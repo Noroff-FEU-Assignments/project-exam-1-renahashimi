@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Della+Respira&family=Kaushan+Script&family=Water+Brush&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="css/styles.css">
+    <script type="module" src="js/pages/index.js"></script>
+
   
     <title>Buta Cuisine</title>
 
@@ -31,7 +33,7 @@
   <header>
     <!--MOBILE-->
     <div class="navigation1">
-      <h1 class="headh1">Buta Cuisine</h1>
+      <a href="index.html"><h1 class="headh1">Buta Cuisine</h1></a>
       <label class="hideX" for="menu-chechbox"><i class="fa-solid fa-bars fa-2x" style="color: #000000;"></i></label> 
       <input type="checkbox" id="menu-chechbox">
       <nav class="nav1">
@@ -63,7 +65,10 @@
 
     <div class="mobimg">
       <div><p class="hide"></p></div>
-      <p class="quote1">"Recognizing that food is more than sustenance—it is an expression of culture, heritage, and creativity."</p>
+      <div class="quote1">
+        <p>"Recognizing that food is more than sustenance —</p> 
+        <p>it is an expression of culture, heritage, and creativity."</p>
+      </div>
     </div>
     
     <div class="carousel"></div>
@@ -71,20 +76,39 @@
     <div class="nav3">
       <nav class="navgrid">
         <ul>
-          <li class="s&s"><a href="blog.html">Salads & Starters</a></li>
-          <li class="m&c"><a href="blog.html">Main Courses</a></li>
-          <li class="c&s"><a href="blog.html">Cakes & Sweets</a></li>
+          <li class="s-s"><a href="blog.html">Salads & Starters</a></li>
+          <li class="m-c"><a href="blog.html">Main Courses</a></li>
+          <li class="c-s"><a href="blog.html">Cakes & Sweets</a></li>
           <li class="allres"><a href="blog.html">See all recipes</a></li>
         </ul>
       </nav>
     </div>
-
-
-
-
+    <div class="wrapper-back">
+    <div class="heritage-back">
+      <div class="container-heritage">
+        <img src="images/traditional-azerbaijani-sweetness.jpeg" alt="Sweets">
+        <div class="heritagetext">
+          <h2 class="mh">my heritage</h2>
+          <p>This food is my roots, my home and my heritage</p>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="back-to-top">
+      <a href="#top" class="btt"><i class="fa-solid fa-arrow-up fa-2xl" style="color: #000000;"></i></a>
+      <p>back to top</p>
+  </div>
   </main>
   <footer>
-    
+    <div class="connect">
+      <h3>Connect with me</h3>
+      <div class="logos">
+        <a href="https://www.instagram.com/"><img src="images/logos/instagram.png" alt="Instagram"></a>
+        <a href="https://www.facebook.com/?locale=nb_NO"><img src="images/logos/facebook.png" alt="Facebook"></a>
+        <a href="https://www.youtube.com/"><img src="images/logos/youtube.png" alt="Youtube"></a>
+      </div>
+      <p>Copyright &copy; 2024 - Rena Hashimi</p>
+    </div>
   </footer>  
 </body>
 </html>
