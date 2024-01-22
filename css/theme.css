@@ -282,7 +282,7 @@ img {
 
 .searchbox a  {
     background-color: var(--beige);
-    padding: 15px 18px;
+    padding: 15px;
     border-radius: 50%;
     height: 18px;
 }
