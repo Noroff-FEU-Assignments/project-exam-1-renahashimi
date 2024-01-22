@@ -1,16 +1,19 @@
-import { BUTACUISINE_URL } from "./url.js";
+import { BUTACUISINE_URL, BUTACUISINE_URL_MEDIA } from "./url.js";
 
+export const params = new URLSearchParams (document.location.search);
+export const id = params.get ("id");
+export const url = BUTACUISINE_URL_MEDIA + id + "?_embed";
 
-export async function getApiSinglePosts () {
+export async function getApiPosts() {
+    try{
+        const response = await fetch(url);
+        const posts = await response.json();
 
-    const params = new URLSearchParams (document.location.search);
-    const id = params.get ("id");
-    const API_BASE_URL = "" + id;
-    
-          const response = await fetch(BUTACUISINE_URL);
-          const posts = await response.json();
-    console.log(posts);
         return posts;
-        
-};
+
+} catch(error) {
+    console.log("Unknown error", error);
+    main.innerHTML = errorMessage();
+}
+}
 

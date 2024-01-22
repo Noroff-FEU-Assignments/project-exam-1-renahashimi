@@ -20,9 +20,15 @@
     visibility: hidden;
 }
 
-.mobimg {
-    display: grid; 
-    grid-template-columns: 40% 60%;
+.mobimg img {
+    display: block; 
+    border-radius: 50%;
+    width: 300px;
+    height: 250px;
+    margin: 30px auto;
+   
+
+    /*grid-template-columns: 40% 60%;
     background-image: url(/images/stuffed-aubergine.jpeg);
     background-size: cover;
     background-color: var(--white);
@@ -31,7 +37,7 @@
     width: 99,5%;
     margin: 0 auto 60px;
     border-bottom: 0.5px solid var(--beige);
-    box-shadow: -5px 10px 20px 0 var(--black);
+    box-shadow: -5px 10px 20px 0 var(--black);*/
 }
 
 .quote1 {
@@ -49,6 +55,61 @@
     background-color: var(--beige);
     padding: 5px;
     border: 1px solid var(--black);
+}
+
+.carousel {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+}
+
+.carousel button {
+    position: absolute;
+    z-index: 2;
+    transform: translateY(50%);
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: var(--beige);
+    border: 1px solid var(--black);
+    border-radius: 50%;
+}
+
+.carousel button.pre {
+    left: -20px;
+}
+
+.carousel button.next {
+    right: -20px
+} 
+
+.carousel button:hover {
+    border: 3px solid var(--black);
+}
+
+.slidepost {
+    display: flex;
+    position: relative;
+    inset: 0;
+    transition: transform 200ms ease-in;
+}
+
+.slidepost1, .slidepost2, .slidepost3 {
+
+    width: 100%;
+    min-width: 200px;
+}
+
+.carbtn span {
+    scale: 1.8;
+    display: block;
+    margin: auto;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    padding-top: 1px;
 }
 
 .container-heritage {
@@ -120,8 +181,12 @@
 .postbox {
     margin: 0 auto;
     max-width: 320px;
-    border-left: 15px solid var(--beige);
-    border-right: 15px solid var(--beige);
+    border-left: 10px solid var(--beige);
+    border-right: 10px solid var(--beige);
+}
+
+.pagename {
+    margin: 0 20px;
 }
 
 .pagename p {
@@ -179,6 +244,13 @@
     padding: 0;
 }
 
+.butaimg {
+    display: block;
+    margin: 10px auto;
+    width: 30px;
+    transform: rotate(-25deg);
+}
+
 
 /*BLOGPAGE*/
 
@@ -224,7 +296,7 @@
 
 .backbutton {
     display: block;
-    width: 100%;
+    width: 94%;
     padding: 5px 10px;
     font-size: 0.6em;
     border-bottom: 2px solid var(--beige);
@@ -236,7 +308,7 @@
     background-image: url(/images/Paisley5.jpeg);
     background-size: 170px;
     height: 80px;
-    font-size: 1.0em;
+    font-size: 1em;
     margin-bottom: -10px;
 }
 
@@ -249,7 +321,7 @@
 
 .postquote span {
     font-family: var(--water);
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 /* ABOUT */

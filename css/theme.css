@@ -7,7 +7,7 @@
     --kaus: 'Kaushan Script', cursive;
 }
 
-/* HEADER & FOOTER & NAVIGATION */ 
+/* HEADER & NAVIGATION & FOOTER */ 
 
 /* ALL PAGES */
 
@@ -59,36 +59,6 @@ img {
     max-width: 90%;
 }
 
-/*FOOTER*/
-
-.connect {
-    display: block;
-    background-color: var(--beige);
-    font-family: var(--water);
-    font-size: 1.1em;
-    letter-spacing: 0.1em;
-    margin: 20px auto;
-    text-align: center;
-    border-top: 5px solid var(--black);
-    border-bottom: 1px solid var(--black);
-}
-
-.connect h3 {
-    font-size: 2em;
-    margin: 0;
-    padding: 5px;
-}
-
-.connect p {
-    font-family: var(--della);
-    font-size: 0.6em;
-}
-
-.connect img {
-    width: 50px;
-    height: 50px;
-    padding: 10px 5px;
-}
 
 
 /*NAVIGATION*/
@@ -96,16 +66,20 @@ img {
 .headh1 {
     margin: 13px;
     text-align: left;
-    font-size: 1.7em;
+    font-size: 2em;
     color: var(--black);
-    font-family: var(--della);
+    font-family: var(--water);
+}
+
+.headlogo {
+    width: 20px;
 }
 
 .navigation1 {
     display: grid;
     grid-template-columns: 80% 20%;
     height: 60px;
-    box-shadow: inset 0 0.1px 15px var(--black);
+    box-shadow: inset 0 0.1rem 10px var(--black);
 }
 
 .navigation1 label {
@@ -205,7 +179,7 @@ img {
     margin: auto;
 }
 
-.m-c, .allres {
+.m-c, .allrec {
     background-image: url(/images/Paisley5.jpeg);
     background-size: contain;
     background-size: 50px;
@@ -227,6 +201,90 @@ img {
     padding: 10px;
     border-radius: 50%;
     border: 1px solid var(--black);
+}
+
+
+/*FOOTER*/
+
+.connect {
+    display: block;
+    background-color: var(--beige);
+    font-family: var(--water);
+    font-size: 1.1em;
+    letter-spacing: 0.1em;
+    margin: 20px auto;
+    text-align: center;
+    border-top: 5px solid var(--black);
+    border-bottom: 1px solid var(--black);
+}
+
+.connect h3 {
+    font-size: 2em;
+    margin: 0;
+    padding: 5px;
+}
+
+.connect p {
+    font-family: var(--della);
+    font-size: 0.6em;
+}
+
+.connect img {
+    width: 50px;
+    height: 50px;
+    padding: 10px 5px;
+}
+
+
+/* SEARCH */
+
+.searchbox {
+    display: flex;
+    height: 25px;
+    border-radius: 50px;
+    background-color: var(--beige);
+    box-shadow: 0 1px 10px var(--black);
+    padding:  10px 0;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.searchbox label {
+    display: none;
+    visibility: hidden;
+}
+
+.searchbox input {
+    position: relative;
+    padding-left: 1px;
+    font-size: 1em;
+    margin-left: 10px;
+}
+
+.searchbox:hover input  {
+    width: 190px;
+    transition: 0.7s;
+}
+
+.searchbox:hover {
+    transition: 0.2s;
+    border: 5px solid var(--beige);
+    width: 259px;
+}
+
+.searchbox input, .searchbox {
+    background-color: transparent;
+    outline: none;
+    width: 0;
+    border: none;
+}
+
+.searchbox a  {
+    background-color: var(--beige);
+    padding: 15px 18px;
+    border-radius: 50%;
+    height: 18px;
 }
 
 @media screen and (min-width: 500px){

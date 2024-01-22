@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Rena Hashimi">
-    <meta name="description" content="">
+    <meta name="description" content="All my posts and recipies.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/e2e07e46bd.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Della+Respira&family=Kaushan+Script&family=Water+Brush&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="css/styles.css">
     <script type="module" src="js/pages/blog.js"></script>
+    <script type="module" src="js/pages/filter.js"></script>
 
   
     <title>Blog - My posts</title>
@@ -50,10 +51,33 @@
   <main>
 
     <div class="pagename"></div>
+    
+    <div class="utils">
+        <div class="filter">
+
+        </div>
+        <div class="searchbox">
+            <form action="#" class="searchBox">
+                <label for="search"></label>
+                <input type="text" id="search" placeholder="Search">
+                <a href="#">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+                </a>
+            </form>
+        </div>
+    </div>
+
+    <!-- <div class="filterbtn">
+        <button  class="ss">Starters & Salad</button>
+        <button class="mc">Main Course</button>
+        <button class="sw">Sweets</button>
+        <button class="sa">See All</button>
+    </div> -->
 
     <div class="postcontainer">  
         <div class="postbox"></div>
     </div>
+
     <div class="back-to-top">
         <a href="#top" class="btt"><i class="fa-solid fa-arrow-up fa-2xl" style="color: #000000;"></i></a>
         <p>back to top</p>

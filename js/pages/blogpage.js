@@ -36,11 +36,12 @@ async function getSinglePosts() {
 }
 }
     function createPosts(posts){
+        
         postTitle.innerHTML += `<h1>${posts.title.rendered}</h1>`;
         postImage.innerHTML += `<div><img class="postimages" src="${posts._embedded["wp:featuredmedia"][0].source_url}" alt="${posts.title.rendered}"></div>`;
         postText.innerHTML += `<p>${posts.content.rendered}</p>`;
-        postQuote.innerHTML += `<p>Ready, Cook & <span>Enjoy</span></p>`;
-
+        postQuote.innerHTML += `<p>Ready, Cook & <span>Bon Appetit</span></p>`;
+    
         console.log(posts, postTitle);
 }
 
