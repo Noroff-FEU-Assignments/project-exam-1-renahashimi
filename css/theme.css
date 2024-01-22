@@ -285,6 +285,7 @@ img {
     padding: 15px;
     border-radius: 50%;
     height: 18px;
+    width: 18px;
 }
 
 @media screen and (min-width: 500px){
