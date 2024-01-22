@@ -247,7 +247,7 @@ img {
     padding:  10px 0;
     justify-content: center;
     align-items: center;
-    margin: 10px auto;
+    margin: 30px auto 50px;
 }
 
 .searchbox label {
@@ -263,14 +263,14 @@ img {
 }
 
 .searchbox:hover input  {
-    width: 190px;
+    width: 250px;
     transition: 0.7s;
 }
 
 .searchbox:hover {
     transition: 0.2s;
     border: 5px solid var(--beige);
-    width: 259px;
+    width: 314px;
 }
 
 .searchbox input, .searchbox {
