@@ -292,7 +292,8 @@ img {
 .searchbox:hover a {
     display: inline;
     border: none;
-    padding: 10px 13px;
+    padding: auto 13px;
+    margin: auto;
 }
 
 @media screen and (min-width: 500px){
