@@ -281,6 +281,7 @@ img {
 }
 
 .searchbox a  {
+    display: block;
     background-color: var(--beige);
     padding: 15px;
     border-radius: 50%;
@@ -289,6 +290,7 @@ img {
     border: 1px solid var(--black);
 }
 .searchbox:hover a {
+    display: inline;
     border: none;
     padding: 10px;
 }
