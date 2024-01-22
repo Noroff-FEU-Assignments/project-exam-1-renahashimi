@@ -224,6 +224,7 @@
 
 .postcontent button {
     display: block;
+    color: var(--black);
     font-family: var(--della);
     font-size: 0.7em;
     text-transform: uppercase;
