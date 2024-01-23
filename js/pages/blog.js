@@ -21,15 +21,6 @@ export async function getPosts() {
 
    
     for (let i = 0; i <posts.length; i++) {
-
-        filter.innerHTML += `<form action="#" class="filterform">
-                                <select name="sort" id="sort"><i class="fa-solid fa-sort fa-2xl" style="color: #000000;"></i>
-                                    <option value="1">${posts[i].categories[0] === 3}</option>            
-                                    <option value="3">${posts[i].categories[0] === 6}</option>            
-                                    <option value="4"></option>            
-                                </select>
-                            </form> `;
-        
         postBox.innerHTML += `<div class="postcontent">
                                <a href="blogpage.html?id=${posts[i].id}">
                                 <img class="postsimage" src="${posts[i]._embedded["wp:featuredmedia"][0].source_url}" alt="${posts[i].title.rendered}">
