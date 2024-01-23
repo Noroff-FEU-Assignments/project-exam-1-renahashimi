@@ -199,7 +199,7 @@
 }
 
 .carbtn span {
-    scale: 1.8;
+    scale: 2;
     display: block;
     margin: auto;
     color: var(--black);
