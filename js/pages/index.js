@@ -33,7 +33,6 @@ buttons.forEach((button) => {
 
 
 
-
 async function carousel() {
     try{
         const response = await fetch(BUTACUISINE_URL_MEDIA);

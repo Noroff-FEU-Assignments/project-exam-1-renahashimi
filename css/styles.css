@@ -13,10 +13,6 @@
     --kaus: 'Kaushan Script', cursive;
 }
 
-*, *::after, *::before {
-  box-sizing: border-box;
-}
-
 /*HOME*/
 
 .headerbackground {
@@ -25,34 +21,42 @@
 }
 
 .mobimg {
-    display: grid; 
-    height: 500px;
+    display: block; 
+    height: 550px;
     padding: 0;
-    grid-template-columns: 40% 60%;
     background-image: url(/images/traditional-azerbaijani-sweetness.jpeg);
     background-size: cover;
     background-color: var(--white);
     width: 99,5%;
-    margin: -10px auto 60px;
+    margin: -30px auto 60px;
     border-bottom: 0.5px solid var(--beige);
-    box-shadow: -5px 10px 20px 0 var(--black);*/
+    box-shadow: -5px 10px 20px 0 var(--black);
 }
 
-.quote1 {
-    position: sticky;
-    padding: 0 10px;
-    margin: auto 0;
-    max-width: 320px;
-    color:  var(--black);
-    font-size: 0.9em;
-    text-align: right;
-    line-height: 20px;
+.mobimg::before {
+    content: "";
+    position: absolute;
+    background-color: var(--black);
+    inset: 0;
+    transform: skewY(-6deg);
+    height: 16%;
+    margin-top: 485px;
+    z-index: 1;
+    opacity: 0.5;
 }
 
 .quote1 p {
-    background-color: var(--beige);
-    padding: 5px;
-    border: 1px solid var(--black);
+    display: block;
+    position: relative;
+    color: var(--white);
+    max-width: 300px;
+    font-size: 0.9em;
+    margin: auto;
+    text-align: center;
+    line-height: 20px;
+    padding: 450px 0;
+    border-radius: 20px;
+    z-index: 2;
 }
 
 .heritagetext {
@@ -364,8 +368,8 @@
 /*/HOME*/
 
 .mobimg {
-    height: 300px;
-    grid-template-columns: 55% 45%;
+    height: 600px;
+    position: 90%;
 }
 
 .quote1 {
