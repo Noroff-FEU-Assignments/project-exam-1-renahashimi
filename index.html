@@ -64,7 +64,6 @@
     <!--MOBILE-->
 
     <div class="mobimg">
-      <img src="images/stuffed-aubergine.jpeg" alt="aubergine">
       <div><p class="hide"></p></div>
       <div class="quote1">
         <p>"Recognizing that food is more than sustenance —</p> 
@@ -74,24 +73,27 @@
 
     <div><img class="butaimg" src="images/buta.png" alt="Buta"></div>                 
     
+
+    <!--CAROUSEL-->
     <section>
-      <div class="carousel">
-        <button class="carbtn pre"><span class="rotate">&#10170;</span></button>
-        <button class="carbtn next"><span>&#10170;</span></button>
-        <ul class="slidepost">
-          <li class="postslide slidepost1 activeslide"></li>
-          <li class="postslide slidepost2"><img src="images/kebab-varieties.jpeg" alt=""></li>
-          <li class="postslide slidepost3"><img src="images/shakhplov.jpeg" alt=""></li>
+      <div class="carousel" data-carousel>
+        <button class="carbtn pre" data-carousel-button="pre"><span class="rotate">&#10170;</span></button>
+        <button class="carbtn next" data-carousel-button="next"><span>&#10170;</span></button>
+        <ul class="slidepost" data-slides>
+          <li data-active class="postslide" id="slidepost1"></li>
+          <li class="postslide" id="slidepost2"><img src="images/kebab-varieties.jpeg" alt=""></li>
+          <li class="postslide" id="slidepost3"><img src="images/shakhplov.jpeg" alt=""></li>
         </ul>
       </div>
     </section>
+    <!--Reference for carousel : https://youtu.be/9HcxHDS2w1s?si=AlX06ovT6-FNpefE -->
 
     <div><img class="butaimg" src="images/buta.png" alt="Buta"></div>                 
 
     <div class="nav3">
       <nav class="navgrid">
         <ul>
-          <li class="s-s"><a href="blog.html">Salads & Starters</a></li>
+          <li class="s-s"><a href="https://butacuisine.renahashimi.no/wp-json/wp/v2/posts/?_embed/categories=6">Salads & Starters</a></li>
           <li class="m-c"><a href="blog.html">Main Courses</a></li>
           <li class="c-s"><a href="blog.html">Cakes & Sweets</a></li>
           <li class="allrec"><a href="blog.html">See all recipes</a></li>
@@ -100,7 +102,8 @@
     </div>
 
     <div><img class="butaimg" src="images/buta.png" alt="Buta"></div>                 
-
+    
+    <!--HERITAGE IMAGE-->
     <div class="wrapper-back">
     <div class="heritage-back">
       <div class="container-heritage">
@@ -112,6 +115,8 @@
       </div>
     </div>
     </div>
+
+    <!--GO TO TOP -->
     <div class="back-to-top">
       <a href="#top" class="btt"><i class="fa-solid fa-arrow-up fa-2xl" style="color: #000000;"></i></a>
       <p>back to top</p>
