@@ -40,21 +40,21 @@
     inset: 0;
     transform: skewY(-6deg);
     height: 16%;
-    margin-top: 485px;
+    margin-top: 185px;
     z-index: 1;
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 .quote1 p {
     display: block;
     position: relative;
     color: var(--white);
-    max-width: 300px;
+    max-width: 340px;
     font-size: 0.9em;
     margin: auto;
     text-align: center;
     line-height: 20px;
-    padding: 450px 0;
+    padding: 150px 0;
     border-radius: 20px;
     z-index: 2;
 }
