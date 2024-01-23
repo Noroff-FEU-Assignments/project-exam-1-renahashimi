@@ -202,4 +202,5 @@
     scale: 1.8;
     display: block;
     margin: auto;
+    color: var(--black);
 }
