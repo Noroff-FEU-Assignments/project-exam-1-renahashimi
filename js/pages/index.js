@@ -85,7 +85,7 @@ async function carousel() {
 
 } catch(error) {
     console.log("Unknown error", error);
-    // .innerHTML = errorMessage();
+    postcontent2.innerHTML = errorMessage();
   }
 }
 
