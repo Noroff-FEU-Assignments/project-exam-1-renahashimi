@@ -26,13 +26,12 @@
 
 .mobimg {
     display: grid; 
-    height: 250px;
+    height: 500px;
     padding: 0;
     grid-template-columns: 40% 60%;
-    background-image: url(/images/stuffed-aubergine.jpeg);
+    background-image: url(/images/traditional-azerbaijani-sweetness.jpeg);
     background-size: cover;
     background-color: var(--white);
-    max-height: 400px;
     width: 99,5%;
     margin: -10px auto 60px;
     border-bottom: 0.5px solid var(--beige);

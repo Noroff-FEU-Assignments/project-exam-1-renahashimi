@@ -74,13 +74,13 @@ button, .poststitle, .postsimage, .backbutton {
     z-index: 3;
 }
 
-.back-to-top p {}
-
-.ba {
-    rotate: -30deg;
-
+.back-to-top p {
+    position: fixed;
+    z-index: 3;
+    right: 17px;
+    bottom: 15px;
+    font-size: 0.7em;
 }
-
 
 
 

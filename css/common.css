@@ -62,6 +62,7 @@
     width: 25px;
     border: 1px solid var(--black);
 }
+
 .searchbox:hover a {
     display: inline;
     border: none;
@@ -129,20 +130,17 @@
 
 .carlink p  {
     font-size: 1em;
-
 }
 
 .carousel ul {
     margin: 0;
     padding: 0;
-
 }
 
 .postslide {
     position: absolute;
     opacity: 0;
     inset: 0;
-    /* transition: transform 200ms ease-in; */
 }
 
 .postslide[data-active] {
@@ -156,6 +154,7 @@
     height: 100%;
     object-fit: cover; 
     border: 3px solid var(--beige);
+    box-shadow: 0 2px 20px 0 var(--black);
 }
 
 .carbtn {
@@ -172,10 +171,14 @@
 
 .carousel button.pre {
     left: -7px;
+    box-shadow: -5px 10px 20px 0 var(--black);
+
 }
 
 .carousel button.next {
-    right: -7px
+    right: -7px;
+    box-shadow: 5px 10px 20px 0 var(--black);
+
 } 
 
 .carousel button:hover, .carlink:hover  {
