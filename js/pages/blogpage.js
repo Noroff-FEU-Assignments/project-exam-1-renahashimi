@@ -1,5 +1,6 @@
 import { BUTACUISINE_URL, BUTACUISINE_URL_MEDIA } from "../api/url.js";
 import { errorMessage } from "../api/errormessage.js";
+import { loadPage } from "../common/pageloader.js";
 
 
 export const params = new URLSearchParams (document.location.search);
@@ -24,26 +25,24 @@ async function getSinglePosts() {
         const posts = await response.json();
 
         createPosts(posts);
+        loadPage();
         postContainer2.innerHTML += "";
         postTitle.innerHTML += "";
         postImage.innerHTML += "";
         postText.innerHTML += "";
         postQuote.innerHTML += "";
 
-} catch(error) {
+    } catch(error) {
     console.log("Unknown error", error);
     postContainer2.innerHTML = errorMessage();
-}
+    }
 }
     function createPosts(posts){
-        
+        loadPage();
         postTitle.innerHTML += `<h1>${posts.title.rendered}</h1>`;
         postImage.innerHTML += `<div><img class="postimages" src="${posts._embedded["wp:featuredmedia"][0].source_url}" alt="${posts.title.rendered}"></div>`;
         postText.innerHTML += `<p>${posts.content.rendered}</p>`;
         postQuote.innerHTML += `<p>Ready, Cook & <span>Bon Appetit</span></p>`;
-    
-        console.log(posts, postTitle);
-}
-
+    }
 getSinglePosts()
 

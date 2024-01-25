@@ -94,7 +94,7 @@ button, .poststitle, .postsimage, .backbutton {
     font-family: var(--water);
 }
 
-.sitename, .sitename h1{
+.sitename, .sitename h1 {
     display: flex;
     font-size: 1.7em;
     color: var(--black);
@@ -105,12 +105,13 @@ button, .poststitle, .postsimage, .backbutton {
 .sitename span {
     font-size: 1.2em;
     color: var(--black);
-    margin-left: -6px;
+    margin: 2px 0 0 -6px;
 }
 
 .headh1 p {
     font-family: var(--della);
-    margin: -50px 55px;
+    color: var(--white);
+    margin: -45px 55px;
 }
 
 .headlogo {
@@ -134,12 +135,12 @@ button, .poststitle, .postsimage, .backbutton {
 }
 
 #menu-chechbox:checked ~ nav {
-    background-color: #fff;
+    background-color: var(--white);
     text-transform: uppercase;
     display: flex;
     width: 100%;
     min-width: 100px; 
-    background-color: #fff;
+    background-color: var(--white);
 }
 
 .nav2 {
@@ -148,11 +149,10 @@ button, .poststitle, .postsimage, .backbutton {
     background-color: var(--beige);
     flex-direction: column;
     width: 100%;
-
     max-width: 1000px;
     border-top: 2px solid var(--white);
     text-align: center;
-    background-color: #fff;
+    background-color: var(--white);
     z-index: 2;
 }
 
@@ -160,7 +160,7 @@ button, .poststitle, .postsimage, .backbutton {
     list-style-type: none;
     background-color: var(--beige);
     padding: 10px 0;
-    margin-top: 0px;
+    margin-top: -5px;
     box-shadow: inset 0 1px 15px var(--black);
 }
 
@@ -253,7 +253,7 @@ button, .poststitle, .postsimage, .backbutton {
 }
 
 .connect h3 {
-    font-size: 2em;
+    font-size: 1.6em;
     margin: 0 10px;
     padding: 5px;
 }
@@ -268,7 +268,7 @@ button, .poststitle, .postsimage, .backbutton {
     width: 40px;
     height: 40px;
     padding: 0 -15px;
-    margin-left: 10px;
+    margin-left: 12px;
 }
 
 @media screen and (min-width: 500px){

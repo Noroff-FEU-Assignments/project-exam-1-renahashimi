@@ -7,11 +7,23 @@ const slidePost = document.querySelector(".slidepost");
 const slidePost1 = document.querySelector("#slidepost1");
 const slidePost2 = document.querySelector("#slidepost2");
 const slidePost3 = document.querySelector("#slidepost3");
- 
+const postContainer2 = document.querySelector(".postcontainer2");
 
-// REFERENCE FOR CAROUSEL: https://youtu.be/9HcxHDS2w1s?si=AlX06ovT6-FNpefE
 const buttons = document.querySelectorAll("[data-carousel-button]");
 
+async function carousel() {
+  try{
+      const response = await fetch(BUTACUISINE_URL_MEDIA);
+      const posts = await response.json();
+      console.log(posts);
+
+
+      slidePost1.innerHTML = "";
+      slidePost2.innerHTML = "";
+      slidePost3.innerHTML = "";
+
+
+// REFERENCE FOR CAROUSEL: https://youtu.be/9HcxHDS2w1s?si=AlX06ovT6-FNpefE
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
     const offset = button.dataset.carouselButton === "next" ? 1 : -1;
@@ -30,23 +42,18 @@ buttons.forEach((button) => {
 });
 //END OF VIDEO - REFERENCE FOR CAROUSEL
 
-
-
-
-async function carousel() {
-    try{
-        const response = await fetch(BUTACUISINE_URL_MEDIA);
-        const posts = await response.json();
-        console.log(posts);
-
-
-        slidePost1.innerHTML = "";
-        slidePost2.innerHTML = "";
-        slidePost3.innerHTML = "";
-
-    for (let i = 0; i <posts.length; i++) {
-        if (posts[i].id === 8){
-            slidePost1.innerHTML += `<div class="postcontent2">
+      for (let i = 0; i <posts.length; i++) {
+        if (posts[i].id === 149){
+            slidePost1.innerHTML += `<div class="postcontent">
+                               <a href="blogpage.html?id=${posts[1].id}">
+                                <img class="postsimage" src="${posts[i]._embedded["wp:featuredmedia"][0].source_url}" alt="${posts[i].title.rendered}">
+                                <h2 class="poststitle">${posts[i].title.rendered}</h2>
+                                <p class="shorttext">${posts[i].excerpt.rendered}</p>
+                                <li class="carlink">Go to the recipe</li>
+                                </a>
+                              </div>`;
+        } else if (posts[i].id === 157){
+            slidePost2.innerHTML += `<div>
                                <a href="blogpage.html?id=${posts[i].id}">
                                 <img class="postsimage" src="${posts[i]._embedded["wp:featuredmedia"][0].source_url}" alt="${posts[i].title.rendered}">
                                 <h3 class="poststitle">${posts[i].title.rendered}</h3>
@@ -54,25 +61,8 @@ async function carousel() {
                                 <li class="carlink">Go to the recipe</li>
                                 </a>
                               </div>`;
-        }  
-    }   
-    
-    for (let i = 0; i <posts.length; i++) {
-        if (posts[i].id === 124){
-            slidePost2.innerHTML += `<div class="postcontent2">
-                               <a href="blogpage.html?id=${posts[i].id}">
-                                <img class="postsimage" src="${posts[i]._embedded["wp:featuredmedia"][0].source_url}" alt="${posts[i].title.rendered}">
-                                <h3 class="poststitle">${posts[i].title.rendered}</h3>
-                                <p class="shorttext">${posts[i].excerpt.rendered}</p>
-                                <li class="carlink">Go to the recipe</li>
-                                </a>
-                              </div>`;
-        } 
-    }   
-
-    for (let i = 0; i <posts.length; i++) {
-        if (posts[i].id === 20){
-            slidePost3.innerHTML += `<div class="postcontent2">
+        } else if (posts[i].id === 20){
+            slidePost3.innerHTML += `<div>
                                <a href="blogpage.html?id=${posts[i].id}">
                                 <img class="postsimage" src="${posts[i]._embedded["wp:featuredmedia"][0].source_url}" alt="${posts[i].title.rendered}">
                                 <h3 class="poststitle">${posts[i].title.rendered}</h3>

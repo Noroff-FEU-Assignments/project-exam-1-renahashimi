@@ -54,12 +54,25 @@
 
     <input type="button" id="back" value="back" onclick="history.go(-1);"> 
     <label for="back" class="backbutton"></label>
-
+    
+    <section class="loadingbox">
+      <div class="loader"></div>
+      <div class="loader-indicator"></div> 
+    </section>
+    
     <div class="postcontainer2">  
         <div class="posttitle"></div>
         <div class="postimage"></div>
         <div class="posttext"></div>
         <div class="postquote"></div>
+    </div>
+
+    <div>
+      <ul class="slidepost" data-slides>
+        <li id="slidepost1"></li>
+        <li id="slidepost2"></li>
+        <li id="slidepost3"></li>
+      </ul>
     </div>
     <div class="back-to-top">
         <a href="#top" class="btt"><i class="fa-solid fa-arrow-up fa-2xl" style="color: #000000;"></i></a>

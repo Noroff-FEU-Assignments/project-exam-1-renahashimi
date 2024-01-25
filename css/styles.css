@@ -8,6 +8,7 @@
     --beige: #BFAFB0;
     --white: #fff;
     --black: #000;
+    --red: red;
     --della:'Della Respira', serif;
     --water:'Water Brush', cursive;
     --kaus: 'Kaushan Script', cursive;
@@ -42,7 +43,7 @@
     height: 16%;
     margin-top: 185px;
     z-index: 1;
-    opacity: 0.6;
+    opacity: 0.5;
 }
 
 .quote1 p {
@@ -141,13 +142,13 @@
 
 .postcontent h2 {
     color: var(--black);
-    margin: 5px 10px;
+    margin: 10px;
     font-size: 1em;
 }
 
 .text-justify {
     color: var(--black);
-    font-size: 0.7em;
+    font-size: 0.8em;
     margin: -10px 10px 30px;
 }
 
@@ -163,6 +164,10 @@
     margin: 20px auto;
     width: 80%;
     height: 40px;
+}
+
+.r-m-btn span {
+    font-size: 1.2em;
 }
 
 .postsimage {
@@ -191,12 +196,10 @@
     margin: 10px auto;
 }
 
-.posttitle {
-}
 
 .postimages {
     display: block;
-    min-width: 99%;
+    width: 99%;
     margin: auto;
     height: 250px;
     object-fit: cover;
@@ -206,11 +209,11 @@
 .wp-block-quote {
     display: block;
     font-size: 0.8em;
-    width: 100%;
     margin: -10px auto 10px;
     padding: 1px 0;
     background-color: var(--beige);
-   text-align: center;
+    text-align: center;
+    border-radius: 10px;
 }
 
 .wp-block-columns, .wp-block-columns p {
@@ -319,6 +322,7 @@
 
 .aboutpage p {
     display: block;
+    text-align: center;
     background-color: var(--white);
     font-family: var(--della);
     padding: 20px 10px;
@@ -361,6 +365,106 @@
 
 
 /* CONTACT */
+
+.contact-wrapper {
+    display: block;
+    margin: -20px auto;
+    padding: 20px 0;
+    background-image: url(/images/Paisley5.jpeg);
+    background-size: 170px;
+}
+
+.contact-wrapper h1 {
+    background-color: var(--white);
+}
+
+.heart {
+    font-size: smaller;
+}
+
+.contactform {
+    display: flex;
+    max-width: 380px;
+    width: 95%;
+    background-color: var(--white);
+    border: 2px solid var(--beige);
+    border-radius: 20px;
+    margin: 15px auto;
+}
+
+#c-form {
+    display: inline;
+    margin: 20px auto;
+}
+
+.contactbox {
+    display: table-caption;
+    margin: 5px auto;
+}
+
+.contactbox input, .contactbox textarea {
+    width: 220px;
+    font-family: var(--della);
+    font-size: 1em;
+    text-align: left;
+    padding: 7px;
+    border: 2px solid var(--beige);
+}
+
+.contactbox textarea {
+    height: 100%;
+    margin: 0;
+}
+
+.contactbox label {
+    font-family: var(--della);
+}
+
+#messageerror {
+    margin-top: -5px;
+}
+
+.contactform button {
+    display: block;
+    margin: 20px auto;
+    width: 60%;
+    height: 40px;
+    font-size: 1.2em;
+    background-color: var(--beige);
+    text-transform: uppercase;
+    border: 3px solid var(--black);
+}
+
+.contactform button:hover {
+    background-color: var(--white);
+    border: 3px solid var(--beige);
+}
+
+.errorbox {
+    display: none;
+    background-color: var(--beige);
+    border: 1px solid var(--red);
+    font-size: 0.8em;
+    width: 225px;
+    padding: 2px 5px;
+}
+
+.successmessage {
+    display: block;
+    background-color: var(--white);
+    margin: 30px auto;
+    padding: 10px 0;
+    width: 300px;
+    border: 1px solid var(--beige);
+    border-radius: 20px;
+}
+
+.successmessage p {
+    text-align: center;
+    font-size: 1.3em;
+}
+
+
 
 
 

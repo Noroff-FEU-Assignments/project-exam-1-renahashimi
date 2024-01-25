@@ -2,17 +2,61 @@
     --beige: #BFAFB0;
     --white: #fff;
     --black: #000;
+    --red: #d31f1f;
     --della:'Della Respira', serif;
     --water:'Water Brush', cursive;
     --kaus: 'Kaushan Script', cursive;
 }
 
+/* LOADER FOR PAGE*/
+
+.loadingbox {
+    display: block;  
+}
+
+.loader {
+    font-family: var(--della);
+    border-top: 3px solid var(--beige);
+    color: var(--red);
+    font-size: 1.4em;
+    margin: 10px auto;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.loader-indicator {
+    border: 6px solid var(--beige);
+    border-top: 6px solid var(--black);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1.5s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+   0% { transform: rotate(0deg);}
+   100% { transform: rotate(360deg);}
+}
+
+
+/* ERRORMESSAGE */
+
+.errorMessage {
+    display: block;
+    width: max-content;
+    font-size: 1.2em;
+    color: var(--red);
+    padding: 1.5rem;
+    margin: 30px auto;
+    grid-column-end: span 3;
+}
 
 /* SEARCH */
 
 .searchbox {
     display: flex;
-    height: 25px;
+    height: 20px;
     border-radius: 60px;
     background-color: var(--beige);
     box-shadow: 0 1px 10px var(--black);
@@ -56,7 +100,7 @@
     display: block;
     background-color: var(--beige);
     justify-content: center;
-    padding: 13px 14px;
+    padding: 8px 10px;
     border-radius: 50%;
     border: 1px solid var(--black);
 }
@@ -64,7 +108,7 @@
 .searchbox:hover a {
     display: inline;
     border: none;
-    padding: 10px 13px;
+    padding: 7px 8px;
     margin-left: -10px;
     margin: auto;
 }
@@ -108,10 +152,6 @@
     text-transform: uppercase;
 }
 
-.carousel p {
-    font-size: 0.8em;
-    margin: 5px auto 20px 10px;
-}
 
 .carlink {
     display: block;
@@ -170,7 +210,6 @@
 .carousel button.pre {
     left: -7px;
     box-shadow: -5px 10px 20px 0 var(--black);
-
 }
 
 .carousel button.next {
@@ -178,29 +217,28 @@
     box-shadow: 5px 10px 20px 0 var(--black);
 } 
 
-.carousel button:hover, .carlink:hover  {
+.carousel button:hover {
     background-color: var(--white);
     border: 3px solid var(--black);
 }
 
 .slidepost1, .slidepost2, .slidepost2 {
-    display: block;
-    margin: auto;
+    
+
 } 
-
-.postscontent2 a {
-    display: block;
-    margin: 20px auto;
-    border: 3px solid var(--beige);
-}
-
-.postslide .text-justify {
-    min-height: 40px;
-}
 
 .carbtn span {
     scale: 2;
     display: block;
     margin: auto;
     color: var(--black);
+}
+
+.postcontent2 img {
+    width: 100%;
+}
+
+.postcontent2 p {
+    font-size: 0.8em;
+    margin: 5px auto 20px 10px;
 }

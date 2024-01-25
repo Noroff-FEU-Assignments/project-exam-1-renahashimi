@@ -1,5 +1,10 @@
 import { BUTACUISINE_URL, BUTACUISINE_URL_MEDIA } from "../api/url.js";
 import { errorMessage } from "../api/errormessage.js";
+import { loadPage } from "../common/pageloader.js";
+import * as pageloader from "../common.js";
+
+// const perPage = 10;
+// let page = 1;
 
 const postBox = document.querySelector(".postbox");
 const pageName = document.querySelector(".pagename");
@@ -13,31 +18,43 @@ export async function getPosts() {
     const posts = await response.json(); 
     console.log(posts);
     
-
+    //loadMorePost();
+    loadPage();
     filter.innerHTML = "";
     postBox.innerHTML = "";
     pageName.innerHTML = `<h1>Blog Posts</h1>
                           <p>“Where heritage meets the plate.”</p>`;
 
-   
-    for (let i = 0; i <posts.length; i++) {
-        postBox.innerHTML += `<div class="postcontent">
-                               <a href="blogpage.html?id=${posts[i].id}">
-                                <img class="postsimage" src="${posts[i]._embedded["wp:featuredmedia"][0].source_url}" alt="${posts[i].title.rendered}">
-                                <h2 class="poststitle">${posts[i].title.rendered}</h2>
-                                <p class="shorttext">${posts[i].excerpt.rendered}</p>
-                                <button class="r-m-btn">Read more</button>
-                                </a>
-                              </div>
-                              <div><img class="butaimg" src="images/buta.png" alt="Buta"></div>`;                      
-                        
-}
+    setTimeout (function() {
+        posts.forEach(function (posts) {
+            postBox.innerHTML += `<div class="postcontent">
+                                        <a href="blogpage.html?id=${posts.id}">
+                                            <img class="postsimage" src="${posts._embedded["wp:featuredmedia"][0].source_url}" alt="${posts.title.rendered}">
+                                            <h2 class="poststitle">${posts.title.rendered}</h2>
+                                            <p class="shorttext">${posts.excerpt.rendered}</p>
+                                            <button class="r-m-btn">The recipe <span class="heart">&#10084;</span></button>
+                                        </a>
+                                    </div>
+                                <div><img class="butaimg" src="images/buta.png" alt="Buta"></div>`;                      
+                            
+});
+}, 2500);
+
+
+  
+
+// function loadMorePost(){}
+    
+
 } catch(error) {
     console.log("Unknown error", error);
     postBox.innerHTML = errorMessage();
 }
 }
+
+
   
 getPosts()
+
 
 
