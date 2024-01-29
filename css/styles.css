@@ -105,10 +105,9 @@
 /* BLOG */
 
 .postcontainer {
-    padding: 0 15px;
     border-left: 10px solid var(--beige);
     border-right: 10px solid var(--beige);
-    margin: 0 40px;
+    margin: 0 20px;
 }
 
 .postbox {
@@ -137,7 +136,7 @@
 
 .postcontent {
     border: 3px solid var(--beige);
-    margin: 20px 30px;
+    margin: 20px 10px;
     color: var(--black);
 }
 
