@@ -49,51 +49,52 @@
 .welcomecontent {
     display: flex;
     background-image: url(/images/tomato-pasta.jpeg);
-    background-size: 60%;
-    height: 300px;
+    background-size: 80%;
+    height: 320px;
     background-repeat: no-repeat;
     padding: 0 20px;
     text-align: right;
-    margin: auto;
+    margin: 10px;
     max-width: 400px;
     padding-right: 10px;
 }
 
-.welcomecontent img {
-    width: 80%;
-}
-
 .welcometxt {
     display: block;
+    width: 950%;
 }
 
 .welcometxt h3 {
-    padding-left: 50px;
+    padding-left: 70px;
     font-size: 3em;
     font-family: var(--water);
     letter-spacing: 0.2em;
-    margin: -15px 0 2px;
+    margin: -5px 0 2px;
 }
 
 .welcometxt p {
     text-align: right;
     font-size: 2em;
-    margin: -5px 10px 30px;
+    margin: -5px 10px 5px;
 }
 
-.welcometxt a {
+.wellink a {
+    display: inline-flex;
     color: var(--black);
+    background-color: var(--white);
     cursor: pointer;
     text-transform: uppercase;
-    border: 1px solid var(--black);
+    border: 2px solid var(--black);
     padding: 1px 5px;
-    margin-right: 10px;
+    margin: 130px 10px;
     border-radius: 10px;
+    font-size: 0.9em;
 }
 
 .welcometxt a:hover {
     background-color: var(--beige);
 }
+
 .quote1 p {
     display: block;
     position: relative;
