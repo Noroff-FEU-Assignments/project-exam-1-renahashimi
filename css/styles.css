@@ -297,7 +297,7 @@
     font-family: var(--water);
     border: 2px solid var(--beige);
     width: 90%;
-    max-width: 460px;
+    max-width: 600px;
     margin: auto;
     padding: 5px;
     font-size: 0.9em;
@@ -305,8 +305,8 @@
 
 .aboutpage {
     display: block;
-    width: 96%;
-    max-width: 1000px;
+    width: 90%;
+    max-width: 700px;
     margin: 50px auto;
     padding: 5px;
 }
@@ -342,7 +342,7 @@
     box-shadow: inset 10px 10px 0px var(--black);
 }
 
-.aboutpage p {
+.aboutpage p, .myquote {
     display: block;
     text-align: center;
     background-color: var(--white);
@@ -356,12 +356,12 @@
     display: block;
     letter-spacing: 0.4em;
     max-width: 200px;
-    margin: 20px auto;
+    margin: 20px auto 40px;
 }
 
-.buta h3 {
+.buta h2 {
     font-size: 3em;
-    margin-bottom: -10px;
+    margin: 50px auto -10px;
 }
 
 .buta p {
@@ -529,8 +529,8 @@
 /* BLOG */
 
 .borderstyle {
-    border-left: 20px solid var(--beige);
-    border-right: 20px solid var(--beige);
+    border-left: 20px groove var(--beige);
+    border-right: 20px  var(--beige);
 }
 
 .postcontainer {
@@ -556,6 +556,31 @@
     margin-bottom: 0;
 }
 
+.blogquote {
+    display: block;
+    background-image: url(/images/pancakes.jpeg);
+    object-fit: contain;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 40%;
+    border-radius: 5px;
+    height: 140px;
+
+}
+
+.pagename p {
+    display: block;
+    color: var(--black);
+    font-size: 1.8em;
+    max-width: 50%;
+    margin: auto 40px;
+    padding: 30px 0;
+    height: 140px;
+    border: none;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
 
 
 /*
