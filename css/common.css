@@ -52,6 +52,35 @@
     grid-column-end: span 3;
 }
 
+/* LOAD PAGES BUTTON */
+
+.loadmorebtn {
+    display: flex;
+    font-family: var(--della);
+    background-color: var(--white);
+    border-radius: 20px;
+    align-items: center;
+    margin: 30px auto 0;
+    padding: 15px 20px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.loadmorebtn:hover {
+    background-color: var(--beige);
+    border: 3px inset var(--black);
+    box-shadow: 0 2px 20px 0px var(--beige);
+    padding: 15px 20px;
+    color: var(--white);
+}
+
+.loadbtn {
+    margin: 50px 0 0;
+    padding-bottom: 50px;
+}
+
+
+
 /* SEARCH */
 
 .searchbox {
@@ -187,6 +216,7 @@
 
 .postslide div {
     display: block;
+    position: absolute;
     margin: auto;
     width: 90%;
     height: 100%;
@@ -222,11 +252,6 @@
     border: 3px solid var(--black);
 }
 
-.slidepost1, .slidepost2, .slidepost2 {
-    
-
-} 
-
 .carbtn span {
     scale: 2;
     display: block;
@@ -242,3 +267,77 @@
     font-size: 0.8em;
     margin: 5px auto 20px 10px;
 }
+
+/* MODAL */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal img {
+    position: absolute;
+    transition: 0.4s all ease;
+    width: 80%;
+    cursor: pointer;
+    max-width: 600px;
+}
+
+.modalimg:hover {
+    transform: scale(0.9);
+}
+
+.modal.show{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal.show .modalImg {
+    animation: zoom 0.4s linear;
+}
+
+.modalbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#imageLay {
+    border-radius: 25px;
+    margin: 0 auto;
+    display: block;
+    max-width: 75%;
+    max-height: 75%;
+}
+
+.closemodal {
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    color: var(--white);
+    background-color: transparent;
+    border: 4px solid var(--beige);
+    border-radius: 50%;
+    padding: 12px 11px;
+}
+
+.closemodal:hover {
+    color: var(--black);
+    background-color: var(--beige);
+    border: 4px solid var(--white);
+}
+
+
+
+
+
+

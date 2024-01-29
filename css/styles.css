@@ -106,13 +106,14 @@
 
 .postcontainer {
     padding: 0 15px;
+    border-left: 10px solid var(--beige);
+    border-right: 10px solid var(--beige);
+    margin: 0 40px;
 }
 
 .postbox {
     margin: 0 auto;
-    max-width: 320px;
-    border-left: 10px solid var(--beige);
-    border-right: 10px solid var(--beige);
+    max-width: 420px;
 }
 
 .pagename {
@@ -124,8 +125,8 @@
     text-align: center;
     font-family: var(--della);
     color: var(--beige);
-    font-size: 1em;
-    max-width: 320px;
+    font-size: 1.3em;
+    max-width: 350px;
     margin: 20px auto;
     padding: 10px;
     border: 2px solid var(--beige);
@@ -136,19 +137,24 @@
 
 .postcontent {
     border: 3px solid var(--beige);
-    margin: 20px;
+    margin: 20px 30px;
     color: var(--black);
+}
+
+.postcontent:hover {
+    border: 3px ridge var(--black);
 }
 
 .postcontent h2 {
     color: var(--black);
     margin: 10px;
-    font-size: 1em;
+    padding: 2px 0;
+    font-size: 1.1em;
 }
 
 .text-justify {
     color: var(--black);
-    font-size: 0.8em;
+    font-size: 0.9em;
     margin: -10px 10px 30px;
 }
 
@@ -156,14 +162,21 @@
     display: block;
     color: var(--black);
     font-family: var(--della);
-    font-size: 0.7em;
+    font-size: 0.8em;
     text-transform: uppercase;
     background-color: var(--white);
     border: 3px solid var(--beige);
+    box-shadow: 0 2px 10px 0px var(--beige);
     border-radius: 60px;
     margin: 20px auto;
     width: 80%;
     height: 40px;
+}
+
+.postcontent button:hover {
+    border: 3px unset var(--black);
+    box-shadow: 0 2px 20px 0px var(--beige);
+    font-size: 0.9em;
 }
 
 .r-m-btn span {
@@ -179,9 +192,13 @@
     padding: 0;
 }
 
+.postsimage:hover {
+    opacity: 0.8;
+}
+
 .butaimg {
     display: block;
-    margin: 10px auto;
+    margin: 30px auto;
     width: 30px;
     transform: rotate(-25deg);
 }
@@ -198,13 +215,18 @@
 
 
 .postimages {
-    display: block;
     width: 99%;
     margin: auto;
     height: 250px;
     object-fit: cover;
     border: 2px solid var(--beige);
+    cursor: pointer;
+    transition: 0.3s;  
 } 
+
+.postimages:hover {
+    opacity: 0.8;
+}
 
 .wp-block-quote {
     display: block;
@@ -360,6 +382,7 @@
 .imgbaku {
     display: block;
     margin: auto;
+    padding-bottom: 60px;
     width: 90%;
 }
 
@@ -470,7 +493,7 @@
 
 @media screen and (min-width: 500px){
 
-/*/HOME*/
+/* HOME */
 
 .mobimg {
     height: 600px;
@@ -495,4 +518,136 @@
 
 
 
+}
+
+@media screen and (min-width: 768px){
+
+
+/* HOME */
+
+
+/* BLOG */
+
+.borderstyle {
+    border-left: 20px solid var(--beige);
+    border-right: 20px solid var(--beige);
+}
+
+.postcontainer {
+    border: none;
+}
+
+.postbox {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: space-evenly;
+    max-width: 900px;
+}
+
+.postcontent {
+    height: 420px;
+}
+
+.text-justify {
+    height: 65px;
+}
+
+.butaimg {
+    margin-bottom: 0;
+}
+
+
+
+/*
+.pagename {
+    margin: 0 20px;
+}
+
+.pagename p {
+    display: block;
+    text-align: center;
+    font-family: var(--della);
+    color: var(--beige);
+    font-size: 1em;
+    max-width: 320px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 2px solid var(--beige);
+    border-radius: 40px;
+    -webkit-text-stroke: 0.6px var(--black);
+    text-transform: none;
+}
+
+.postcontent {
+    border: 3px solid var(--beige);
+    margin: 20px 30px;
+    color: var(--black);
+}
+
+.postcontent:hover {
+    border: 3px ridge var(--black);
+}
+
+.postcontent h2 {
+    color: var(--black);
+    margin: 10px;
+    padding: 2px 0;
+    font-size: 1.1em;
+}
+
+.text-justify {
+    color: var(--black);
+    font-size: 0.9em;
+    margin: -10px 10px 30px;
+}
+
+.postcontent button {
+    display: block;
+    color: var(--black);
+    font-family: var(--della);
+    font-size: 0.8em;
+    text-transform: uppercase;
+    background-color: var(--white);
+    border: 3px solid var(--beige);
+    box-shadow: 0 2px 10px 0px var(--beige);
+    border-radius: 60px;
+    margin: 20px auto;
+    width: 80%;
+    height: 40px;
+}
+
+.postcontent button:hover {
+    border: 3px unset var(--black);
+    box-shadow: 0 2px 20px 0px var(--beige);
+    font-size: 0.9em;
+}
+
+.r-m-btn span {
+    font-size: 1.2em;
+}
+
+.postsimage {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.postsimage:hover {
+    opacity: 0.8;
+}
+
+.butaimg {
+    display: block;
+    margin: 30px auto;
+    width: 30px;
+    transform: rotate(-25deg);
+}
+*/
+
+/* BLOGPAGE */
+/* ABOUT */
+/* CONTACT */
 }

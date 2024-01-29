@@ -39,37 +39,34 @@ const postBox = document.querySelector(".postbox");
 }
 
 filterBtn()
-   /*
-    // Turn on the kettle button
-    var powerButton = document.querySelector("#btn2");
-    powerButton.addEventListener("click", function() {
-    powerButton.textContent = "ON";
-    powerButton.style.backgroundColor = "#46b84c";  
-    console.log ("Kettle is on"); 
-    });
 
-} else if (indexImage.src.match ("/images/1.jpeg")){
-    indexImage.src = "/images/2.jpeg"; 
-    indexButton.innerHTML = "Water is boiled and the next step is...";
-    indexText.innerHTML = "to fill the can with aromatic leaves and then with hot water";
-    document.getElementById("btn2").style.display = "none";
-} else if (indexImage.src.match ("/images/2.jpeg")){
-    indexImage.src = "/images/3.avif";
-    indexButton.innerHTML = "More waiting in process...";
-    indexText.innerHTML = "Let the the sitt for 10 minutes";
-} else if (indexImage.src.match ("/images/3.avif")){
-    indexImage.src = "/images/4.jpeg";
-    indexButton.innerHTML = "Now that the waiting is done...";
-    indexText.innerHTML = "fill the cups with tea";  
-} else if (indexImage.src.match ("/images/4.jpeg")){
-    indexImage.src = "/images/5.jpeg";
-    indexButton.innerHTML = "Finally, a good cup of tea";
-    indexText.innerHTML = "and enjoy your tea with some sweets, such as baklava...mhhm";
-} else {
-    indexImage.src = "/images/0.jpeg";
-    indexButton.innerHTML = alert("Do you love tea?"); 
-    indexButton.innerHTML = "If you do, then let us make more tea.";
-    indexText.innerHTML = "";
-}
-}
-console.log (changeText);*/
+
+unction createPostCard(posts) {
+    loadPage();
+    
+        const postContent = document.createElement("a");
+        postContent.className ="postcontent";
+        postContent.href = "blogpage.html?id=" + posts.id;
+        postContent.id = posts.id;
+
+        const postsImage = document.createElement("img");
+        postsImage.className ="postsimage";
+        postsImage.src = posts._embedded["wp:featuredmedia"][0].source_url;
+        postsImage.alt = posts.title.rendered;
+        postsImage.href = "blogpage.html?id=" + posts.id;
+        postContent.append(postsImage);
+
+        const title = document.createElement("h2");
+        title.className ="poststitle";
+        title.href = "blogpage.html?id=" + posts.id;
+        title.innerText = posts.title.rendered;
+        postContent.append(title);
+
+        const shortText = document.createElement("p");
+        shortText.className ="shorttext";
+        shortText.href = "blogpage.html?id=" + posts.id;
+        shortText.innerText = posts.excerpt.rendered;
+        postContent.append(shortText);
+
+
+        

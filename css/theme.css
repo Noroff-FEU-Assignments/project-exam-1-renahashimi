@@ -23,6 +23,7 @@ header {
     position: fixed;
     z-index: 5;
     width: 100%;
+    max-width: 1000px;
     background-color: var(--beige);
     box-shadow: 0px 0px 60px black;
     margin-top: -40px;
@@ -31,9 +32,8 @@ header {
 main {
     display: block;
     background-color: var(--white);
-    max-width: 1100px;
-    margin: auto;
-    margin-top: 40px;
+    max-width: 1000px;
+    margin: 40px auto -20px;
     padding-top: 50px;
 }
 
@@ -62,6 +62,7 @@ button, .poststitle, .postsimage, .backbutton {
 
 
 /* BACK TO TOP */
+
 .btt {
     background-color: var(--beige);
     padding: 10px;
@@ -94,7 +95,7 @@ button, .poststitle, .postsimage, .backbutton {
     font-family: var(--water);
 }
 
-.sitename, .sitename h1 {
+.sitename, .sitename p {
     display: flex;
     font-size: 1.7em;
     color: var(--black);
@@ -105,10 +106,11 @@ button, .poststitle, .postsimage, .backbutton {
 .sitename span {
     font-size: 1.2em;
     color: var(--black);
-    margin: 2px 0 0 -6px;
+    margin: 2px 0 0 -4px;
 }
 
-.headh1 p {
+.rh-name {
+    font-size: 0.9em;
     font-family: var(--della);
     color: var(--white);
     margin: -45px 55px;
@@ -282,10 +284,124 @@ button, .poststitle, .postsimage, .backbutton {
     margin-left: 30px;
 }
 
+}
 
 
+@media screen and (min-width: 768px){
+
+/*HOME*/
+
+
+/*NAVIGATION*/
+
+.nav2 a {
+    font-size: 1.2em;
+}
+
+}
+
+@media screen and (min-width: 1000px){
+
+/* ALL PAGES */
+
+body {
+    background-image: url(/images/Paisley5.jpeg);
+    background-size: 350px;
+    background-color: var(--white);
+    width: 1000px;
+}
+
+main, body , header {
+    max-width: 1000px;
+    background-color: var(--white);
+}
+
+/*HOME*/
+
+
+/*NAVIGATION*/
+
+.navigation1 {
+    grid-template-columns: 25% 75%;
+    width: 100%;
+    box-shadow: none;
+    background-color: var(--beige);
+}
+
+.hideX, .navigation1 label{
+    display: none;
+    visibility: hidden;
+}
+
+.nav1 {
+    display: block;
+    width: 100%;
+}
+
+.nav2{ 
+    max-width: 750px;
+}
+
+.nav2 li {
+    width: 450px;
+    max-width: 100%;
+    padding: 1px 10px;
+    justify-content: center;
+}
+
+.nav2 a {
+    width: 140px;
+    font-size: 1em;
+    border: none;
+    padding: 5px;
+    text-align: center;
+}
+
+.nav2 a:hover {
+    min-width: 100%;
+    font-size: 1.1em;
+    padding: 2px;
+}
+
+.nav2 ul {
+    display: flex;
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    box-shadow: none;
+    background-color: var(--beige);
+
+}
+/* 
+
+.navigation1 li, .nav2 a {
+    font-size: 1em;
+    color: var(--black);
+    margin: 10px auto;
+    padding: 2px;
+}
+
+.nav2 a  {
+    display: block;
+    padding: 2px 20px;
+    width: 170px;
+    border-left: 2px solid var(--white);
+    border-right: 2px solid var(--white);
+    letter-spacing: 0.2em;
+}
+
+.nav2 a:hover {
+    min-width: 100px;
+    background-color: #fff;
+    color: var(--black);
+    border-radius: 60px;
+    box-shadow: 0 1px 15px var(--black);
+
+}
+ */
 
 
 
 }
+
 

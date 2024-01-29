@@ -1,8 +1,6 @@
 const form = document.querySelector("#c-form");
 const fullname = document.querySelector("#fullname");
 const fullnameErr = document.querySelector("#fullnameerror");
-const phone = document.querySelector("#phone");
-const phoneErr = document.querySelector("#phoneerror");
 const email = document.querySelector("#email");
 const emailErr = document.querySelector("#emailerror");
 const subject = document.querySelector("#subject");
@@ -20,21 +18,19 @@ function validateContactForm (event) {
     } else {
         fullnameErr.style.display = "block";
     }
-    if (checkLength(phone.value, 7) === true){
-        phoneErr.style.display = "none"; 
-    } else {
-        phoneErr.style.display = "block";
-    }
+
     if (validEmail(email.value) === true){
         emailErr.style.display = "none"; 
     } else {
         emailErr.style.display = "block";
     }
+
     if (checkLength(subject.value, 15) === true){
         subjectErr.style.display = "none"; 
     } else {
         subjectErr.style.display = "block";
     }
+    
     if (checkLength(message.value, 24) === true){
         messageErr.style.display = "none"; 
     } else {
@@ -47,12 +43,11 @@ form.addEventListener("submit", validateContactForm);
         event.preventDefault();
         if (
             checkLength(fullname.value, 4) &&
-            checkLength(phone.value, 7) &&
             validEmail(email.value) &&
             checkLength(subject.value, 14) &&
             checkLength(message.value, 24)
         ) { 
-            alert("Thank you for contacting us!");
+            // alert("Thank you for contacting us!");
         formSuccess.innerHTML = `<div class="successmessage">
                                     <p>Thank you for contacting us! We will contact you shortly.</p>
                                 </div>`

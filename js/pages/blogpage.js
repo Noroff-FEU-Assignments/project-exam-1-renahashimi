@@ -1,12 +1,8 @@
 import { BUTACUISINE_URL, BUTACUISINE_URL_MEDIA } from "../api/url.js";
 import { errorMessage } from "../api/errormessage.js";
+import * as pageloader from "../common.js";
 import { loadPage } from "../common/pageloader.js";
 
-
-export const params = new URLSearchParams (document.location.search);
-export const id = params.get ("id");
-export const url = BUTACUISINE_URL + id + "?_embed";
-console.log(url);
 const postContainer2 = document.querySelector(".postcontainer2");
 const postTitle = document.querySelector(".posttitle");
 const postImage = document.querySelector(".postimage");
@@ -21,8 +17,10 @@ backButton.innerHTML = "GO BACK TO POSTS";
 
 async function getSinglePosts() {
     try{
-        const response = await fetch(url);
+        const response = await fetch(BUTACUISINE_URL);
         const posts = await response.json();
+
+        console.log(posts);
 
         createPosts(posts);
         loadPage();
@@ -37,12 +35,43 @@ async function getSinglePosts() {
     postContainer2.innerHTML = errorMessage();
     }
 }
-    function createPosts(posts){
-        loadPage();
-        postTitle.innerHTML += `<h1>${posts.title.rendered}</h1>`;
-        postImage.innerHTML += `<div><img class="postimages" src="${posts._embedded["wp:featuredmedia"][0].source_url}" alt="${posts.title.rendered}"></div>`;
-        postText.innerHTML += `<p>${posts.content.rendered}</p>`;
-        postQuote.innerHTML += `<p>Ready, Cook & <span>Bon Appetit</span></p>`;
-    }
-getSinglePosts()
+getSinglePosts();
+
+
+function createPosts(posts){
+    loadPage();
+    postTitle.innerHTML += `<h1>${posts.title.rendered}</h1>`;
+    postImage.innerHTML += `<img class="postimages" src="${posts._embedded["wp:featuredmedia"][0].source_url}" alt="${posts.title.rendered}" onclick="">`;
+    postText.innerHTML += `<p>${posts.content.rendered}</p>`;
+    postQuote.innerHTML += `<p>Ready, Cook & <span>Bon Appetit</span></p>`;
+}
+
+
+
+//Modal 
+
+    const imageUrl = document.querySelector(".postimages").src;
+    const modal = document.querySelector(".modal");
+    const modalImg = document.querySelectorAll(".modalimg");
+    const modalExit = document.querySelectorAll(".modalexit");
+    console.log(imageUrl);
+modalImg.src = imageUrl;
+
+        imageUrl.addEventListener("click", () => {
+            modal.showModal();
+        })
+    
+        modalExit.addEventListener("click", () => {
+            modal.close();
+        })
+
+
+
+
+
+
+
+
+
+
 

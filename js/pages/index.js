@@ -52,7 +52,7 @@ buttons.forEach((button) => {
                                 <li class="carlink">Go to the recipe</li>
                                 </a>
                               </div>`;
-        } else if (posts[i].id === 157){
+        } if (posts[i].id === 157){
             slidePost2.innerHTML += `<div>
                                <a href="blogpage.html?id=${posts[i].id}">
                                 <img class="postsimage" src="${posts[i]._embedded["wp:featuredmedia"][0].source_url}" alt="${posts[i].title.rendered}">
@@ -61,7 +61,7 @@ buttons.forEach((button) => {
                                 <li class="carlink">Go to the recipe</li>
                                 </a>
                               </div>`;
-        } else if (posts[i].id === 20){
+        } if (posts[i].id === 20){
             slidePost3.innerHTML += `<div>
                                <a href="blogpage.html?id=${posts[i].id}">
                                 <img class="postsimage" src="${posts[i]._embedded["wp:featuredmedia"][0].source_url}" alt="${posts[i].title.rendered}">
