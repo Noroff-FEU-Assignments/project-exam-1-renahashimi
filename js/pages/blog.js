@@ -44,7 +44,7 @@ function createPost(posts) {
                                             <img class="postsimage" src="${posts._embedded["wp:featuredmedia"][0].source_url}" alt="${posts.title.rendered}">
                                             <h2 class="poststitle">${posts.title.rendered}</h2>
                                             <p class="shorttext">${posts.excerpt.rendered}</p>
-                                            <button class="r-m-btn">The recipe <span class="heart">&#9829;</span></button>
+                                            <button class="r-m-btn">The recipe <span class="heart">&#9825;</span></button>
                                         </a>
                                     </div>
                                     <div><img class="butaimg" src="images/buta.png" alt="Buta-Logo"></div>
