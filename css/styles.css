@@ -48,7 +48,7 @@
 
 .welcomecontent {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: auto auto;
     justify-content: center;
     margin: 0 auto 80px;
     width: 100%;
