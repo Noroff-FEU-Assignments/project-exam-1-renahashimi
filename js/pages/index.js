@@ -11,6 +11,23 @@ const postContainer2 = document.querySelector(".postcontainer2");
 
 const buttons = document.querySelectorAll("[data-carousel-button]");
 
+
+/* WELCOME */
+
+const welcomeImg = document.querySelector(".welcomeimg");
+const welcomeTxt = document.querySelector(".welcometxt");
+const welcomeLi = document.querySelector(".welcomeli");
+
+welcomeImg.innerHTML += `<img src="/images/Pomegranate.png" alt="Pomegranate">`;
+welcomeTxt.innerHTML += `<h3>Welcome</h3>
+                          <p>to my blog</p>
+                          <a href="about.html">More about me</a>`;    
+
+
+
+
+
+
 async function carousel() {
   try{
       const response = await fetch(BUTACUISINE_URL_MEDIA);
