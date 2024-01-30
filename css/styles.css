@@ -72,7 +72,6 @@
     min-width: 200px;
 }
 
-
 .welcometxt h3 {
     font-size: 2.5em;
     text-align: right;
@@ -97,7 +96,7 @@
     text-transform: uppercase;
     border: 2px solid var(--black);
     padding: 1px 5px;
-    width: 125px;
+    width: 130px;
     border-radius: 10px;
     font-size: 0.8em;
     margin: 40px 20px;

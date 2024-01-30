@@ -8,6 +8,7 @@ const filter = document.querySelector(".filter");
 const loadMoreBtn = document.querySelector(".loadmorebtn");
 const postBox = document.querySelector(".postbox");
 
+
 const baseUrl = BUTACUISINE_URL_MEDIA + perPage5;
 
 async function getPosts(baseUrl) {
