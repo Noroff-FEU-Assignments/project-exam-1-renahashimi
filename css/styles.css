@@ -12,6 +12,8 @@
     --della:'Della Respira', serif;
     --water:'Water Brush', cursive;
     --kaus: 'Kaushan Script', cursive;
+    --gluten: 'Gluten', cursive;
+    --tran: transparent;
 }
 
 /*HOME*/
@@ -34,7 +36,7 @@
     box-shadow: -5px 10px 20px 0 var(--black);
 }
 
-.mobimg::before {
+/* .mobimg::before {
     content: "";
     position: absolute;
     background-color: var(--black);
@@ -44,80 +46,118 @@
     margin-top: 185px;
     z-index: 1;
     opacity: 0.5;
+} */
+
+
+.quote1 {
+    padding-top: 120px;
+}
+.quote1 p {
+    display: block;
+    font-family: var(--gluten);
+    font-weight: 900;
+    position: relative;
+    color: var(--tran);
+    -webkit-text-stroke: 5px var(--white);
+    font-size: 3.5em;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.quote1 span {
+    text-transform: uppercase;
 }
 
 .welcomecontent {
     display: grid;
     grid-template-columns: auto auto;
-    justify-content: center;
-    margin: 0 auto 80px;
+    justify-content: space-between;
+    margin: 30px auto;
     width: 100%;
-    max-height: 200px;
+    height: 300px;
+    max-width: 500px;
 }
 
 .welcomeimg img {
     display: block;
+    position: absolute;
     max-height: 200px;
+    z-index: 0;
     width: 100%;
-    max-width: 170px;
-    margin: 70px 0 0;
+    max-width: 200px;
+    margin: 50px 0 0;
     border-bottom: 3px solid var(--beige);
-
 }
 
 .welcometxt {
     display: block;
     text-align: right;
-    justify-content: right;
-    min-width: 200px;
+    z-index: 1;
 }
 
 .welcometxt h3 {
-    font-size: 2.5em;
+    font-size: 3em;
     text-align: right;
     font-family: var(--water);
     letter-spacing: 0.2em;
-    margin: 0 10px -10px -70px;
-    padding-top: 20px;
+    margin: -10px 10px -10px 0;
+    padding-top: 5px;
     border-top: 3px solid var(--beige);
 }
 
 .welcometxt p {
-    font-size: 1.7em;
+    font-size: 1.3em;
     text-align: right;
     margin: 0 20px;
 }
 
+.foodbold span{
+    font-size: 1.4em;
+    text-align: right;
+    letter-spacing: 0.1em;
+}
+
 .welcometxt a {
     display: inline-flex;
+    justify-content: center;
     color: var(--black);
     background-color: var(--white);
     cursor: pointer;
     text-transform: uppercase;
-    border: 2px solid var(--black);
+    border: 2px solid var(--beige);
     padding: 1px 5px;
     width: 130px;
     border-radius: 10px;
     font-size: 0.8em;
-    margin: 40px 20px;
+    margin: 30px 20px;
 }
 
 .welcometxt a:hover {
     background-color: var(--beige);
 }
 
-.quote1 p {
+.indexcontact {
     display: block;
-    position: relative;
-    color: var(--white);
-    max-width: 340px;
-    font-size: 0.9em;
-    margin: auto;
+    border: 2px solid var(--black);
+    border-radius: 20px 0;
     text-align: center;
-    line-height: 20px;
-    padding: 150px 0;
+    padding: 5px 10px 20px;
+    margin: 20px;
+}
+
+.indexcontact a {
+    border:  1px dotted var(--black);
     border-radius: 20px;
-    z-index: 2;
+    font-size: 0.7em;
+    color: var(--black);
+    text-transform: uppercase;
+    margin: 10px 0 20px;
+    padding: 2px 5px;
+}
+
+.indexcontact a:hover {
+    background-color: var(--beige);
 }
 
 .heritagetext {
@@ -290,8 +330,8 @@
 .wp-block-quote {
     display: block;
     font-size: 0.8em;
-    margin: -10px auto 10px;
-    padding: 1px 0;
+    margin: -10px 10px 10px;
+    padding: 1px 4px;
     background-color: var(--beige);
     text-align: center;
     border-radius: 10px;
@@ -555,21 +595,22 @@
 /* HOME */
 
 .mobimg {
-    height: 600px;
-    position: 90%;
+    height: 650px;
+    background-position: 95%;
 }
 
 .quote1 {
-    font-size: 1.2em;
-    padding: 20px;
-    line-height: 30px;
-    background-color: transparent;
-    line-height: 20px;
+    font-size: 1.3em;
 }
-
 
 .welcometxt {
     margin-left: 80px;
+}
+
+.welcomeimg img {
+    max-height: 200px;
+    max-width: 200px;
+    margin-top: 20px;
 }
 
 .heritagetext h2 {
@@ -589,12 +630,30 @@
 
 /* HOME */
 
+.mobimg {
+    background-image: url(/images/bbq-grill.jpeg);
+    height: 500px;
+}
+
+.quote1 {
+    padding: 160px 30px;
+}
+
+.quote1 p {
+    text-align: left;
+    font-family: var(--della);
+    -webkit-text-stroke: 0px;
+    color: var(--white);
+    font-size: 2.8em;
+    padding: 0;
+}
+
 
 /* BLOG */
 
 .borderstyle {
     border-left: 20px groove var(--beige);
-    border-right: 20px  var(--beige);
+    border-right: 20px ridge var(--beige);
 }
 
 .postcontainer {
@@ -609,7 +668,7 @@
 }
 
 .postcontent {
-    height: 420px;
+    height: 400px;
 }
 
 .text-justify {
@@ -635,7 +694,7 @@
 .pagename p {
     display: block;
     color: var(--black);
-    font-size: 1.8em;
+    font-size: 1.5em;
     max-width: 50%;
     margin: auto 40px;
     padding: 30px 0;
@@ -645,6 +704,44 @@
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
+
+@media screen and (min-width: 1000px){
+
+
+/* HOME */
+
+.mobimg {
+    background-image: url(/images/pieces-cake.jpg);
+    height: 450px;
+}
+
+.quote1 {
+    padding: 100px 40px;
+}
+
+.quote1 p {
+    -webkit-text-stroke: 2px var(--beige);
+    font-size: 3em;
+    color: var(--beige);
+}
+
+.quote1 span {
+    color: var(--white);
+}
+
+/*BLOG*/
+
+.postbox {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: space-evenly;
+    max-width: 900px;
+}
+
+
+}
+
+
 
 
 /*
@@ -739,4 +836,3 @@
 /* BLOGPAGE */
 /* ABOUT */
 /* CONTACT */
-}

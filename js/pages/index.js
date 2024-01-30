@@ -20,7 +20,8 @@ const welcomeLi = document.querySelector(".welcomeli");
 
 welcomeImg.innerHTML += `<img src="/images/Pomegranate.png" alt="Pomegranate">`;
 welcomeTxt.innerHTML += `<h3>Welcome</h3>
-                          <p>to my blog</p>
+                          <p>to my</p>
+                          <p class="foodbold"><span>food</span> blog</p>
                           <a href="about.html">More about me</a>`;    
 
 

@@ -4,7 +4,7 @@ export const params = new URLSearchParams (document.location.search);
 export const id = params.get ("id");
 export const url = BUTACUISINE_URL_MEDIA + id + "?_embed";
 
-export async function getApiPosts() {
+export async function getApiPosts(id) {
     try{
         const response = await fetch(url);
         const posts = await response.json();

@@ -2,6 +2,68 @@ import { errorMessage } from "../api/errormessage.js";
 import { BUTACUISINE_URL, BUTACUISINE_URL_MEDIA } from "../api/url.js";
 
 
+loadMoreBtn.addEventListener("click", (e) => {
+    const newUrl = BUTACUISINE_URL_MEDIA + restPage;
+    postBox.innerHTML = "";
+    loadPage()
+    getPosts(newUrl);
+    console.log(newUrl);
+    loadMoreBtn.style.display = "none";
+});
+----------------------------------------------
+function createCarouselPosts(posts) {
+
+    const carouselContainer = document.createElement('a');
+    carouselContainer.href = "blog-specific.html?id=" + posts.id;
+    carouselContainer.className = 'carousel-container', 'wrapper';
+    carouselContainer.id = posts.id;
+
+    if (posts._embedded['wp:featuredmedia']) {
+        const image = document.createElement('img');
+        image.src = posts._embedded['wp:featuredmedia'][0].source_url;
+        image.alt = posts._embedded['wp:featuredmedia'][0].alt_text;
+        carouselContainer.append(image);
+    } else {
+        const noImage = document.createElement('p');
+        noImage.innerText = 'No image available';
+        carouselContainer.append(noImage);
+    }
+
+    const title = document.createElement('p');
+    title.innerText = posts.title.rendered;
+    carouselContainer.append(title);
+
+    carousel.append(carouselContainer);
+}
+
+// Carousel buttons
+
+const leftCarouselButton = document.querySelector('.prev');
+const rightCarouselButton = document.querySelector('.next');
+
+leftCarouselButton.addEventListener('click', () => {
+    carousel.scrollLeft += -210;
+});
+
+rightCarouselButton.addEventListener('click', () => {
+    carousel.scrollLeft += 210;
+});
+
+// Handle posts
+
+function handlePost(posts) {
+    for (let i = 0; i < posts.length; i++) {
+        createHTML(posts[i]);
+        createCarouselPosts(posts[i]);
+    }
+}
+
+async function main() {
+    const posts = await getPost();
+    handlePost(posts);
+}
+------------------------------------------
+
 async function filterBtn() {
 const startAndSalad= document.querySelector(".ss");
 const mainCourse = document.querySelector(".mc");

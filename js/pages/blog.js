@@ -8,9 +8,10 @@ const filter = document.querySelector(".filter");
 const loadMoreBtn = document.querySelector(".loadmorebtn");
 const postBox = document.querySelector(".postbox");
 
-
 const baseUrl = BUTACUISINE_URL_MEDIA + perPage5;
 
+const page = 1;
+const currentPosts = 7;
 async function getPosts(baseUrl) {
    try {
     const response = await fetch(baseUrl);
@@ -21,7 +22,7 @@ async function getPosts(baseUrl) {
     loadPage();
     createPost(posts);
     filter.innerHTML += "";
-    pageName.innerHTML += "";
+    pageNameBlog.innerHTML += "";
     return posts;
    
 } catch(error) {
