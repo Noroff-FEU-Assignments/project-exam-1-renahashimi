@@ -8,6 +8,7 @@ const postTitle = document.querySelector(".posttitle");
 const postImage = document.querySelector(".postimage");
 const postText = document.querySelector(".posttext");
 const postQuote = document.querySelector(".postquote");
+const modalBox = document.querySelector(".modalbox");
 
 
 const backButton = document.querySelector(".backbutton");
@@ -24,11 +25,11 @@ async function getSinglePosts() {
 
         createPosts(posts);
         loadPage();
-        postContainer2.innerHTML += "";
-        postTitle.innerHTML += "";
-        postImage.innerHTML += "";
-        postText.innerHTML += "";
-        postQuote.innerHTML += "";
+    
+        const modalImg = document.querySelector(".postimages");
+        modalImg.addEventListener("click", modal);
+
+        console.log(modalImg);
 
     } catch(error) {
     console.log("Unknown error", error);
@@ -38,36 +39,42 @@ async function getSinglePosts() {
 getSinglePosts();
 
 
-function createPosts(posts){
-    loadPage();
-    postTitle.innerHTML += `<h1>${posts.title.rendered}</h1>`;
-    postImage.innerHTML += `<img class="postimages" src="${posts._embedded["wp:featuredmedia"][0].source_url}" alt="${posts.title.rendered}" onclick="">`;
-    postText.innerHTML += `<p>${posts.content.rendered}</p>`;
-    postQuote.innerHTML += `<p>Ready, Cook & <span>Bon Appetit</span></p>`;
+//Modal 
+function modal(){
+    const modalImage = document.querySelector(".modalimage");
+    modalImage.classList.add("open");
+    modalImage.addEventListener("click", () => {
+        modalImage.classList.remove("open")
+
+        //console.log(modal, modalImage, modalbox);
+    });
 }
 
 
 
-//Modal 
+function createPosts(posts){
+    const imgUrl = posts._embedded["wp:featuredmedia"][0].source_url;
+    const imgAlt = posts._embedded["wp:featuredmedia"][0].alt_text;
 
-    const imageUrl = document.querySelector(".postimages").src;
-    const modal = document.querySelector(".modal");
-    const modalImg = document.querySelectorAll(".modalimg");
-    const modalExit = document.querySelectorAll(".modalexit");
-    console.log(imageUrl);
-modalImg.src = imageUrl;
-
-        imageUrl.addEventListener("click", () => {
-            modal.showModal();
-        })
-    
-        modalExit.addEventListener("click", () => {
-            modal.close();
-        })
+    loadPage();
+    postTitle.innerHTML += `<h1>${posts.title.rendered}</h1>`;
+    postImage.innerHTML += `<img class="postimages" src="${imgUrl}" alt="${imgAlt}">`;
+    modalBox.innerHTML += `<div class="modalimage"><div class="modalcontent"><img src="${imgUrl}" alt="${imgAlt}"></div></div>`;
+    postText.innerHTML += `<p>${posts.content.rendered}</p>`;
+    postQuote.innerHTML += `<p>Ready, Cook & <span>Bon Appetit</span></p>`;
+}console.log(modalBox.innerHTML);
 
 
 
 
+
+
+
+/*<div class="post-aut-date">
+    <i class="fa-solid fa-pen-nib fa-xs" style="color: #000000;"></i> ${posts._embedded.author[0].name} 
+    <i class="fa-solid fa-calendar-days fa-xs" style="color: #000000;"></i> ${posts.date.slice(0, -9)} 
+</div>
+*/
 
 
 

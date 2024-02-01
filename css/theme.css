@@ -194,7 +194,7 @@ button, .poststitle, .postsimage, .backbutton {
 
 .nav3 {
     display: block;
-    background-image: url(/images/Pomegranate\ -19\ –\ lite.jpeg);
+    background-image: url(/images/Pomegranate.png);
     background-color: var(--white);
     background-size: cover;
     background-position: 90%;
@@ -377,33 +377,7 @@ main, body , header {
     background-color: var(--beige);
 
 }
-/* 
 
-.navigation1 li, .nav2 a {
-    font-size: 1em;
-    color: var(--black);
-    margin: 10px auto;
-    padding: 2px;
-}
-
-.nav2 a  {
-    display: block;
-    padding: 2px 20px;
-    width: 170px;
-    border-left: 2px solid var(--white);
-    border-right: 2px solid var(--white);
-    letter-spacing: 0.2em;
-}
-
-.nav2 a:hover {
-    min-width: 100px;
-    background-color: #fff;
-    color: var(--black);
-    border-radius: 60px;
-    box-shadow: 0 1px 15px var(--black);
-
-}
- */
 
 
 

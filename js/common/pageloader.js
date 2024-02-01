@@ -4,7 +4,7 @@ export function loadPage(){
     load.innerHTML = "Loading...";
 
     setTimeout (function () {
-        loader.classList.remove("loader-indicator");
+        loader.style.display = "none";
         load.style.display = "none";
     }, 2800);
 }

@@ -295,12 +295,24 @@
     opacity: 0.8;
 }
 
+.post-aut-date{
+    font-size: 0.6em;
+    color: var(--black);
+}
+
+.post-aut-date i{
+    margin: 10px 0;
+    padding-left: 10px;
+}
+
 .butaimg {
     display: block;
     margin: 30px auto;
     width: 30px;
     transform: rotate(-25deg);
 }
+
+  
 
 
 /*BLOGPAGE*/
@@ -835,4 +847,4 @@
 
 /* BLOGPAGE */
 /* ABOUT */
-/* CONTACT */
+/* CONTACT*/
