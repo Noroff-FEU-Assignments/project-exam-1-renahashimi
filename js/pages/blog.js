@@ -15,13 +15,13 @@ console.log(baseUrl);
 
 let currentCategory = 1;
 let currentPage = 1;
-let currentPosts = 1;
+let currentPosts = 6;
 
-const url = `${baseUrl}?per_page${currentPosts}&?_page${currentPage}&_embed`;
+const url = `${baseUrl}&per_page${currentPosts}&_embed`;
 console.log(url);
 async function getPosts() {
    try {
-    const response = await fetch(url);
+    const response = await fetch(urlLoad);
     const posts = await response.json(); 
     
     console.log(posts);
@@ -64,6 +64,7 @@ function createPost(posts) {
             });
 }
 
+const postContent = document.querySelectorAll(".postcontent")
 const filterBtn = document.querySelectorAll(".filter-btn");
 
 filterBtn.forEach(function (catBtn) {
@@ -76,14 +77,12 @@ filterBtn.forEach(function (catBtn) {
 
         if (catFilter === 1) {
             currentCategory = 1;
-            getPosts(urlLoad);
+            getPosts(catUrl,  postContainer)
+            console.log(currentCategory);
         } else {
             currentCategory = catFilter;
-       
-            currentPage = 1;
-
             const catUrl = urlLoad + `&categories=${currentCategory}&page=${currentPage}`;
-            getPosts(catUrl);
+            getPosts(catUrl, postContainer);
             console.log('Category URL:', catUrl, catFilter);
         }
     }
