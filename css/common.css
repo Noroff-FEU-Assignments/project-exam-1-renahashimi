@@ -507,7 +507,9 @@
 
 .disabled {
     pointer-events: none;
-    color: var(--black);
+    opacity: 0.5;
+    cursor: not-allowed;
+
 }
 
 

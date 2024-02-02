@@ -75,28 +75,24 @@ function carouselSlide(index) {
   };
   
 nextBtn.addEventListener("click", function(){
-  carouselContainer.style.transform = "translateX(-100%)";
-  currentIndex = (currentIndex + 1)
-  carouselSlide(currentIndex);
-
-  if (currentIndex === posts.length -1) {
-    nextBtn.classList.add("disabled");
-  } else {
+  if (currentIndex < allPosts -1) {
+    currentIndex++;
+    carouselSlide(currentIndex);
     prevBtn.classList.remove("disabled");
   }
-
-
+  if (currentIndex === allPosts -1) {
+    nextBtn.classList.add("disabled");
+  }
 });
-prevBtn.addEventListener("click", function(){
-  carouselContainer.style.transform = "translateX(0)";
-  currentIndex = (currentIndex - 1)
-  carouselSlide(currentIndex);
 
-    
+prevBtn.addEventListener("click", function(){
+  if (currentIndex > 0) {
+    currentIndex--;
+    carouselSlide(currentIndex);
+    nextBtn.classList.remove("disabled");
+  }  
   if (currentIndex === 0) {
     prevBtn.classList.add("disabled");
-  } else {
-    nextBtn.classList.remove("disabled");
   }
 
 });
