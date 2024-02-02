@@ -1,4 +1,4 @@
-import { BUTACUISINE_URL, BUTACUISINE_URL_MEDIA, urlLoad, restPage } from "../api/url.js";
+import { BUTACUISINE_URL, BUTACUISINE_URL_MEDIA, urlLoad, restPage, baseUrl } from "../api/url.js";
 import { errorMessage } from "../api/errormessage.js";
 import { loadPage } from "../common/pageloader.js";
 import * as pageloader from "../common.js";
@@ -6,27 +6,26 @@ import * as pageloader from "../common.js";
 
 
 const pageNameBlog = document.querySelector(".pagename");
-const filterBtn = document.querySelectorAll(".filter-btn");
 const loadMoreBtn = document.querySelector(".loadmorebtn");
 const postContainer = document.querySelector(".postbox");
 const postContainer3 = document.querySelector(".postbox2");
 
-console.log(filterBtn);
-const baseUrl = BUTACUISINE_URL_MEDIA + restPage;
 
-console.log(urlLoad);
+console.log(baseUrl);
 
+let currentCategory = 1;
+let currentPage = 1;
+let currentPosts = 1;
 
-const page = 1;
-const currentPosts = 7;
+const url = `${baseUrl}?per_page${currentPosts}&?_page${currentPage}&_embed`;
+console.log(url);
 async function getPosts() {
    try {
-    const response = await fetch(BUTACUISINE_URL_MEDIA);
+    const response = await fetch(url);
     const posts = await response.json(); 
     
     console.log(posts);
     loadPage();
-    
     createPost(posts);
     postContainer.innerHTML += "";
     pageNameBlog.innerHTML += "";
@@ -37,11 +36,12 @@ async function getPosts() {
    // postBox.innerHTML = errorMessage();
 }
 }
-getPosts(BUTACUISINE_URL_MEDIA);
+getPosts();
 
 
 
 function createPost(posts) {
+    postContainer.innerHTML = "";
     pageNameBlog.innerHTML = `<h1>Blog Posts</h1>
                             <div class="blogquote"><p>“Where heritage meets the plate.”</p> </div>`;
     loadPage();
@@ -64,40 +64,27 @@ function createPost(posts) {
             });
 }
 
-loadMoreBtn.addEventListener("click", (e) => {
-    const newUrl = urlLoad;
-    postContainer.innerHTML = "";
-    getPosts(newUrl);
-    console.log(newUrl);
-    loadMoreBtn.style.display = "none";
-});
-
-
-
-
-
-
-
-
-
-// function renderSpinner(){
-//     const recipe = `<div class="spinn"></div>`;
-//     return recipe;
-// }
+const filterBtn = document.querySelectorAll(".filter-btn");
 
 filterBtn.forEach(function (catBtn) {
     catBtn.onclick = function (e) {
         filterPost(catBtn);
         const catFilter = e.target.value;
-        console.log(catBtn);
+        console.log('Selected URL:', catFilter);
 
-        
+        postContainer.innerHTML = "";
+
         if (catFilter === 1) {
-            getPosts(baseUrl, postContainer);
+            currentCategory = 1;
+            getPosts(urlLoad);
         } else {
-            const catUrl = baseUrl + `&categories=${catFilter}`;
+            currentCategory = catFilter;
+       
+            currentPage = 1;
+
+            const catUrl = urlLoad + `&categories=${currentCategory}&page=${currentPage}`;
             getPosts(catUrl);
-            console.log(catUrl, catFilter);
+            console.log('Category URL:', catUrl, catFilter);
         }
     }
 });
@@ -107,6 +94,15 @@ function filterPost(filterOn) {
     filterOn.classList.add("post-selected");
         
 }
+
+// loadMoreBtn.addEventListener("click", async () => {
+//     currentPage++;
+//     const newUrl = urlLoad + `&categories=${currentCategory}&page=${currentPage}`;
+//     await getPosts(newUrl);
+//     console.log(newUrl);
+//     loadMoreBtn.style.display = "none";
+// });
+
 
 
 // //<div><img class="butaimg" src="images/buta.png" alt="Buta-Logo"></div>
