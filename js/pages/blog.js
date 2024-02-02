@@ -85,29 +85,28 @@ loadMoreBtn.addEventListener("click", (e) => {
 //     return recipe;
 // }
 
-// filterBtn.forEach(function (catBtn) {
-//     catBtn.onclick = function (e) {
-//         filterPost(catBtn);
-//         const catFilter = e.target.value;
-//         console.log(catBtn);
+filterBtn.forEach(function (catBtn) {
+    catBtn.onclick = function (e) {
+        filterPost(catBtn);
+        const catFilter = e.target.value;
+        console.log(catBtn);
 
         
-//         if (catFilter === 1) {
-//             getPosts(baseUrl, postContainer);
-//         } else {
-//             const catUrl = baseUrl + `&categories=${catFilter}`;
-//             getPosts(catUrl);
-//             console.log(catUrl, catFilter);
-        
-//         }
-//     }
-// });
+        if (catFilter === 1) {
+            getPosts(baseUrl, postContainer);
+        } else {
+            const catUrl = baseUrl + `&categories=${catFilter}`;
+            getPosts(catUrl);
+            console.log(catUrl, catFilter);
+        }
+    }
+});
 
-// function filterPost(filterOn) {
-//     filterBtn.forEach((catBtn) => catBtn.classList.remove("post-selected"));
-//     filterOn.classList.add("post-selected");
+function filterPost(filterOn) {
+    filterBtn.forEach((catBtn) => catBtn.classList.remove("post-selected"));
+    filterOn.classList.add("post-selected");
         
-// }
+}
 
 
 // //<div><img class="butaimg" src="images/buta.png" alt="Buta-Logo"></div>
