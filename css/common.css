@@ -438,22 +438,21 @@
     border: none;
     width: 100%;
     overflow: hidden;
-
     scroll-behavior: smooth;
 }
 
 .carousel {
     display: flex;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease-in-out;
     padding-left: 40px;
-    gap: 6px;
+    gap: 4px;
 }
 
 .carouselcontent {
-    display: block;
+    display: ;
     transition: transform 0.5s ease;
     border-radius: 0;
-    width: 350px;
+    width: 400px;
     margin: 0 50px;
     padding: 0 0 20px;
 }
@@ -480,7 +479,6 @@
 
 .carbtnpre {
     left: 15px;
-    
     box-shadow: -5px 10px 20px 0 var(--black);
 }
 
@@ -505,6 +503,11 @@
 .post-aut-date2  {
     font-size: 1em;
     width: 400px;
+}
+
+.disabled {
+    pointer-events: none;
+    color: var(--black);
 }
 
 
