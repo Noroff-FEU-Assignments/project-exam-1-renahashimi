@@ -1,22 +1,19 @@
 import { errorMessage } from "../api/errormessage.js";
 import { BUTACUISINE_URL, BUTACUISINE_URL_MEDIA, carouselUrl } from "../api/url.js";
 
-const nextBtn = document.querySelector(".next");
-const prevBtn = document.querySelector (".pre")
+
+let startPosts = 0;
+let totalPagePost = 2;
+
+const nextBtn = document.querySelector(".carbtnnext");
+console.log(nextBtn);
+const prevBtn = document.querySelector (".carbtnpre");
 const carouselContainer = document.querySelector(".carousel");
-const slidePost1 = document.querySelector("#slidepost1");
-const slidePost2 = document.querySelector("#slidepost2");
-const slidePost3 = document.querySelector("#slidepost3");
-const postContainer2 = document.querySelector(".postcontainer2");
-
-const buttons = document.querySelectorAll("[data-carousel-button]");
-
 
 /* WELCOME */
 
 const welcomeImg = document.querySelector(".welcomeimg");
 const welcomeTxt = document.querySelector(".welcometxt");
-const welcomeLi = document.querySelector(".welcomeli");
 
 welcomeImg.innerHTML += `<img src="/images/Pomegranate.png" alt="Pomegranate">`;
 welcomeTxt.innerHTML += `<h3>Welcome</h3>
@@ -30,7 +27,7 @@ async function carousel() {
   try {
       const response = await fetch(carouselUrl);
       const posts = await response.json();
-      console.log(carouselUrl);
+      console.log(posts);
      
       carouselContent(posts);
       carouselContainer.innerHTML += "";
@@ -45,22 +42,36 @@ carousel();
 function carouselContent(posts) {
   posts.forEach(function (posts) {
     carouselContainer.innerHTML += `<div class="carouselcontent">
-                                      <a href="blogpage.html?id=${posts.id}">
+                                      <a href="blogpage.html?id=${posts.id}" class="caritem">
                                         <img class="carimage" src="${posts._embedded["wp:featuredmedia"][0].source_url}" alt="${posts.title.rendered}">
-                                        <div class="post-aut-date">
-                                            <i class="fa-solid fa-pen-nib fa-xs" style="color: #000000;"></i> ${posts._embedded.author[0].name} 
-                                            <i class="fa-solid fa-calendar-days fa-xs" style="color: #000000;"></i> ${posts.date.slice(0, -9)} 
-                                        </div>
-                                        <h4 class="cartitle">${posts.title.rendered}</h4>
-                                        <p class="cartext">${posts.excerpt.rendered}</p>
-                                        <button class="r-m-btn">The recipe <span class="heart">&#9825;</span></button>
+                                        <div class="caritemblock">
+                                          <div class="post-aut-date2">
+                                            <i class="fa-solid fa-pen-nib fa-xs" style="color: #000000;"> Rena Hashimi</i> 
+                                            <i class="fa-solid fa-calendar-days fa-xs" style="color: #000000;"> ${posts.date.slice(0, -9)} </i> 
+                                          </div>
+                                          <h4 class="cartitle">${posts.title.rendered}</h4>
+                                          <p class="cartext">${posts.excerpt.rendered}</p>
+                                          <button class="carlink">The recipe <span class="heart">&#9825;</span></button>
+                                        </div> 
                                       </a>
                                     </div>`;
-
-      }); 
-
+  }); 
 }
 
+  nextBtn.addEventListener("click", function() {
+    carouselContainer.style.animation = "slides 14s forwards";
+});
+
+prevBtn.addEventListener("click", function() {
+  carouselSpinner.style.animation = "slides 14s forwards";
+});
+
+// prevBtn.addEventListener("click", () => {
+//   carouselContainer.scrollLeft += -1000;
+// });
+// nextBtn.addEventListener("click", () => {
+//   carouselContainer.scrollLeft += 1000;
+// });
 
 // REFERENCE FOR CAROUSEL: https://youtu.be/9HcxHDS2w1s?si=AlX06ovT6-FNpefE
 // buttons.forEach((button) => {

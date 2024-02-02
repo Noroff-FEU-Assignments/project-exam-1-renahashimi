@@ -11,6 +11,17 @@ pageNameBlog.innerHTML = `<h1>Blog Posts</h1>
 
 //Rendering and loading pages
                         
+showMore.onclick = function () {
+    const newUrl =
+     // /wp-json/wp/v2/posts?per_page=20&_embed";
+    postContainer.innerHTML = "";
+    showMore.style.display = "none";
+    getAllPosts(newUrl);
+    console.log(newUrl);
+  };
+
+
+
 
 let currentPage = 1;
 let currentPosts = 8;

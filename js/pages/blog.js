@@ -1,7 +1,9 @@
-import { BUTACUISINE_URL, BUTACUISINE_URL_MEDIA, perPage5, restPage } from "../api/url.js";
+import { BUTACUISINE_URL, BUTACUISINE_URL_MEDIA, urlLoad, restPage } from "../api/url.js";
 import { errorMessage } from "../api/errormessage.js";
 import { loadPage } from "../common/pageloader.js";
 import * as pageloader from "../common.js";
+
+
 
 const pageNameBlog = document.querySelector(".pagename");
 const filterBtn = document.querySelectorAll(".filter-btn");
@@ -10,9 +12,9 @@ const postContainer = document.querySelector(".postbox");
 const postContainer3 = document.querySelector(".postbox2");
 
 console.log(filterBtn);
-const baseUrl = BUTACUISINE_URL_MEDIA;
+const baseUrl = BUTACUISINE_URL_MEDIA + restPage;
 
-console.log(baseUrl);
+console.log(urlLoad);
 
 
 const page = 1;
@@ -24,6 +26,7 @@ async function getPosts() {
     
     console.log(posts);
     loadPage();
+    
     createPost(posts);
     postContainer.innerHTML += "";
     pageNameBlog.innerHTML += "";
@@ -34,7 +37,7 @@ async function getPosts() {
    // postBox.innerHTML = errorMessage();
 }
 }
-getPosts();
+getPosts(BUTACUISINE_URL_MEDIA);
 
 
 
@@ -60,6 +63,20 @@ function createPost(posts) {
                                         </div>`;                                                      
             });
 }
+
+loadMoreBtn.addEventListener("click", (e) => {
+    const newUrl = urlLoad;
+    postContainer.innerHTML = "";
+    getPosts(newUrl);
+    console.log(newUrl);
+    loadMoreBtn.style.display = "none";
+});
+
+
+
+
+
+
 
 
 

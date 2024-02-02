@@ -1,4 +1,4 @@
-import { BUTACUISINE_URL, BUTACUISINE_URL_MEDIA, perPage5, restPage } from "../api/url.js";
+import { BUTACUISINE_URL, BUTACUISINE_URL_MEDIA } from "../api/url.js";
 
 export async function getPosts() {
    try {
