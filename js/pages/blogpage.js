@@ -10,7 +10,6 @@ const postImage = document.querySelector(".postimage");
 const postText = document.querySelector(".posttext");
 const postQuote = document.querySelector(".postquote");
 const modalBox = document.querySelector(".modalbox");
-//const likePosts = document.querySelector(".likeposts");
 
 
 const backButton = document.querySelector(".backbutton");
@@ -24,6 +23,10 @@ async function getSinglePosts() {
         const posts = await response.json();
 
         console.log(posts);
+        if (!posts) {
+            console.error("Posts not found");
+            return;
+        }
 
         createPosts(posts);
         //setupLikePosts(posts);
@@ -71,30 +74,33 @@ function createPosts(posts){
 }console.log(modalBox.innerHTML);
 
 
-function setupLikePosts(posts) {
+async function setupLikePosts() {
     try {
-        let post = await getPosts(BUTACUISINE_URL_MEDIA);
-   
+        let morePosts = await getPosts(BUTACUISINE_URL_MEDIA);
+        
+        const likePosts = document.querySelector(".likeposts");
 
-        const imgUrl = post._embedded["wp:featuredmedia"][0].source_url;
-        const imgAlt = post._embedded["wp:featuredmedia"][0].alt_text;
+        if (!morePosts) {
+            console.error("Posts not found");
+            return;
+        }
+
+        morePosts.forEach((post) => {
+            const imgUrl = post._embedded["wp:featuredmedia"][0].source_url;
+            const imgAlt = post._embedded["wp:featuredmedia"][0].alt_text;
+    
+            likePosts.innerHTML += `<div class="morepostcontent">
+                                        <img class="postimages" src="${imgUrl}" alt="${imgAlt}">
+                                        <h4>${post.title.rendered}</h4>
+                                    </div>`;
+        });
+        
     }catch(error) {
         console.log("Unknown error", error);
         likePosts.innerHTML = errorMessage();
-        }
-        for (let i = 0; i < post.length; i++) {
-   
-            likePosts.innerHTML += `<img class="postimages" src="${imgUrl}" alt="${imgAlt}">
-            <h4>${post.title.rendered}</h4>`;
-        
-        
-
-
     }
 }
-
-
-
+setupLikePosts();
 
 
 

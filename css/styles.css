@@ -414,6 +414,46 @@
     font-size: 1.2em;
 }
 
+.likesection {
+    display: block;
+    margin: 40px auto;
+    border-top: 2px solid var(--beige);
+    border-bottom: 2px solid var(--beige);
+}
+
+.likeposts {
+    display: flex;
+    overflow: scroll;
+}
+
+.likesection h3, .likesection p {
+    display: block;
+    text-align: center;
+    font-size: small;
+}
+.likesection h3 {
+    text-transform: uppercase;
+    margin-bottom: -15px;
+}
+
+.morepostcontent {
+    width: 100%;
+    height: 150px;
+    margin: 20px ;
+    border: 2px solid var(--black);
+}
+
+.morepostcontent img {
+    height: 100px;
+    width: 150px;
+}
+
+.morepostcontent h4{
+    margin: 0;
+    padding: 10px;
+}
+
+
 /* COMMENT FORM */
 
 .commentcontainer {

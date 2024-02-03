@@ -23,6 +23,11 @@ async function getPosts() {
    try {
     const response = await fetch(urlLoad);
     const posts = await response.json(); 
+
+    if (!posts) {
+        console.error("Posts not found");
+        return;
+    }
     
     console.log(posts);
 

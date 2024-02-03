@@ -14,6 +14,11 @@ async function fecthIndexData() {
       const posts = await response.json();
       console.log(posts);
 
+      if (!posts) {
+        console.error("Posts not found");
+        return;
+    }
+
       setupWelcomeSection();
       displayCarousel(posts);
       carouselContainer.innerHTML += "";
