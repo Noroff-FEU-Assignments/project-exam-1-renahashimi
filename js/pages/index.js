@@ -57,6 +57,8 @@ function displayCarousel(posts) {
                         </a>
                       </div>`;
 carouselContainer.innerHTML += indexPost;
+const allPosts = posts.length;
+console.log(allPosts);
   }); 
 }
 
@@ -71,23 +73,24 @@ const nextBtn = document.querySelector(".carbtnnext");
 console.log(nextBtn);
 const prevBtn = document.querySelector (".carbtnpre");
 
-const allPosts = posts.length;
-console.log(allPosts);
-
 function carouselSlide(index) {
   const offset = -87 * index;
     carouselContainer.style.transform = `translateX(${offset}%)`; 
   };
+
+let allPosts = 5;
   
 nextBtn.addEventListener("click", function(){
-  carouselContainer.style.transform = "translateX(-50%)";
-  currentIndex = (currentIndex + 1)
-  carouselSlide(currentIndex);
-console.log(currentIndex);
-  if (currentIndex === posts.length -1) {
-    nextBtn.classList.add("disabled");
-  } else {
+
+  if (currentIndex < allPosts.length -1) {
+    currentIndex++;
+    carouselSlide(currentIndex);
     prevBtn.classList.remove("disabled");
+    carouselContainer.style.transform = "translateX(-100%)";
+
+  } 
+  if (currentIndex === allPosts.length -1) {
+    nextBtn.classList.add("disabled");
   }
 
 });

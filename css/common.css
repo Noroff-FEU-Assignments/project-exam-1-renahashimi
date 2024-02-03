@@ -437,13 +437,16 @@
     position: relative;
     border: none;
     width: 100%;
+    overflow: hidden;
+
 }
 
 .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
     padding-left: 40px;
-    overflow: hidden;
+
+    width: 100%;
     gap: 35px;
 }
 
