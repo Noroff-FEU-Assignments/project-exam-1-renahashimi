@@ -90,14 +90,15 @@ async function setupLikePosts() {
             const imgAlt = post._embedded["wp:featuredmedia"][0].alt_text;
     
             likePosts.innerHTML += `<div class="morepostcontent">
-                                        <img class="postimages" src="${imgUrl}" alt="${imgAlt}">
-                                        <h4>${post.title.rendered}</h4>
+                                        <a href="blogpage.html?id=${post.id}">
+                                            <img class="postimages" src="${imgUrl}" alt="${imgAlt}">
+                                            <h4>${post.title.rendered}</h4>
+                                        </a>
                                     </div>`;
         });
         
     }catch(error) {
         console.log("Unknown error", error);
-        likePosts.innerHTML = errorMessage();
     }
 }
 setupLikePosts();

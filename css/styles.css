@@ -431,6 +431,7 @@
     text-align: center;
     font-size: small;
 }
+
 .likesection h3 {
     text-transform: uppercase;
     margin-bottom: -15px;
@@ -445,12 +446,13 @@
 
 .morepostcontent img {
     height: 100px;
-    width: 150px;
+    width: 160px;
 }
 
 .morepostcontent h4{
     margin: 0;
     padding: 10px;
+    color: var(--black);
 }
 
 
