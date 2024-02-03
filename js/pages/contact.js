@@ -8,7 +8,6 @@ const subjectErr = document.querySelector("#subjecterror");
 const message = document.querySelector("#message");
 const messageErr = document.querySelector("#messageerror");
 const formSuccess = document.querySelector(".formsuccess");
-  
         
 function validateContactForm (event) {
     event.preventDefault();

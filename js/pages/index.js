@@ -70,42 +70,36 @@ console.log(posts);
 
 
 const nextBtn = document.querySelector(".carbtnnext");
-console.log(nextBtn);
 const prevBtn = document.querySelector (".carbtnpre");
 
 function carouselSlide(index) {
-  const offset = -87 * index;
+  const offset = -90 * index;
     carouselContainer.style.transform = `translateX(${offset}%)`; 
   };
 
 let allPosts = 5;
   
 nextBtn.addEventListener("click", function(){
-
-  if (currentIndex < allPosts.length -1) {
+  if (currentIndex < allPosts - 1) {
     currentIndex++;
     carouselSlide(currentIndex);
     prevBtn.classList.remove("disabled");
-    carouselContainer.style.transform = "translateX(-100%)";
-
   } 
-  if (currentIndex === allPosts.length -1) {
+  if (currentIndex === allPosts - 1) {
     nextBtn.classList.add("disabled");
   }
 
 });
 prevBtn.addEventListener("click", function(){
-  carouselContainer.style.transform = "translateX(0)";
-  currentIndex = (currentIndex - 1)
-  carouselSlide(currentIndex);
+  if (currentIndex > 0) {
+    currentIndex--;
+    carouselSlide(currentIndex);
 
-    
+    nextBtn.classList.remove("disabled");
+  } 
   if (currentIndex === 0) {
     prevBtn.classList.add("disabled");
-  } else {
-    nextBtn.classList.remove("disabled");
   }
-
 });
 });
 

@@ -1,7 +1,7 @@
 import { BUTACUISINE_URL, BUTACUISINE_URL_MEDIA, urlLoad, restPage, baseUrl } from "../api/url.js";
 import { errorMessage } from "../api/errormessage.js";
-import { loadPage } from "../common/pageloader.js";
-import * as pageloader from "../common.js";
+// import { loadPage } from "../common/pageloader.js";
+// import * as pageloader from "../common.js";
 
 
 
@@ -25,7 +25,7 @@ async function getPosts() {
     const posts = await response.json(); 
     
     console.log(posts);
-    loadPage();
+
     createPost(posts);
     postContainer.innerHTML += "";
     pageNameBlog.innerHTML += "";
@@ -44,7 +44,6 @@ function createPost(posts) {
     postContainer.innerHTML = "";
     pageNameBlog.innerHTML = `<h1>Blog Posts</h1>
                             <div class="blogquote"><p>“Where heritage meets the plate.”</p> </div>`;
-    loadPage();
         posts.forEach(function (posts) {
             postContainer.innerHTML += `<div>
                                             <div class="postcontent">

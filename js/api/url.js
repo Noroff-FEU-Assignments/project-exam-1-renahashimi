@@ -2,6 +2,7 @@
 const url = "https://butacuisine.renahashimi.no/wp-json/wp/v2/"; 
 const post = "posts";
 const posts  = "posts/";
+const page2Url = `?page=2`;
 const embed = "?_embed";
 const categ = "&per_page=6&categories=3";
 const ending = "?per_page=12&_embed=wp:featuredmedia";
