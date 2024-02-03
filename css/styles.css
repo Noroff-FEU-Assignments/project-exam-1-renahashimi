@@ -804,11 +804,15 @@
     max-width: 900px;
 }
 
+.postcontent {
+    height: max-content;
+}
+
 /* BLOGPAGE*/
 
 
 }
-}
+
 
 
 

@@ -5,9 +5,6 @@ import { BUTACUISINE_URL, BUTACUISINE_URL_MEDIA, carouselUrl } from "../api/url.
 let startPosts = 0;
 let totalPagePost = 2;
 
-const nextBtn = document.querySelector(".carbtnnext");
-console.log(nextBtn);
-const prevBtn = document.querySelector (".carbtnpre");
 const carouselContainer = document.querySelector(".carousel");
 
 
@@ -44,58 +41,103 @@ const welcomeTxt = document.querySelector(".welcometxt");
 /* CAROUSEL */
 
 function displayCarousel(posts) {
-  posts.forEach((posts) => {
+  posts.forEach((post) => {
     const indexPost = `<div class="carouselcontent">
-                                      <a href="blogpage.html?id=${posts.id}" class="caritem">
-                                        <img class="carimage" src="${posts._embedded["wp:featuredmedia"][0].source_url}" alt="${posts.title.rendered}">
-                                        <div class="caritemblock">
-                                          <div class="post-aut-date2">
-                                            <i class="fa-solid fa-pen-nib fa-xs" style="color: #000000;"> Rena Hashimi</i> 
-                                            <i class="fa-solid fa-calendar-days fa-xs" style="color: #000000;"> ${posts.date.slice(0, -9)} </i> 
-                                          </div>
-                                          <h4 class="cartitle">${posts.title.rendered}</h4>
-                                          <p class="cartext">${posts.excerpt.rendered}</p>
-                                          <button class="carlink">The recipe <span class="heart">&#9825;</span></button>
-                                        </div> 
-                                      </a>
-                                    </div>`;
+                        <a href="blogpage.html?id=${post.id}" class="caritem">
+                        <img class="carimage" src="${post._embedded["wp:featuredmedia"][0].source_url}" alt="${post.title.rendered}"> 
+                        <div class="caritemblock">
+                          <div class="post-aut-date2">
+                            <i class="fa-solid fa-pen-nib fa-xs" style="color: #000000;"> Rena Hashimi</i> 
+                            <i class="fa-solid fa-calendar-days fa-xs" style="color: #000000;"> ${post.date.slice(0, -9)} </i> 
+                          </div>
+                          <h4 class="cartitle">${post.title.rendered}</h4>
+                          <div class="cartext">${post.excerpt.rendered}</div>
+                          <button class="carlink">The recipe <span class="heart">&#9825;</span></button>
+                        </div> 
+                        </a>
+                      </div>`;
 carouselContainer.innerHTML += indexPost;
   }); 
 }
 
-
+document.addEventListener("DOMContentLoaded", function(){
 let currentIndex = 0;
-const posts = document.querySelectorAll(".carouselcontent");
+let posts = document.querySelectorAll(".carouselcontent");
+
+console.log(posts);
+
+
+const nextBtn = document.querySelector(".carbtnnext");
+console.log(nextBtn);
+const prevBtn = document.querySelector (".carbtnpre");
 
 const allPosts = posts.length;
+console.log(allPosts);
 
 function carouselSlide(index) {
-  const offset = -100 * index;
+  const offset = -87 * index;
     carouselContainer.style.transform = `translateX(${offset}%)`; 
   };
   
 nextBtn.addEventListener("click", function(){
-  if (currentIndex < allPosts -1) {
-    currentIndex++;
-    carouselSlide(currentIndex);
+  carouselContainer.style.transform = "translateX(-50%)";
+  currentIndex = (currentIndex + 1)
+  carouselSlide(currentIndex);
+console.log(currentIndex);
+  if (currentIndex === posts.length -1) {
+    nextBtn.classList.add("disabled");
+  } else {
     prevBtn.classList.remove("disabled");
   }
-  if (currentIndex === allPosts -1) {
-    nextBtn.classList.add("disabled");
-  }
-});
 
+});
 prevBtn.addEventListener("click", function(){
-  if (currentIndex > 0) {
-    currentIndex--;
-    carouselSlide(currentIndex);
-    nextBtn.classList.remove("disabled");
-  }  
+  carouselContainer.style.transform = "translateX(0)";
+  currentIndex = (currentIndex - 1)
+  carouselSlide(currentIndex);
+
+    
   if (currentIndex === 0) {
     prevBtn.classList.add("disabled");
+  } else {
+    nextBtn.classList.remove("disabled");
   }
 
 });
+});
+
+// const allPosts = posts.length;
+// console.log(allPosts);
+// function carouselSlide(index) {
+//   const offset = -100 * index;
+//     carouselContainer.style.transform = `translateX(${offset}%)`; 
+//   };
+  
+// nextBtn.addEventListener("click", function(){
+//   console.log("nextbb");
+//   if (currentIndex < allPosts - 1) {
+//     currentIndex++;
+//     console.log(currentIndex);
+//     carouselSlide(currentIndex);
+//     prevBtn.classList.remove("disabled");
+//   }
+//   if (currentIndex === allPosts - 1) {
+//     nextBtn.classList.add("disabled");
+//   }
+// });
+
+// prevBtn.addEventListener("click", function(){
+
+//   if (currentIndex > 0) {
+//     currentIndex--;
+//     carouselSlide(currentIndex);
+//     nextBtn.classList.remove("disabled");
+//   }  
+//   if (currentIndex === 0) {
+//     prevBtn.classList.add("disabled");
+//   }
+
+// });
 
 
 fecthIndexData()

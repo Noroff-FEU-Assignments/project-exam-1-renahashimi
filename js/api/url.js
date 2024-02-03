@@ -3,7 +3,7 @@ const url = "https://butacuisine.renahashimi.no/wp-json/wp/v2/";
 const post = "posts";
 const posts  = "posts/";
 const embed = "?_embed";
-const categ = "&categories=3";
+const categ = "&per_page=6&categories=3";
 const ending = "?per_page=12&_embed=wp:featuredmedia";
 export const perPage = "?per_page=12&_embed";
 export const restPage = "?per_page=12&_embed";
