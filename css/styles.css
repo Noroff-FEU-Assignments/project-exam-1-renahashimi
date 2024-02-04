@@ -507,6 +507,7 @@
     padding: 5px 10px;
     margin: 10px 6px 0;
     font-size: 0.9em;
+    color: var(--black);
     text-transform: uppercase;
 }
 
