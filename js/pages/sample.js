@@ -176,7 +176,7 @@ const postBox = document.querySelector(".postbox");
 filterBtn()
 
 
-unction createPostCard(posts) {
+function createPostCard(posts) {
     loadPage();
     
         const postContent = document.createElement("a");
@@ -203,5 +203,5 @@ unction createPostCard(posts) {
         shortText.innerText = posts.excerpt.rendered;
         postContent.append(shortText);
 
-
+}
         

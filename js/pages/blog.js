@@ -11,14 +11,11 @@ const postContainer = document.querySelector(".postbox");
 const postContainer3 = document.querySelector(".postbox2");
 
 
-console.log(baseUrl);
-
 let currentCategory = 1;
 let currentPage = 1;
 let currentPosts = 6;
 
-const url = `${baseUrl}&per_page${currentPosts}&_embed`;
-console.log(url);
+
 async function getPosts() {
    try {
     const response = await fetch(urlLoad);
@@ -73,7 +70,7 @@ const filterBtn = document.querySelectorAll(".filter-btn");
 
 filterBtn.forEach(function (catBtn) {
     catBtn.onclick = function (e) {
-        filterPost(catBtn);
+        filterPost(catBtn, filterBtn);
         const catFilter = e.target.value;
         console.log('Selected URL:', catFilter);
 
@@ -81,12 +78,12 @@ filterBtn.forEach(function (catBtn) {
 
         if (catFilter === 1) {
             currentCategory = 1;
-            getPosts(catUrl,  postContainer)
+            getPosts(catUrl,  postContent)
             console.log(currentCategory);
         } else {
             currentCategory = catFilter;
             const catUrl = urlLoad + `&categories=${currentCategory}&page=${currentPage}`;
-            getPosts(catUrl, postContainer);
+            getPosts(catUrl, postContent);
             console.log('Category URL:', catUrl, catFilter);
         }
     }
@@ -94,8 +91,7 @@ filterBtn.forEach(function (catBtn) {
 
 function filterPost(filterOn) {
     filterBtn.forEach((catBtn) => catBtn.classList.remove("post-selected"));
-    filterOn.classList.add("post-selected");
-        
+    filterOn.classList.add("post-selected");      
 }
 
 // loadMoreBtn.addEventListener("click", async () => {

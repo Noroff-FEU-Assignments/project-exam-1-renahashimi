@@ -12,7 +12,8 @@ export const restPage = "?per_page=12&_embed";
 export const params = new URLSearchParams (document.location.search);
 export const id = params.get ("id");
 
-export const carouselUrl = url + posts + embed + ending + categ;
+export const carouselUrl = url + posts + ending + categ;
+export const categoryUrl = url + posts + ending;
 export const BUTACUISINE_URL = url + posts + id + ending;
 export const BUTACUISINE_URL_MEDIA = url + posts + restPage;
 export const urlLoad = url + posts + perPage;

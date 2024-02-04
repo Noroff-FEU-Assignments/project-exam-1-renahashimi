@@ -1,5 +1,6 @@
 import { errorMessage } from "../api/errormessage.js";
-import { BUTACUISINE_URL, BUTACUISINE_URL_MEDIA, carouselUrl } from "../api/url.js";
+import { getPosts } from "../api/getPosts.js";
+import { BUTACUISINE_URL, BUTACUISINE_URL_MEDIA, carouselUrl, categoryUrl} from "../api/url.js";
 
 
 let startPosts = 0;
@@ -108,38 +109,25 @@ prevBtn.addEventListener("click", function(){
 });
 });
 
-// const allPosts = posts.length;
-// console.log(allPosts);
-// function carouselSlide(index) {
-//   const offset = -100 * index;
-//     carouselContainer.style.transform = `translateX(${offset}%)`; 
-//   };
-  
-// nextBtn.addEventListener("click", function(){
-//   console.log("nextbb");
-//   if (currentIndex < allPosts - 1) {
-//     currentIndex++;
-//     console.log(currentIndex);
-//     carouselSlide(currentIndex);
-//     prevBtn.classList.remove("disabled");
-//   }
-//   if (currentIndex === allPosts - 1) {
-//     nextBtn.classList.add("disabled");
-//   }
-// });
+let sweets = "&per_page=10&categories=4";
+let mainC = "&per_page=10&categories=3";
+let saladStart = "&per_page=10&categories=6";
 
-// prevBtn.addEventListener("click", function(){
 
-//   if (currentIndex > 0) {
-//     currentIndex--;
-//     carouselSlide(currentIndex);
-//     nextBtn.classList.remove("disabled");
-//   }  
-//   if (currentIndex === 0) {
-//     prevBtn.classList.add("disabled");
-//   }
+const saladAndStarters = document.querySelector(".s-s");
 
-// });
+saladAndStarters.addEventListener("click", async () => {
+  const ssUrl = categoryUrl + saladStart;
+console.log(ssUrl);
+fecthIndexData(ssUrl)
+postcontainer.innerHTML = "";
+  window.location.href = "blogpage.html?id=${posts.id}";
+})
+
+
+const mainCourse = document.querySelector(".m-s");
+const cakesAndSweets = document.querySelector(".c-s");
+const allBlogs = document.querySelector(".allrec");
 
 
 fecthIndexData()

@@ -127,9 +127,9 @@
     text-transform: uppercase;
     border: 2px solid var(--beige);
     padding: 1px 5px;
-    width: 90px;
+    width: 110px;
     border-radius: 10px;
-    font-size: 0.8em;
+    font-size: 1em;
     margin: 30px 20px;
 }
 
@@ -907,16 +907,16 @@
 
 .mobimg {
     background-image: url(/images/pieces-cake.jpg);
-    height: 450px;
+    height: 550px;
 }
 
 .quote1 {
-    padding: 100px 40px;
+    padding-left: 40px;
 }
 
 .quote1 p {
     -webkit-text-stroke: 2px var(--beige);
-    font-size: 3em;
+    font-size: 3.1em;
     color: var(--beige);
 }
 
