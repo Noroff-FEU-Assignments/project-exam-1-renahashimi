@@ -48,7 +48,8 @@ form.addEventListener("submit", validateContactForm);
         ) { 
             // alert("Thank you for contacting us!");
         formSuccess.innerHTML = `<div class="successmessage">
-                                    <p>Thank you for contacting us! We will contact you shortly.</p>
+                                    <p>Thank you for contacting us!</p>
+                                    <p>We will contact you shortly.</p>
                                 </div>`
         
         form.reset();
