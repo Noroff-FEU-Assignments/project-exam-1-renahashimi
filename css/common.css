@@ -329,7 +329,6 @@
 .modalcontent img{
     display: block;
     max-width: 80%;
-    max-width: 600px;
     justify-content: center;
     margin: auto;
     border: 3px solid var(--beige);
