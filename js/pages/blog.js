@@ -50,7 +50,7 @@ function createPost(posts) {
             postContainer.innerHTML += `<div>
                                             <div class="postcontent">
                                                 <a href="blogpage.html?id=${posts.id}">
-                                                    <img class="postsimage" src="${posts._embedded["wp:featuredmedia"][0].source_url}" alt="${posts.title.rendered}">
+                                                    <img class="postsimage" src="${posts._embedded["wp:featuredmedia"][0].source_url}" alt="${posts._embedded["wp:featuredmedia"][0].alt_text}">
                                                     <div class="post-aut-date">
                                                         <i class="fa-solid fa-pen-nib fa-xs" style="color: #000000;"></i> ${posts._embedded.author[0].name} 
                                                         <i class="fa-solid fa-calendar-days fa-xs" style="color: #000000;"></i> ${posts.date.slice(0, -9)} 

@@ -68,33 +68,36 @@
         <div class="postquote"></div>
     </div>
 
+    <section class="commentcontainer">
+      <h3>Leave a comment <span class="heart">&#9829;</span></h3>
+      <div class="commentsec">
+        <form action="#" id="commentform" class="commentform" autocomplete="on" >
+          <div class="commentbox">
+            <label for="name">
+              <input type="text" id="name" placeholder="Name" required>
+            </label> 
+            <div class="errorbox" id="fullnameerror">Name must be over 5 characters.</div>
+          </div>
+          <div class="commentbox">
+            <label for="email">
+              <input type="text" id="email" placeholder="Email" required>
+            </label>
+            <div class="errorbox" id="emailerror">Please enter a valid email.</div>
+          </div>
+          <div class="commentbox">
+            <label for="message">
+              <textarea  id="message" rows="4" placeholder="Your comment" required></textarea> 
+            </label>
+            <div class="errorbox" id="messageerror">Message must be over 25 characters.</div>
+          </div>
+          <div><button>Submit</button></div>
+        </form>
+      </div>
+    </section>
     <section class="likesection">
       <h3>Other recipes you may like</h3>
       <p>scroll to choose</p>
       <div class="likeposts"></div>
-    </section>
-
-    <section class="commentcontainer">
-      <div class="commentform">
-        <form action="#" id="commentform" autocomplete="on" >
-          <div class="commentbox">
-            <label for="name">Name</label>
-            <input type="text" id="name" required>
-            <div class="errorbox" id="fullnameerror">Name must be over 5 characters.</div>
-          </div>
-          <div class="commentbox">
-            <label for="email">Email</label>
-            <input type="text" id="email" required>
-            <div class="errorbox" id="emailerror">Please enter a valid email.</div>
-          </div>
-          <div class="commentbox">
-            <label for="message">Message</label>
-            <textarea  id="message" rows="4"></textarea> 
-            <div class="errorbox" id="messageerror">Message must be over 25 characters.</div>
-          </div>
-          <div><button type="submit">Submit</button></div>
-        </form>
-      </div>
     </section>
     
     <div class="back-to-top">

@@ -18,7 +18,7 @@ async function fecthIndexData() {
       if (!posts) {
         console.error("Posts not found");
         return;
-    }
+      }
 
       setupWelcomeSection();
       displayCarousel(posts);
@@ -109,25 +109,70 @@ prevBtn.addEventListener("click", function(){
 });
 });
 
-let sweets = "&per_page=10&categories=4";
-let mainC = "&per_page=10&categories=3";
-let saladStart = "&per_page=10&categories=6";
 
 
-const saladAndStarters = document.querySelector(".s-s");
+// function fecthPostsByCategory(categoryUrl) {
+//   return async () => {
+//     try {
+//       const response = await fetch(categoryUrl);
+//       const posts = await response.json();
 
-saladAndStarters.addEventListener("click", async () => {
-  const ssUrl = categoryUrl + saladStart;
-console.log(ssUrl);
-fecthIndexData(ssUrl)
-postcontainer.innerHTML = "";
-  window.location.href = "blogpage.html?id=${posts.id}";
-})
+//       if (!posts || posts.length === 0) {
+//         console.error("Posts not found");
+//         return;
+//       }
+//       const postsJson = encodeURIComponent(JSON.stringify(posts));
+//       window.location.href = `blogpage.html?category=${carouselUrl}`;
+
+//     } catch(error) {
+//       console.log("Something went wrong", error);
+//     }
+//   };
+// }
+
+// let sweets = "&per_page=10&categories=4";
+// let mainC = "&per_page=10&categories=3";
+// let saladStart = "&per_page=10&categories=6";
+// document.querySelector(".s-s").addEventListener("click", fecthPostsByCategory(carouselUrl + saladStart));
+  
+
+// document.querySelector(".m-s");
+// document.querySelector(".c-s");
+// document.querySelector(".allrec");
 
 
-const mainCourse = document.querySelector(".m-s");
-const cakesAndSweets = document.querySelector(".c-s");
-const allBlogs = document.querySelector(".allrec");
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // let sweets = "&per_page=10&categories=4";
+// // let mainC = "&per_page=10&categories=3";
+// // let saladStart = "&per_page=10&categories=6";
+
+
+// // const saladAndStarters = document.querySelector(".s-s");
+
+// // saladAndStarters.addEventListener("click", async () => {
+// //   const ssUrl = categoryUrl + saladStart;
+// // console.log(ssUrl);
+// //  await fecthIndexData(ssUrl)
+
+// //   window.location.href = "blogpage.html? + ssUrl";
+// // })
+
+
+// // const mainCourse = document.querySelector(".m-s");
+// // const cakesAndSweets = document.querySelector(".c-s");
+// // const allBlogs = document.querySelector(".allrec");
 
 
 fecthIndexData()

@@ -245,7 +245,7 @@
     text-align: center;
     font-family: var(--della);
     color: var(--beige);
-    font-size: 1.3em;
+    font-size: 1em;
     max-width: 350px;
     margin: 20px auto;
     padding: 10px;
@@ -398,12 +398,12 @@
     background-size: 170px;
     max-width: 1000px;
     height: 80px;
-    font-size: 1em;
     margin-bottom: -10px;
 }
 
-.postquote p {
+.postquote h2 {
     margin: auto;
+    font-size: 1em;
     background-color: var(--white);
     padding: 5px 20px;
     border-radius: 20px;
@@ -417,8 +417,9 @@
 .likesection {
     display: block;
     margin: 40px auto;
-    border-top: 2px solid var(--beige);
-    border-bottom: 2px solid var(--beige);
+    padding: 10px 0 5px;
+    border-top: 5px solid var(--beige);
+    border-bottom: 5px solid var(--beige);
 }
 
 .likeposts {
@@ -445,6 +446,7 @@
 }
 
 .morepostcontent img {
+    border: 2px solid var(--black);
     height: 100px;
     width: 160px;
 }
@@ -459,30 +461,43 @@
 /* COMMENT FORM */
 
 .commentcontainer {
-    display: flex;
-    background-color: var(--beige);
-    margin: 40px auto;
+    display: block;
+    margin: 40px auto 0;
     padding: 20px;
-    background-size: contain;
-    background-image: url(/images/pomegranate1.jpeg);
-    background-size: 900px;
-    background-repeat: no-repeat;
-    background-position: right;
+    background-color: var(--beige);
+    border: 10px double var(--black);
+    border-left: none;
+    border-right: none;
 }
-.commentform {
- 
+
+.commentcontainer h3 {
+    text-transform: uppercase;
+    margin-left: 5px;
+}
+
+.commentcontainer span {
+    font-size: 1.1em;
+    color: var(--white);
 }
 
 .commentbox {
-    display: table-caption;
+    display: block;
     padding: 6px;
 }
 
-.commentbox input, .commentbox textarea {
-    display: block;
-    width: 220px;
-    padding: 3px;
+.commentform input, .commentform textarea {
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
     border: 3px solid var(--black);
+    font-family: var(--della);
+    color: black;
+    font-size: 1em;
+}
+
+.commentform textarea {
+    max-width: 500px;
+
 }
 
 .commentcontainer button {
@@ -491,7 +506,7 @@
     border: 3px solid var(--black);
     padding: 5px 10px;
     margin: 10px 6px 0;
-    font-size: 0.7em;
+    font-size: 0.9em;
     text-transform: uppercase;
 }
 
@@ -809,10 +824,10 @@
 .pagename p {
     display: block;
     color: var(--black);
-    font-size: 1.5em;
-    max-width: 50%;
-    margin: auto 40px;
-    padding: 30px 0;
+    font-size: 1.2em;
+    max-width: 100%;
+    margin: auto 10px;
+    padding: 55px 0;
     height: 140px;
     border: none;
     text-align: left;
@@ -847,6 +862,7 @@
 
 .wp-block-columns, .wp-block-columns p {
     font-size: 1em;
+    line-height: 1.8rem;
 }
 
 .wp-block-heading {
@@ -898,6 +914,27 @@
     font-size: 0.9em;
 }
 
+/* ABOUT */ 
+
+
+.a-m-section {
+    margin: 20px 50px;
+    font-size: 1.2em;
+}
+
+.aboutme p {
+    padding: 2px 12px 2px -10px;
+    margin: 20px;
+}
+
+.aboutme img {
+    margin: auto -10px auto 10px;
+}
+
+.aboutpage p, .myquote {
+    font-size: 1.2em;
+}
+
 }
 
 @media screen and (min-width: 1000px){
@@ -939,13 +976,22 @@
 
 /* BLOGPAGE*/
 
+.pagename p {
+    font-size: 1.4em;
+    max-width: 100%;
+}
+
+.wp-block-columns, .wp-block-columns p {
+    font-size: 1em;
+    line-height: 2rem;
+}
 
 /* ABOUT */
 
 .aboutcontent {
     display: grid;
     grid-template-columns: 45% 55%;
-    margin: 0 100px;
+    margin: 50px 100px;
 }
 
 .aboutpage, .aboutme  {
@@ -956,12 +1002,16 @@
 }
 
 .a-m-section  {
-    margin-left: 20px;
-
+    margin: auto;
+    padding: 5px 2px;
 }
 
 .aboutme h2 {
     padding: 0 10px;
+}
+
+.aboutme p {
+    padding: 0;
 }
 
 .aboutpage p, .myquote, .a-m-section{
@@ -975,7 +1025,7 @@
 }
 
 .aboutme img {
-    margin: 20px auto 0;
+    margin: 10px auto -10px;
 }
 
 

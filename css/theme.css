@@ -302,6 +302,24 @@ button, .poststitle, .postsimage, .backbutton {
     font-size: 1.2em;
 }
 
+/* FOOTER */
+
+.connect h3 {
+    font-size: 2.5em;
+    padding: 0;
+    margin: 10px;
+}
+
+.connect img {
+    width: 60px;
+    height: 60px;
+}
+
+.connect p {
+    margin: 20px 10px;
+    font-size: 0.8em;
+}
+
 }
 
 @media screen and (min-width: 1000px){

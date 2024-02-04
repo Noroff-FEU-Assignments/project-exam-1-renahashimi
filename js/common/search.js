@@ -15,7 +15,7 @@ async function searchPosts(urlLoad) {
     } else {
         searchResult.innerHTML += `<div>No results found for "${searchInput}", try again</div>`;
     }
-     
+
     console.log(posts, searchBtn);
 
     } catch(error) {
@@ -39,16 +39,16 @@ function searchResultPost(posts){
 
 searchBtn.onclick = function () {
     const searchInput = document.getElementById("search").value;
-    console.log(searchInput);
-    const newUrl = urlLoad + `&search=${searchInput}`;
-  
+    const newUrl = urlLoad + `&search=${searchInput}`;    
+
     if (searchInput) {
         searchPosts(newUrl);
-    } else {
-        searchResult.innerHTML += `<div>No results found for "${searchInput.value}", try again</div>`;
+    } 
+    if (!searchInput){
+        searchResult.innerHTML += `<p>No results found for "${searchInput.value}", try again</p>`;
     }
     clearSearch()
-    console.log(newUrl);
+    // console.log(newUrl);
 }
 
 function clearSearch(){

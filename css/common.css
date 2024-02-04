@@ -143,25 +143,25 @@
 }
 
 .searchresult {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     background-color: var(--beige);
-    padding: 20px 0;
     margin: 0 auto 20px;
     width: 100%;
-    justify-content: center;
 }
 
 .searchcontent{
     display: block;
     background-color: var(--white);
-    width: 90%;
-    margin: auto;
+    width: 200px;
+    height: 220px;
+    margin: 20px auto;
     justify-content: center;
 }
 
 .searchcontent img {
     width:100%;
-    height: 200px;
+    height: 150px;
     object-fit: cover;
 }
 
@@ -384,20 +384,10 @@
 
 /* SEARCH */
 
-.searchresult {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px 0;
-    justify-content: left;
-}
-
 .searchcontent{
-    display: block;
-    background-color: var(--white);
-    width: 30%;
+    width: 30.5%;
     height: 180px;
     margin: 10px;
-    justify-content: space-between;
 }
 
 .searchcontent img {
