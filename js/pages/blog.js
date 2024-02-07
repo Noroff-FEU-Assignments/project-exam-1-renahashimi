@@ -1,4 +1,4 @@
-import { BUTACUISINE_URL, BUTACUISINE_URL_MEDIA, urlLoad, restPage, baseUrl } from "../api/url.js";
+import { BUTACUISINE_URL, BUTACUISINE_URL_MEDIA } from "../api/url.js";
 import { errorMessage } from "../api/errormessage.js";
 // import { loadPage } from "../common/pageloader.js";
 // import * as pageloader from "../common.js";
@@ -18,7 +18,7 @@ let currentPosts = 6;
 
 async function getPosts() {
    try {
-    const response = await fetch(urlLoad);
+    const response = await fetch(BUTACUISINE_URL_MEDIA);
     const posts = await response.json(); 
 
     if (!posts) {
@@ -93,6 +93,16 @@ function filterPost(filterOn) {
     filterBtn.forEach((catBtn) => catBtn.classList.remove("post-selected"));
     filterOn.classList.add("post-selected");      
 }
+
+loadMoreBtn.addEventListener("click", () => {
+    const newUrl = BUTACUISINE_URL_MEDIA;
+    
+    postContainer.innerHTML = "";
+    getPosts(baseUrl);
+    console.log(baseUrl);
+    loadMoreBtn.style.display = "none";
+});
+
 
 // loadMoreBtn.addEventListener("click", async () => {
 //     currentPage++;

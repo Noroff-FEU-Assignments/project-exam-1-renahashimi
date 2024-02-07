@@ -35,12 +35,10 @@ async function fecthIndexData() {
 function setupWelcomeSection(){
 const welcomeImg = document.querySelector(".welcomeimg");
 const welcomeTxt = document.querySelector(".welcometxt");
-  
-  welcomeImg.innerHTML += `<img src="/images/Pomegranate.png" alt="Pomegranate">`;
-  welcomeTxt.innerHTML += `<h3>Welcome</h3>
-                            <p>to my</p>
-                            <p class="foodbold"><span>food</span> blog</p>
-                            <a href="blog.html">All blogs</a>`;    
+  //<img src="/images/Pomegranate.png" alt="Pomegranate">,  <p class="foodbold"><span>food</span> blog</p>
+  welcomeImg.innerHTML += `<h2>Welcome</h2>`;
+  welcomeTxt.innerHTML += `<p>to my food blog</p>
+                          <a href="blog.html">All blogs</a>`; 
 
 }
 
@@ -83,7 +81,7 @@ function carouselSlide(index) {
     carouselContainer.style.transform = `translateX(${offset}%)`; 
   };
 
-let allPosts = 5;
+let allPosts = 6;
   
 nextBtn.addEventListener("click", function(){
   if (currentIndex < allPosts - 1) {

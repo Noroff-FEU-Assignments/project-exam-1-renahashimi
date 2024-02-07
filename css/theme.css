@@ -34,7 +34,7 @@ main {
     background-color: var(--white);
     max-width: 1000px;
     margin: 40px auto -20px;
-    padding-top: 50px;
+    padding: 50px 0 ;
 }
 
 h1 {
@@ -351,6 +351,10 @@ main, body , header {
     background-color: var(--beige);
 }
 
+.rh-name  {
+    color: var(--white);
+}
+
 .hideX, .navigation1 label{
     display: none;
     visibility: hidden;
@@ -362,13 +366,13 @@ main, body , header {
 }
 
 .nav2{ 
-    max-width: 750px;
+    max-width: 700px;
 }
 
 .nav2 li {
     width: 450px;
     max-width: 100%;
-    padding: 1px 10px;
+    padding: 5px 0 -5px;
     justify-content: center;
 }
 
@@ -376,14 +380,17 @@ main, body , header {
     width: 140px;
     font-size: 1em;
     border: none;
-    padding: 5px;
+    padding: 5px 0 -5px;
     text-align: center;
+    border: none;
 }
 
 .nav2 a:hover {
     min-width: 100%;
     font-size: 1.1em;
-    padding: 2px;
+    padding: 2px 0;
+    border: none;
+    border-radius: 10px;
 }
 
 .nav2 ul {

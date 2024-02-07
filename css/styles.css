@@ -13,15 +13,12 @@
     --water:'Water Brush', cursive;
     --kaus: 'Kaushan Script', cursive;
     --gluten: 'Gluten', cursive;
+    --railway:'Raleway', sans-serif;
     --tran: transparent;
 }
 
 /*HOME*/
 
-.headerbackground {
-    display: none;
-    visibility: hidden;
-}
 
 .mobimg {
     display: block; 
@@ -70,67 +67,52 @@
 }
 
 .welcomecontent {
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: space-between;
-    margin: 30px auto;
-    padding: 0 0 50px;
+    display: block;
     width: 100%;
     max-width: 500px;
+    margin: 40px auto;
+    padding: 5px 0;
+    box-shadow: 0 5px 20px 5px var(--beige);
 }
 
-.welcomeimg img {
-    display: block;
-    position: absolute;
-    max-height: 200px;
-    z-index: 0;
-    width: 100%;
-    max-width: 200px;
-    margin: 50px 0 0;
-    border-bottom: 3px solid var(--beige);
-}
-
-.welcometxt {
-    display: block;
-    text-align: right;
-    z-index: 1;
-}
-
-.welcometxt h3 {
-    font-size: 3em;
-    text-align: right;
-    font-family: var(--water);
-    letter-spacing: 0.2em;
-    margin: -10px 10px -10px 0;
-    padding-top: 5px;
-    border-top: 3px solid var(--beige);
+.welcomeimg h2 {
+    font-size: 2.8em;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--railway);
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    background-image: url(/images/colorful-collage.avif);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position: center;
+    background-size: contain;
+    -webkit-text-stroke: 1px var(--black);
 }
 
 .welcometxt p {
-    font-size: 1.3em;
-    text-align: right;
-    margin: 0 20px;
-}
-
-.foodbold span{
-    font-size: 1.4em;
-    text-align: right;
+    font-size: 1.5em;
+    text-align: center;
+    margin: -30px auto 0;
+    font-family: var(--water);
     letter-spacing: 0.1em;
 }
 
 .welcometxt a {
-    display: inline-flex;
+    display: flex;
     justify-content: center;
+    text-align: center;
     color: var(--black);
     background-color: var(--white);
     cursor: pointer;
     text-transform: uppercase;
     border: 2px solid var(--beige);
     padding: 1px 5px;
+    margin: 30px auto;
     width: 110px;
     border-radius: 10px;
     font-size: 1em;
-    margin: 30px 20px;
+    box-shadow: 0 2px 20px 0 var(--black);
 }
 
 .welcometxt a:hover {
@@ -139,11 +121,16 @@
 
 .indexcontact {
     display: block;
+    justify-content: center;
     border: 2px solid var(--black);
-    border-radius: 20px 0;
+    border-radius: 20px;
     text-align: center;
     padding: 5px 10px 20px;
-    margin: 20px;
+    max-height: 130px;
+    margin: 20px auto;
+    background-color: var(--white);
+    width: 85%;
+    max-width: 450px;
 }
 
 .indexcontact a {
@@ -152,7 +139,6 @@
     font-size: 0.7em;
     color: var(--black);
     text-transform: uppercase;
-    margin: 10px 0 20px;
     padding: 2px 5px;
 }
 
@@ -160,65 +146,60 @@
     background-color: var(--beige);
 }
 
-.heritagetext {
-    display: block;
-    margin: auto;
-    text-align: center;
-}
-
-.heritagetext h2 {
-    font-family: var(--water);
-    font-size: 1.6em;
-    padding: 5px;
-    margin: auto;
-    letter-spacing: 0.1em;
-    background-color: var(--beige);
-}
-
-.heritagetext p {
-    font-size: 0.9em;
-    padding: 5px;
-    max-width: 200px;
-    background-color: var(--white);
-}
-
-.heritagetext h3, .heritagetext p, .container-heritage img {
-    box-shadow: 0px 0px 30px 0 var(--black);
-} 
-
-.wrapper-back {
-    overflow: hidden;
-    max-width: 100%;
-}
-
-.heritage-back {
+.contact-back {
     display: -webkit-flex;
     background-image: url(/images/Paisley5.jpeg);
-    background-size: 200px;
-    height: 260px;
-    width: 130%;
+    background-size: 300px;
+    height: 200px;
+    overflow-x: hidden;
+    width: 100%;
     padding: 0 20px;
-    margin: 60px auto 60px -30px;
-    transform: rotate(-7deg);
+    margin: 20px auto 60px -20px;
     border: 3px solid var(--beige);
 }
 
+.heritagetext {
+    display: block;
+    text-align: right;
+    padding-right: 20px;
+    color: var(--white);
+}
+
+.heritagetext h5 {
+    font-family: var(--water);
+    font-size: 1.6em;
+    padding: 15px 0;
+    margin: 10px 0 0;
+    letter-spacing: 0.1em;
+}
+
+.heritagetext p {
+    justify-content: right;
+    font-size: 1.1em;
+    padding: 10px 0 0;
+    margin: 0;
+    text-align: right;
+}
+
 .container-heritage {
-    display: flex;
-    width: 95%;
-    max-width: 400px;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    background-image: url(/images/tasty-kebabs.jpeg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
     background-color: var(--beige);
-    height: 220px;
-    margin: 30px auto;
-    padding: 0 20px;
-    transform: rotate(7deg);
+    height: 250px;
+    margin: 0px auto 30px;
 }
 
 .container-heritage img {
-    max-width: 180px;
-    max-height: 200px;
-    margin-left: 30px;
-    border-radius: 10px;
+   visibility: hidden;
+   width: 10%;
+}
+
+.wrapper-back {
+    overflow: hidden;
 }
 
 
@@ -539,7 +520,6 @@
 .aboutpage {
     display: block;
     width: 90%;
-
     margin: 50px auto;
     padding: 5px;
 }
@@ -735,25 +715,26 @@
     font-size: 1.3em;
 }
 
-.welcometxt {
-    margin-left: 80px;
+.welcomeimg h2 {
+    font-size: 3.5em;
 }
 
-.welcomeimg img {
-    max-height: 200px;
-    max-width: 200px;
-    margin-top: 20px;
+.welcometxt p {
+    font-size: 1.8em;
 }
 
-.heritagetext h2 {
-    font-size: 2em;
+.heritagetext h5 {
+    font-size: 2.5em;
+    letter-spacing: 0.2em;
 }
 
 .heritagetext p {
-    font-size: 1.1em;
+    font-size: 1.3em;
 }
 
-
+.container-heritage {
+    height: 300px;
+}
 
 }
 
@@ -780,6 +761,52 @@
     padding: 0;
 }
 
+.welcomeimg h2 {
+    font-size: 5em;
+}
+
+.welcometxt p {
+    font-size: 2.2em;
+    margin: -60px auto 20px;
+}
+
+.container-heritage {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto 150px;
+    background-image: none;
+    background-color: transparent;
+}
+
+.container-heritage img {
+    display: block;
+    visibility: visible;
+    width: 650px;
+    height: fit-content;
+    margin-left: 90px;
+    box-shadow: -10px 4px 25px 0px var(--black);
+
+}
+
+.heritagetext {
+    background-color: var(--beige);
+    height: fit-content;
+    margin: 40px 90px 0 -250px;
+    color: var(--black);
+    min-width: 300px;
+    padding: 0 20px 20px;
+    box-shadow: 0px 2px 25px 2px var(--black);
+}
+
+.heritagetext p {
+    font-size: 1.6em;
+
+}
+
+.heritagetext h5 {
+    font-size: 2.7em;
+}
+
 
 /* BLOG */
 
@@ -800,7 +827,7 @@
 }
 
 .postcontent {
-    height: 400px;
+    height: fit-content
 }
 
 .text-justify {
@@ -850,7 +877,7 @@
     background-image: url(/images/Paisley5.jpeg);
     background-size: 300px;
     margin: auto;
-    background: content-box radial-gradient(#000, #BFAFB0);
+    background: content-box radial-gradient(#BFAFB0, #fff);
 }
 
 .postimages {
@@ -872,14 +899,15 @@
 
 .wp-block-quote {
     font-size: 1em;
-    border: 10px solid var(--beige);
+    margin: auto;
+    border: 5px solid var(--beige);
     background-color: var(--white);
 }
 
 .posttext {
     display: block;
     font-size: 1.1em;
-    width: 80%;
+    width: 90%;
     justify-content: center;
     margin: auto;
 }
@@ -949,12 +977,12 @@
 }
 
 .quote1 {
-    padding-left: 40px;
+    padding: 100px 40px;
 }
 
 .quote1 p {
-    -webkit-text-stroke: 2px var(--beige);
-    font-size: 3.1em;
+    -webkit-text-stroke: 0.5px var(--black);
+    font-size: 3.5em;
     color: var(--beige);
 }
 
@@ -962,11 +990,30 @@
     color: var(--white);
 }
 
+.container-heritage {
+    margin: 0;
+    padding: 0;
+    height: max-content;
+    padding-bottom: 90px;
+}
+
+.heritagetext {
+    font-size: large;
+    margin: 50px 60px 0 -230px; 
+} 
+
+.container-heritage img {
+    min-width: 700px;
+    min-height: 400px;
+}
+
+
+
 /*BLOG*/
 
 .postbox {
     display: grid;
-    grid-template-columns: repeat(3, 30%);
+    grid-template-columns: repeat(3, 32%);
     justify-content: space-evenly;
     max-width: 900px;
 }

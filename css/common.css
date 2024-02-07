@@ -183,12 +183,13 @@
 .carouselheading {
     display: block;
     text-align: center;
-    font-family: var(--water);
+    font-family: var(--della);
+    text-transform: uppercase;
     background-color: var(--white);
-    font-size: 2.2em;
+    font-size: 1.5em;
     color: var(--black);
     margin: 2px auto;
-    padding: 0;
+    padding: 10px 0;
     letter-spacing: 0.1em;
     box-shadow: 0px 0px 60px 1px var(--beige);
 
@@ -199,7 +200,7 @@
     margin: 10px auto;
     padding: 20px 0;
     background-image: url(/images/Paisley5.jpeg);
-    background-size: 370px;
+    background-size: 170px;
 }
 
 .carouselcontent{
@@ -336,8 +337,6 @@
 
 
 
-
-
 @media screen and (min-width: 500px){
 
 /* CAROUSEL */
@@ -353,12 +352,6 @@
     margin: 0 auto 0;
 }
 
-.carouselheading {
-    padding: 10px 0;
-    background-color: var(--white);
-}
-
-
 }
 
 @media screen and (min-width: 768px){
@@ -366,14 +359,12 @@
 /* CAROUSEL */
 
 
-#carusel-sec {
-
-}
 .carousel {
    display: grid;
-   grid-template-columns: 49% 49%;
+   grid-template-columns: 50% 50%;
    margin: auto;
    justify-content: space-between;
+   margin: 20px auto;
 }
 
 .carouselcontent {
@@ -436,7 +427,9 @@
 }
 
 .carimage {
-    height: 300px;
+    height: 350px;
+    object-fit: cover;
+    width: 480px;
 }
 
 .caritem {
@@ -468,13 +461,14 @@
 }
 
 .cartitle {
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 .cartext p {
     font-size: 1.2em;
     max-width: 300px;
     padding: 20px 0;
+    height: 110px;
 }
 
 .post-aut-date2  {
@@ -482,7 +476,7 @@
     width: 400px;
 }
 .carlink {
-    margin: 50px auto 0;
+    margin: 20px auto 0;
 }
 
 .disabled {
