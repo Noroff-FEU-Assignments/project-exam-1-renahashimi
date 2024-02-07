@@ -69,7 +69,6 @@
 .welcomecontent {
     display: block;
     width: 100%;
-    max-width: 500px;
     margin: 40px auto;
     padding: 5px 0;
     box-shadow: 0 5px 20px 5px var(--beige);
@@ -990,6 +989,11 @@
     color: var(--white);
 }
 
+.indexcontact {
+    font-size: 1.2em;
+    max-width: 550px;
+}
+
 .container-heritage {
     margin: 0;
     padding: 0;
@@ -998,8 +1002,7 @@
 }
 
 .heritagetext {
-    font-size: large;
-    margin: 50px 60px 0 -230px; 
+    margin: 60px 90px 0 -250px; 
 } 
 
 .container-heritage img {

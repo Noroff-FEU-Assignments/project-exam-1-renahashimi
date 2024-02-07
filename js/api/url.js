@@ -17,4 +17,4 @@ export const categoryUrl = url + posts + ending;
 export const BUTACUISINE_URL = url + posts + id + ending;
 export const BUTACUISINE_URL_MEDIA = url + posts + perPage;
 export const urlLoad = url + posts + perPage;
-export const baseUrl = url + posts + page2Url;
+export const baseUrl = url + post;

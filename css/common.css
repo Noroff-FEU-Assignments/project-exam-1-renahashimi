@@ -174,7 +174,7 @@
 
 /* CAROUSEL */
 
-.carousel {
+ .carousel {
     width: 95%;
     position: relative;
     margin: 30px auto;
@@ -292,7 +292,7 @@
 .rotate {
     transform: rotate(180deg);
     padding-top: -3px;
-}
+} 
 
 
 /* MODAL */
@@ -359,19 +359,151 @@
 /* CAROUSEL */
 
 
+#carousel-sec {
+    background-image: none;
+    background-color: var(--beige);
+    position: relative;
+    border: none;
+    width: 100%;
+    overflow: hidden;
+    max-width: 768px;
+}
+
 .carousel {
-   display: grid;
-   grid-template-columns: 50% 50%;
-   margin: auto;
-   justify-content: space-between;
-   margin: 20px auto;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    padding-left: 40px;
+    gap: 74px;
+}
+
+.carouselcontent {
+    min-width: 600px;
+    margin-left: 42px;
+    padding: 0;
+}
+
+.carouselcontent:hover {
+    border: 5px solid var(--white) ;
+}
+
+.carimage {
+    min-height: 290px;
+    object-fit: cover;
+    min-width: 350px;
+    max-width: 350px;
+    padding: 0;
+}
+
+.caritem {
+    display: flex;
+    width: 100%;
+}
+
+.carbtnnext, .carbtnpre {
+    display: block;
+    visibility: visible;
+    top: 45%;
+    width: 60px;
+    height: 60px; 
+}
+
+.carbtnpre {
+    left: 5px;
+    box-shadow: -5px 10px 20px 0 var(--black);
+}
+
+.carbtnnext {
+    right: 5px;
+    box-shadow: 5px 10px 20px 0 var(--black);
+} 
+
+.carbtnnext span, .carbtnpre span  {
+    display: block;
+    scale: 1.7;
+}
+
+.cartitle {
+    color: var(--black);
+    font-size: 1.4em;
+    letter-spacing: 2px;
+    padding: 10px 5px;
+    margin: 5px 5px 20px;
+}
+ 
+.cartext p {
+    font-size: 1.1em;
+    height: 120px;
+}
+
+.carlink {
+    display: block;
+    font-family: var(--della);
+    margin: auto;
+    padding: 2px 0;
+    color:  var(--black);
+    text-align: center;
+    text-transform: uppercase;
+    background-color: var(--white);
+    border: 3px solid var(--beige);
+    width: 70%;
+    border-radius: 20px;
+}
+
+.carlink:hover {
+    border: 3px solid var(--black);
+}
+
+.post-aut-date2, .caritemblock i, .post-aut-date3 {
+    font-size: 0.7em;
+    max-width: 300px;
+    color: var(--black);
+    text-transform: capitalize;
+    letter-spacing: 0.1em;
+    margin: 5px 5px 10px;
+}
+
+.post-aut-date3 {
+    margin-left: 20px;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    padding-top: -3px;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+
+/* #carousel-sec {
+    background-image: none;
+    background-color: var(--beige);
+    position: relative;
+    border: none;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    padding-left: 40px;
+    width: 100%;
+    gap: 65px;
 }
 
 .carouselcontent {
     width: 100%;
-    width: 300px;
-    margin: 15px auto;
-}
+    min-width: 800px;
+    margin-left: 60px;
+    padding: 0;
+} */
+
+
 
 /* SEARCH */
 
@@ -399,19 +531,11 @@
 /* CAROUSEL */
 
 #carousel-sec {
-    background-image: none;
-    background-color: var(--beige);
-    position: relative;
-    border: none;
     width: 100%;
-    overflow: hidden;
+    max-width: 1000px;
 }
 
 .carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    padding-left: 40px;
-    width: 100%;
     gap: 65px;
 }
 
@@ -419,7 +543,6 @@
     width: 100%;
     min-width: 800px;
     margin-left: 60px;
-    padding: 0;
 }
 
 .carouselcontent:hover {
@@ -429,7 +552,7 @@
 .carimage {
     height: 350px;
     object-fit: cover;
-    width: 480px;
+    min-width: 500px;
 }
 
 .caritem {
@@ -437,26 +560,15 @@
     width: 100%;
 }
 
-.carbtnnext, .carbtnpre {
-    display: block;
-    visibility: visible;
-    top: 50%;
-    width: 60px;
-    height: 60px; 
-}
-
 .carbtnpre {
     left: 15px;
-    box-shadow: -5px 10px 20px 0 var(--black);
 }
 
 .carbtnnext {
     right: 15px;
-    box-shadow: 5px 10px 20px 0 var(--black);
 } 
 
 .carbtnnext span, .carbtnpre span  {
-    display: block;
     scale: 3;
 }
 
@@ -467,7 +579,7 @@
 .cartext p {
     font-size: 1.2em;
     max-width: 300px;
-    padding: 20px 0;
+    padding: 20px 0 0;
     height: 110px;
 }
 
@@ -475,15 +587,12 @@
     font-size: 1em;
     width: 400px;
 }
+
 .carlink {
     margin: 20px auto 0;
+    width: 60%;
 }
 
-.disabled {
-    pointer-events: none;
-    opacity: 0.5;
-    cursor: not-allowed;
-}
 
 
 }
