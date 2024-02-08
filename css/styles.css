@@ -1,5 +1,5 @@
 @import url("./theme.css");
-@import url("./common.css");
+@import url("./util.css");
 
 
 /* CSS FOR ALL PAGES (HOME - BLOG - ABOUT - CONTACT */
@@ -70,7 +70,7 @@
     display: block;
     width: 100%;
     margin: 40px auto;
-    padding: 5px 0;
+    padding: 5px 0 40px;
     box-shadow: 0 5px 20px 5px var(--beige);
 }
 
@@ -313,7 +313,6 @@
     transform: rotate(-25deg);
 }
 
-  
 
 
 /*BLOGPAGE*/
@@ -334,6 +333,7 @@
     border: 2px solid var(--beige);
     cursor: pointer;
     transition: 0.3s;  
+    box-shadow: 0 5px 20px var(--black);
 } 
 
 .postimages:hover {
@@ -343,7 +343,7 @@
 .wp-block-quote {
     display: block;
     font-size: 0.8em;
-    margin: -10px 10px 10px;
+    margin: 15px 10px 10px;
     padding: 1px 4px;
     background-color: var(--beige);
     text-align: center;
@@ -420,20 +420,20 @@
 
 .morepostcontent {
     width: 100%;
-    height: 150px;
+    height: 200px;
     margin: 20px ;
     border: 2px solid var(--black);
 }
 
 .morepostcontent img {
     border: 2px solid var(--black);
-    height: 100px;
-    width: 160px;
+    height: 150px;
+    width: 200px;
 }
 
 .morepostcontent h4{
     margin: 0;
-    padding: 5px;
+    padding: 15px 5px;
     color: var(--black);
 }
 
@@ -810,8 +810,8 @@
 /* BLOG */
 
 .borderstyle {
-    border-left: 20px groove var(--beige);
-    border-right: 20px ridge var(--beige);
+    border-left: 20px ridge var(--beige);
+    border-right: 20px groove var(--beige);
 }
 
 .postcontainer {
@@ -834,7 +834,7 @@
 }
 
 .butaimg {
-    margin-bottom: 0;
+    display: none;
 }
 
 .blogquote {
@@ -913,7 +913,7 @@
 
 .postquote {
     font-size: 1.3em;
-    margin-top: 60px;
+    
 }
 
 /* CONTACT */
@@ -1083,99 +1083,3 @@
 
 }
 
-
-
-
-
-/*
-.pagename {
-    margin: 0 20px;
-}
-
-.pagename p {
-    display: block;
-    text-align: center;
-    font-family: var(--della);
-    color: var(--beige);
-    font-size: 1em;
-    max-width: 320px;
-    margin: 20px auto;
-    padding: 10px;
-    border: 2px solid var(--beige);
-    border-radius: 40px;
-    -webkit-text-stroke: 0.6px var(--black);
-    text-transform: none;
-}
-
-.postcontent {
-    border: 3px solid var(--beige);
-    margin: 20px 30px;
-    color: var(--black);
-}
-
-.postcontent:hover {
-    border: 3px ridge var(--black);
-}
-
-.postcontent h2 {
-    color: var(--black);
-    margin: 10px;
-    padding: 2px 0;
-    font-size: 1.1em;
-}
-
-.text-justify {
-    color: var(--black);
-    font-size: 0.9em;
-    margin: -10px 10px 30px;
-}
-
-.postcontent button {
-    display: block;
-    color: var(--black);
-    font-family: var(--della);
-    font-size: 0.8em;
-    text-transform: uppercase;
-    background-color: var(--white);
-    border: 3px solid var(--beige);
-    box-shadow: 0 2px 10px 0px var(--beige);
-    border-radius: 60px;
-    margin: 20px auto;
-    width: 80%;
-    height: 40px;
-}
-
-.postcontent button:hover {
-    border: 3px unset var(--black);
-    box-shadow: 0 2px 20px 0px var(--beige);
-    font-size: 0.9em;
-}
-
-.r-m-btn span {
-    font-size: 1.2em;
-}
-
-.postsimage {
-    display: block;
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    margin: 0;
-    padding: 0;
-}
-
-.postsimage:hover {
-    opacity: 0.8;
-}
-
-.butaimg {
-    display: block;
-    margin: 30px auto;
-    width: 30px;
-    transform: rotate(-25deg);
-}
-*/
-
-/* BLOGPAGE */
-/* ABOUT */
-/* CONTACT*/

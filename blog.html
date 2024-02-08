@@ -69,13 +69,14 @@
             <button type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i></button>
         </form>
     </div>
+
     <div class="searchresult"></div>
 
     <div class="filterbtn">
-      <button class="filter-btn post-selected" value="1">See All</button>
-      <button class="filter-btn" value="6">Starters & Salad</button>
-      <button class="filter-btn" value="3">Main Course</button>
-      <button class="filter-btn" value="4">Sweets</button>
+      <button class="filterbtn post-selected" value="1" onclick="filterPost()">See All</button>
+      <button class="filterbtn" value="6" onclick="filterPost()">Starters & Salad</button>
+      <button class="filterbtn" value="3" onclick="filterPost()">Main Course</button>
+      <button class="filterbtn" value="4" onclick="filterPost()">Sweets</button>
     </div> 
 
     <div class="postcontainer">  
@@ -96,7 +97,7 @@
   </main>
   <footer>
     <div class="connect">
-        <h3>Connect with me</h3>
+        <h2>Connect with me</h2>
         <div class="logos">
           <a href="https://www.instagram.com/"><img src="images/logos/instagram.png" alt="Instagram"></a>
           <a href="https://www.facebook.com/?locale=nb_NO"><img src="images/logos/facebook.png" alt="Facebook"></a>

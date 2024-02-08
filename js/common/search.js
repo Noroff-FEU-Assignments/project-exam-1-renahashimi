@@ -12,14 +12,15 @@ async function searchPosts(urlLoad) {
 
     if (posts.length > 0)  {
         searchResult.innerHTML += searchResultPost(posts);
-    } else {
-        searchResult.innerHTML += `<div>No results found for "${searchInput}", try again</div>`;
+    } 
+    else {
+        searchResult.innerHTML += `<p class="searcherr">No matching recipes found, try again</p>`;
     }
 
     console.log(posts, searchBtn);
 
     } catch(error) {
-        console.log("Unknown error", error);
+        console.log("No recipes found", error);
        // postBox.innerHTML = errorMessage();
     }
 };
@@ -42,14 +43,15 @@ searchBtn.onclick = function () {
     const newUrl = urlLoad + `&search=${searchInput}`;    
 
     if (searchInput) {
-        searchPosts(newUrl);
+        searchPosts(newUrl);  
     } 
-    if (!searchInput){
-        searchResult.innerHTML += `<p>No results found for "${searchInput.value}", try again</p>`;
+    else{
+        searchResult.innerHTML = `<p class="searcherr">No matching recipes found, try again</p>`;
     }
-    clearSearch()
     // console.log(newUrl);
 }
+
+window.addEventListener("click", clearSearch);
 
 function clearSearch(){
     searchResult.innerHTML = "";
