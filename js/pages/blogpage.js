@@ -15,6 +15,7 @@ const modalBox = document.querySelector(".modalbox");
 const backButton = document.querySelector(".backbutton");
 backButton.innerHTML = "GO BACK TO POSTS";
 
+const recipeTitle = document.querySelector(".recipetitle")
 
 
 async function getSinglePosts() {
@@ -31,7 +32,8 @@ async function getSinglePosts() {
         createPosts(posts);
         //setupLikePosts(posts);
     
-        
+        recipeTitle.innerText += `Buta Cuisine - ${posts.title.rendered}`;
+
         const modalImg = document.querySelector(".postimages");
         modalImg.addEventListener("click", modal);
 
