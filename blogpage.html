@@ -54,13 +54,15 @@
   <main>
 
     <input type="button" id="back" value="back" onclick="history.go(-1);"> 
-    <label for="back" class="backbutton"></label>
+    <label for="back" class="backbutton">GO BACK</label>
     
     <!-- <section class="loadingbox">
       <div class="loader"></div>
       <div class="loader-indicator"></div> 
     </section> -->
     
+
+    <!--H1 & H2 IS REFERRED IN JS-->
     <div class="postcontainer2">  
         <div class="posttitle"></div>
         <div class="postimage"></div>
@@ -74,22 +76,16 @@
       <div class="commentsec">
         <form action="#" id="commentform" class="commentform" autocomplete="on" >
           <div class="commentbox">
-            <label for="name">
-              <input type="text" id="name" placeholder="Name" required>
-            </label> 
-            <div class="errorbox" id="fullnameerror">Name must be over 5 characters.</div>
+            <label for="name"class="hide">Name</label> 
+            <input type="text" id="name" placeholder="Name" required>
           </div>
           <div class="commentbox">
-            <label for="email">
-              <input type="text" id="email" placeholder="Email" required>
-            </label>
-            <div class="errorbox" id="emailerror">Please enter a valid email.</div>
+            <label for="email" class="hide">Email</label>
+            <input type="text" id="email" placeholder="Email" required>
           </div>
           <div class="commentbox">
-            <label for="message">
-              <textarea  id="message" rows="4" placeholder="Your comment" required></textarea> 
-            </label>
-            <div class="errorbox" id="messageerror">Message must be over 25 characters.</div>
+            <label for="message" class="hide">Message</label>
+            <textarea  id="message" rows="4" placeholder="Your comment" required></textarea> 
           </div>
           <div><button>Submit</button></div>
         </form>
