@@ -74,7 +74,7 @@
     box-shadow: 0 5px 20px 5px var(--beige);
 }
 
-.welcomeimg h2 {
+.welcomeimg h1 {
     font-size: 2.8em;
     text-align: center;
     text-transform: uppercase;
@@ -164,7 +164,7 @@
     color: var(--white);
 }
 
-.heritagetext h5 {
+.heritagetext h4 {
     font-family: var(--water);
     font-size: 1.6em;
     padding: 15px 0;
@@ -737,7 +737,7 @@
     font-size: 1.3em;
 }
 
-.welcomeimg h2 {
+.welcomeimg h1 {
     font-size: 3.5em;
 }
 
@@ -745,7 +745,7 @@
     font-size: 1.8em;
 }
 
-.heritagetext h5 {
+.heritagetext h4 {
     font-size: 2.5em;
     letter-spacing: 0.2em;
 }
@@ -789,7 +789,7 @@
     padding: 0;
 }
 
-.welcomeimg h2 {
+.welcomeimg h1 {
     font-size: 5em;
 }
 
@@ -831,7 +831,7 @@
 
 }
 
-.heritagetext h5 {
+.heritagetext h4 {
     font-size: 2.7em;
 }
 
