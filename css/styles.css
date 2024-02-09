@@ -55,7 +55,7 @@
     font-weight: 900;
     position: relative;
     color: var(--tran);
-    -webkit-text-stroke: 5px var(--white);
+    -webkit-text-stroke: 7px var(--white);
     font-size: 3.5em;
     margin: auto;
     padding: 10px;
@@ -239,6 +239,7 @@
     border: 3px solid var(--beige);
     margin: 20px 15px;
     color: var(--black);
+    box-shadow: 0 3px 15px var(--black);
 }
 
 .postcontent:hover {
