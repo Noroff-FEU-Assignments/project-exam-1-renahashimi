@@ -420,7 +420,7 @@
 
 .morepostcontent {
     width: 100%;
-    height: 200px;
+    height: 210px;
     margin: 20px ;
     border: 2px solid var(--black);
 }
@@ -428,15 +428,34 @@
 .morepostcontent img {
     border: 2px solid var(--black);
     height: 150px;
-    width: 200px;
+    width: 220px;
 }
 
 .morepostcontent h4{
+    font-size: 0.9em;
     margin: 0;
-    padding: 15px 5px;
+    color: var(--black);
+    padding: 15px 4px 10px;
+}
+
+.morebtn {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 3px;
     color: var(--black);
 }
 
+.morebtn p {
+    border: 2px solid var(--beige);
+    padding: 4px 5px;
+    font-size: 0.7em;
+    border-radius: 20px;
+    margin-right: 5px;
+}
+
+.morebtn:hover p {
+    border: 2px solid var(--black);
+}
 
 /* COMMENT FORM */
 
@@ -502,7 +521,7 @@
     font-family: var(--water);
 }
 
-.aboutme, .aboutpage {
+.aboutme, .aboutpage, .aboutpage2 {
     display: flex;
     justify-content: space-evenly;
     background-image: url(/images/Paisley5.jpeg);
@@ -514,17 +533,18 @@
     margin: auto;
     padding: 5px;
     font-size: 0.9em;
+    line-height: 2em;
 }
 
 .aboutpage {
     display: block;
     width: 90%;
-    margin: 50px auto;
+    margin: 20px auto;
     padding: 5px;
 }
 
 .aboutme h2 {
-    padding: 10px;
+    padding: 2px 20px;
     font-size: 1em;
     text-align: right;
 }
@@ -559,14 +579,16 @@
     font-family: var(--della);
     padding: 20px 10px;
     margin: 10px auto;
-    max-width: 80%;
+    max-width: 90%;
 }
 
 .buta {
     display: block;
     letter-spacing: 0.4em;
     max-width: 200px;
-    margin: 20px auto 40px;
+    margin: 30px auto 40px;
+    padding: 0 20px 10px;
+    box-shadow: 0 5px 20px var(--black);
 }
 
 .buta h2 {
@@ -733,6 +755,12 @@
 
 .container-heritage {
     height: 300px;
+}
+
+/* ABOUT */
+
+.aboutpage2 {
+    font-size: 1.1em;
 }
 
 }
@@ -950,6 +978,15 @@
     font-size: 1.2em;
 }
 
+.buta {
+    max-width: 240px;
+}
+
+.buta p, .buta span, .p-span {
+    font-size: 1em;
+    padding: 15px 0;
+}
+
 .aboutme p {
     padding: 2px 12px 2px -10px;
     margin: 20px;
@@ -961,6 +998,11 @@
 
 .aboutpage p, .myquote {
     font-size: 1.2em;
+}
+
+.aboutpage2 p {
+    font-size: 1.2em;
+    padding: 20px 40px;
 }
 
 }
@@ -1010,6 +1052,10 @@
     min-height: 400px;
 }
 
+.likesection h3, .likesection p {
+    font-size: medium;
+}
+
 
 
 /*BLOG*/
@@ -1041,8 +1087,21 @@
 
 .aboutcontent {
     display: grid;
-    grid-template-columns: 45% 55%;
+    grid-template-columns: 50% 50%;
     margin: 50px 100px;
+}
+
+.buta {
+    max-width: 270px;
+}
+
+.buta h2 {
+    font-size: 3.5em;
+}
+
+.buta p, .buta span, .p-span {
+    font-size: 1.1em;
+    padding: 15px 0;
 }
 
 .aboutpage, .aboutme  {
@@ -1050,15 +1109,22 @@
     display: block;
     margin: auto;
     justify-content: center;
+    text-align: center;
+}
+
+.aboutme img {
+    width: 100px;
+    height: 150px;
 }
 
 .a-m-section  {
     margin: auto;
-    padding: 5px 2px;
+    padding: 5px 2px 1px;
 }
 
 .aboutme h2 {
-    padding: 0 10px;
+    padding: 0 20px;
+    text-align: center;
 }
 
 .aboutme p {
@@ -1066,9 +1132,14 @@
 }
 
 .aboutpage p, .myquote, .a-m-section{
-    font-size: 1.3em;
+    font-size: 1.4em;
     margin-top: 20px;
     max-width: 90%;
+    border-radius: 20px;
+}
+
+.aboutpage p {
+    padding: 35px 5px;
 }
 
 .myquote {
@@ -1077,6 +1148,20 @@
 
 .aboutme img {
     margin: 10px auto -10px;
+}
+
+.aboutpage2 {
+    max-width: 760px;
+    margin-top: -25px;
+}
+
+.aboutpage2 p {
+    padding: 10px 30px;
+    font-size: 1.5em;
+}
+
+.imgbaku {
+    width: 80%;
 }
 
 

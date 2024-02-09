@@ -34,7 +34,7 @@ main {
     background-color: var(--white);
     max-width: 1000px;
     margin: 40px auto -20px;
-    padding: 50px 0;
+    padding: 50px 0 0;
 }
 
 h1 {
@@ -68,13 +68,17 @@ button, .poststitle, .postsimage, .backbutton {
     background-color: var(--beige);
     padding: 10px;
     border-radius: 50%;
-    border: 1px solid var(--black);
+    border: 2px solid var(--black);
     right: 20px;
     bottom: 40px;
     position: fixed;
     z-index: 3;
 }
 
+.btt:hover{
+    background-color: var(--white);
+    border: 2px solid var(--beige);
+}
 .back-to-top p {
     position: fixed;
     z-index: 3;
@@ -399,9 +403,22 @@ main, body , header {
     padding: 0;
     box-shadow: none;
     background-color: var(--beige);
-
 }
 
+/* BACK TO TOP */
+
+.btt {
+    right: 48%;
+    bottom: 40px;
+}
+
+.back-to-top p {
+    position: fixed;
+    z-index: 3;
+    right: 47%;
+    bottom: 8px;
+    font-size: 0.9em;
+}
 
 
 

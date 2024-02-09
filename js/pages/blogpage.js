@@ -91,9 +91,13 @@ async function setupLikePosts() {
             likePosts.innerHTML += `<div class="morepostcontent">
                                         <a href="blogpage.html?id=${post.id}">
                                             <img class="postimages" src="${imgUrl}" alt="${imgAlt}">
-                                            <h4>${post.title.rendered}</h4>
+                                            <div class="morebtn">
+                                               <h4>${post.title.rendered}</h4>
+                                               <p>the recipe <i class="fa-solid fa-arrow-right fa-sm" style="color: #000000;"></i></p>
+                                            </div>   
                                         </a>
                                     </div>`;
+                            
         });
         
     }catch(error) {
