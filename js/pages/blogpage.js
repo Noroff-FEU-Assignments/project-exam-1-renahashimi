@@ -1,8 +1,7 @@
 import { BUTACUISINE_URL, BUTACUISINE_URL_MEDIA } from "../api/url.js";
 import { errorMessage } from "../api/errormessage.js";
-import * as pageloader from "../common.js";
-import { loadPage } from "../common/pageloader.js";
 import { getPosts } from "../api/getPosts.js";
+import { showLoader, hideLoader } from "../api/loader.js";
 
 const postContainer2 = document.querySelector(".postcontainer2");
 const postTitle = document.querySelector(".posttitle");
@@ -22,7 +21,8 @@ async function getSinglePosts() {
     try{
         const response = await fetch(BUTACUISINE_URL);
         const posts = await response.json();
-
+        
+        showLoader();
         console.log(posts);
         if (!posts) {
             console.error("Posts not found");
@@ -42,6 +42,8 @@ async function getSinglePosts() {
     } catch(error) {
     console.log("Unknown error", error);
     postContainer2.innerHTML = errorMessage();
+    } finally {
+        hideLoader();
     }
 }
 getSinglePosts();
@@ -60,6 +62,7 @@ function modal(){
 
 
 function createPosts(posts){
+    showLoader()
     const imgUrl = posts._embedded["wp:featuredmedia"][0].source_url;
     const imgAlt = posts._embedded["wp:featuredmedia"][0].alt_text;
 
@@ -72,7 +75,8 @@ function createPosts(posts){
                             <i class="fa-solid fa-calendar-days fa-xs" style="color: #000000;"> ${posts.date.slice(0, -9)} </i> 
                           </div>`;
     postQuote.innerHTML += `<h2>Ready, Cook & <span>Bon Appetit</span></h2>`;
-}console.log(modalBox.innerHTML);
+}
+hideLoader()
 
 
 async function setupLikePosts() {

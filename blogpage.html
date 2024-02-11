@@ -55,11 +55,10 @@
     <input type="button" id="back" value="back" onclick="history.go(-1);"> 
     <label for="back" class="backbutton">GO BACK</label>
     
-    <!-- <section class="loadingbox">
-      <div class="loader"></div>
+    <section class="loadingbox2">
+      <div class="loader">Loading recipes</div>
       <div class="loader-indicator"></div> 
-    </section> -->
-    
+    </section>
 
     <!--H1 & H2 IS REFERRED IN JS-->
     <div class="postcontainer2">  
@@ -77,11 +76,11 @@
         <form action="#" id="commentform" class="commentform" autocomplete="on" >
           <div class="commentbox">
             <label for="name"class="hide">Name</label> 
-            <input type="text" id="name" placeholder="Name" required>
+            <input type="text" id="name" placeholder="Name" autocomplete="on" required>
           </div>
           <div class="commentbox">
             <label for="email" class="hide">Email</label>
-            <input type="text" id="email" placeholder="Email" required>
+            <input type="text" id="email" placeholder="Email" autocomplete="on" required>
           </div>
           <div class="commentbox">
             <label for="message" class="hide">Message</label>

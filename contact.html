@@ -56,15 +56,15 @@
         <h1>Send me a message <span class="heart">&#9825;</span></h1>
         <div class="formsuccess"></div>
         <div class="contactform">
-          <form action="#" id="c-form" autocomplete="on" >
+          <form action="#" id="c-form" autocomplete="on">
             <div class="contactbox">
               <label for="fullname">Name</label>
-              <input type="text" id="fullname">
+              <input type="text" id="fullname" autocomplete="on">
               <div class="errorbox" id="fullnameerror">Name must be over 5 characters.</div>
             </div>
             <div class="contactbox">
               <label for="email">Email</label>
-              <input type="text" id="email" >
+              <input type="text" id="email" autocomplete="on">
               <div class="errorbox" id="emailerror">Please enter a valid email.</div>
             </div>
             <div class="contactbox">
@@ -77,7 +77,7 @@
               <textarea  id="message" rows="6"></textarea> 
               <div class="errorbox" id="messageerror">Message must be over 25 characters.</div>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit">Send</button>
           </form>
         </div>
       </div>

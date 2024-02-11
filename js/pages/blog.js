@@ -1,9 +1,6 @@
 import { BUTACUISINE_URL, BUTACUISINE_URL_MEDIA, baseUrl, urlLoad } from "../api/url.js";
 import { errorMessage } from "../api/errormessage.js";
-// import { loadPage } from "../common/pageloader.js";
-// import * as pageloader from "../common.js";
-
-
+import { showLoader, hideLoader } from "../api/loader.js";
 
 const pageNameBlog = document.querySelector(".pagename");
 const loadMoreBtn = document.querySelector(".loadmorebtn");
@@ -21,6 +18,7 @@ async function getPosts() {
     const response = await fetch(baseUrl + `?per_page=${currentPosts}&_embed`);
     const posts = await response.json(); 
 
+    showLoader()
     if (!posts) {
         console.error("Posts not found");
         return;
@@ -36,11 +34,13 @@ async function getPosts() {
 } catch(error) {
     console.log("Unknown error", error);
    // postBox.innerHTML = errorMessage();
+}finally {
+    hideLoader()
 }
 }
+
+
 getPosts();
-
-
 
 function createPost(posts) {
     postContainer.innerHTML = "";
@@ -90,8 +90,6 @@ filterBtn.forEach(function (catBtn) {
         if (catFilter === "1") {
             getPosts(catUrl, postContent);
             postContainer.innerHTML = "";
-
-
         } 
         else {
             currentCategory = catFilter;

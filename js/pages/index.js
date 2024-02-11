@@ -1,6 +1,7 @@
 import { errorMessage } from "../api/errormessage.js";
 import { getPosts } from "../api/getPosts.js";
 import { BUTACUISINE_URL, BUTACUISINE_URL_MEDIA, carouselUrl, categoryUrl} from "../api/url.js";
+import { showLoader, hideLoader } from "../api/loader.js";
 
 
 let startPosts = 0;
@@ -15,6 +16,8 @@ async function fecthIndexData() {
       const posts = await response.json();
       console.log(posts);
 
+      showLoader()
+
       if (!posts) {
         console.error("Posts not found");
         return;
@@ -27,6 +30,8 @@ async function fecthIndexData() {
 
    } catch(error) {
     console.log("Something went wrong", error);
+  } finally {
+    hideLoader()
   }
 }
 
@@ -44,6 +49,8 @@ const welcomeTxt = document.querySelector(".welcometxt");
 /* CAROUSEL */
 
 function displayCarousel(posts) {
+  showLoader()
+  hideLoader()
   posts.forEach((post) => {
     const indexPost = `<div class="carouselcontent">
                         <a href="blogpage.html?id=${post.id}" class="caritem">
@@ -59,18 +66,18 @@ function displayCarousel(posts) {
                         </div> 
                         </a>
                       </div>`;
+
+
 carouselContainer.innerHTML += indexPost;
-const allPosts = posts.length;
-console.log(allPosts);
   }); 
 }
+
+
+
 
 document.addEventListener("DOMContentLoaded", function(){
 let currentIndex = 0;
 let posts = document.querySelectorAll(".carouselcontent");
-
-console.log(posts);
-
 
 const nextBtn = document.querySelector(".carbtnnext");
 const prevBtn = document.querySelector (".carbtnpre");
