@@ -85,6 +85,10 @@ filterBtns.forEach(function (filterBtn) {
         console.log('Selected URL:', selectedCategory);
         handleFilter(selectedCategory);
 
+        if (selectedCategory !== "1") {
+            loadMoreBtn.style.display = "none";
+        }
+
     });
 });
 async function handleFilter(selectedCategory) {
@@ -92,7 +96,7 @@ async function handleFilter(selectedCategory) {
         showLoader();
         let catUrl = urlLoad + `&categories=${selectedCategory}&_embed`;
         const response = await fetch(catUrl);
-        const posts = response.json();
+        const posts =  await response.json();
         console.log(catUrl);
 
         if (!posts) {
@@ -110,10 +114,3 @@ async function handleFilter(selectedCategory) {
 }
 
 });
-
-
-
-// function filterPost(filterOn) {
-//  filterBtn.forEach((catBtn) => catBtn.classList.remove("post-selected"));
-//  filterOn.classList.add("post-selected");      
-// }

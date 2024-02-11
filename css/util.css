@@ -81,7 +81,36 @@
     padding-bottom: 50px;
 }
 
-/* SEARCH */
+/* FILTER & SEARCH */
+
+.utilbox {
+    display: block;
+}
+
+.filterbtn {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    max-width: 90%;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.filter-btn {
+    font-size: 0.8em;
+    width: 90%;
+    max-width: 200px;
+    font-family: var(--della);
+    padding: 10px 5px; 
+    background-color: var(--white);
+    border: 2px solid var(--beige);
+    margin: 5px auto;
+    text-transform: uppercase;
+}
+
+.filter-btn:hover {
+    border-color: var(--black);
+}
 
 .searchbox {
     display: flex;
@@ -156,14 +185,13 @@
     justify-content: center;
     width: 200px;
     height: 220px;
-    margin: 10px auto;
+
     justify-content: left;
     border: 2px solid var(--black);
 }
 
 .searchcontent:hover {
     border: 2px solid var(--white);
-
 }
 
 .searchcontent img {
@@ -389,7 +417,16 @@
     margin: 0 auto 0;
 }
 
+/* FILTER & SEARCH */
+
+.filterbtn {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    justify-content: space-evenly;
 }
+
+}
+
 
 @media screen and (min-width: 768px){
 
@@ -521,7 +558,40 @@
 }
 
 
-/* SEARCH */
+/* FILTER & SEARCH */
+
+.utilbox {
+    display: grid;
+    grid-template-columns: 55% 45%;
+}
+
+.filterbtn {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    padding: 0;
+}
+
+.filter-btn {
+    min-width: 130px;
+    margin: 5px auto;
+    padding: 4px;
+    font-family: var(--della);
+    border-radius: 20px;
+    letter-spacing: 0.1em;
+}
+
+.filter-btn:hover {
+    border-color: var(--black);
+}
+
+.searchbox {
+    margin-top: 30px;
+}
+
+.searchbox:hover {
+    margin: 35px auto 40px;
+}
 
 .searchcontent{
     width: 30%;
@@ -611,7 +681,25 @@
     width: 60%;
 }
 
-/* BLOG */
+
+
+/* FILTER & SEARCH */
+
+.utilbox {
+    display: grid;
+    grid-template-columns: 65% 35%;
+}
+
+.filterbtn {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    justify-content: space-between;
+    width: 100%;
+}
+
+.filter-btn {
+    padding: 15px 0;
+}
 
 
 }
