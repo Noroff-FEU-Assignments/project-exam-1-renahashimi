@@ -1,6 +1,6 @@
 import { BUTACUISINE_URL, BUTACUISINE_URL_MEDIA, baseUrl, urlLoad } from "../api/url.js";
 import { errorMessage } from "../api/errormessage.js";
-import { showLoader, hideLoader } from "../api/loader.js";
+import { showLoader, hideLoader } from "../common/loader.js";
 
 const pageNameBlog = document.querySelector(".pagename");
 const loadMoreBtn = document.querySelector(".loadmorebtn");
@@ -15,10 +15,10 @@ let currentPosts = 9;
 
 async function getPosts() {
    try {
+    showLoader();
     const response = await fetch(baseUrl + `?per_page=${currentPosts}&_embed`);
     const posts = await response.json(); 
 
-    showLoader()
     if (!posts) {
         console.error("Posts not found");
         return;
@@ -33,6 +33,7 @@ async function getPosts() {
    
 } catch(error) {
     console.log("Unknown error", error);
+    hideLoader()
    // postBox.innerHTML = errorMessage();
 }finally {
     hideLoader()
@@ -71,42 +72,44 @@ loadMoreBtn.addEventListener("click", function () {
     loadMoreBtn.style.display = "none";
 });
 
+/* FILTER / BUTTON / CATEGORY */
 
 document.addEventListener("DOMContentLoaded", function(){
 const postContent = document.querySelectorAll(".postcontent")
-const filterBtn = document.querySelectorAll(".filterbtn");
+const filterBtns = document.querySelectorAll(".filter-btn");
 
-filterBtn.forEach(function (catBtn) {
-    catBtn.addEventListener ("click", function (e) {
-        filterPost(catBtn, filterBtn);
+filterBtns.forEach(function (filterBtn) {
+    filterBtn.addEventListener ("click", function (event) {
 
-        const catFilter = e.target.value;
-        const catUrl = urlLoad + `&categories=${currentCategory}`;
-        currentCategory = 1;
-        postContainer.innerHTML = "";
-
-        console.log('Selected URL:', catFilter);
-
-        if (catFilter === "1") {
-            getPosts(catUrl, postContent);
-            postContainer.innerHTML = "";
-        } 
-        else {
-            currentCategory = catFilter;
-            postContainer.innerHTML = "";
+        const selectedCategory = event.target.value;
+        console.log('Selected URL:', selectedCategory);
+        handleFilter(selectedCategory);
 
 
-            const catUrl = urlLoad + `&categories=${currentCategory}`;
+async function handleFilter(selectedCategory) {
+    try{
+        showLoader();
+        let catUrl = urlLoad + `&categories=${selectedCategory}`;
+        const response = await fetch(catUrl);
+        const posts = response.json
 
-            getPosts(catUrl, postContent);
-
-            console.log('Category URL:', catUrl, catFilter);
+        if (!posts) {
+            return;
         }
-    });
+
+    }catch(error) {
+        console.log("Unknown error", error);
+        hideLoader();
+    }finally {
+        hideLoader();
+    }
+}
+});
 });
 
-function filterPost(filterOn) {
- filterBtn.forEach((catBtn) => catBtn.classList.remove("post-selected"));
- filterOn.classList.add("post-selected");      
-}
+
+// function filterPost(filterOn) {
+//  filterBtn.forEach((catBtn) => catBtn.classList.remove("post-selected"));
+//  filterOn.classList.add("post-selected");      
+// }
 });

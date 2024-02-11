@@ -1,11 +1,10 @@
 export function showLoader() {
     const loader = document.querySelector(".loader");
     const loadInd = document.querySelector(".loader-indicator");
-    
 
     setTimeout(function(){
-   loader.style.display = "block";
-    loadInd.style.display = "block";
+        loader.style.display = "block";
+        loadInd.style.display = "block";
     }, 3000);
  
 }
@@ -15,7 +14,7 @@ export function hideLoader() {
 
     setTimeout(function(){
         loader.style.display = "none";
-         loadInd.style.display = "none";
-        }, 3000);
+        loadInd.style.display = "none";
+    }, 3000);
 }
 

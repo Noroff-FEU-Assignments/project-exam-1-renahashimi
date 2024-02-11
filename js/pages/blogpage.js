@@ -1,7 +1,7 @@
 import { BUTACUISINE_URL, BUTACUISINE_URL_MEDIA } from "../api/url.js";
 import { errorMessage } from "../api/errormessage.js";
 import { getPosts } from "../api/getPosts.js";
-import { showLoader, hideLoader } from "../api/loader.js";
+import { showLoader, hideLoader } from "../common/loader.js";
 
 const postContainer2 = document.querySelector(".postcontainer2");
 const postTitle = document.querySelector(".posttitle");
@@ -40,8 +40,9 @@ async function getSinglePosts() {
         console.log(modalImg);
 
     } catch(error) {
-    console.log("Unknown error", error);
-    postContainer2.innerHTML = errorMessage();
+        console.log("Unknown error", error);
+        postContainer2.innerHTML = errorMessage();
+        hideLoader()
     } finally {
         hideLoader();
     }

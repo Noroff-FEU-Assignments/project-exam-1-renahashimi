@@ -1,7 +1,7 @@
 import { errorMessage } from "../api/errormessage.js";
 import { getPosts } from "../api/getPosts.js";
 import { BUTACUISINE_URL, BUTACUISINE_URL_MEDIA, carouselUrl, categoryUrl} from "../api/url.js";
-import { showLoader, hideLoader } from "../api/loader.js";
+import { showLoader, hideLoader } from "../common/loader.js";
 
 
 let startPosts = 0;
@@ -30,6 +30,7 @@ async function fecthIndexData() {
 
    } catch(error) {
     console.log("Something went wrong", error);
+    hideLoader()
   } finally {
     hideLoader()
   }
