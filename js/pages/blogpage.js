@@ -106,6 +106,25 @@ async function setupLikePosts() {
         console.log("Unknown error", error);
     }
 }
+
+
+// const commentTxt = document.querySelector(".commenttxt");
+// commentTxt.innerHTML = "";
+
+// const commentBtn = document.querySelector(".commentbtn");
+
+
+// commentBtn.on
+
+
+// window.addEventListener("click", clearSearch);
+
+// function clearSearch(){
+//     commentTxt.innerHTML = "";
+// }
+
+
+
 setupLikePosts();
 
 

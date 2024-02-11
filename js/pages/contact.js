@@ -39,21 +39,21 @@ function validateContactForm (event) {
 form.addEventListener("submit", validateContactForm);
 
     function submitMessage (event) {
-        event.preventDefault();
         if (
             checkLength(fullname.value, 4) &&
             validEmail(email.value) &&
             checkLength(subject.value, 14) &&
             checkLength(message.value, 24)
         ) { 
+    
             // alert("Thank you for contacting us!");
         formSuccess.innerHTML = `<div class="successmessage">
                                     <p>Thank you for contacting us!</p>
                                     <p>We will contact you shortly.</p>
                                 </div>`
         
+    
         form.reset();
-        form.submit();
         }  
 }
     form.addEventListener("submit", submitMessage);
@@ -69,6 +69,14 @@ function checkLength(value, len) {
         return value.trim().length >len;
     }
 } 
+
+
+window.addEventListener("click", clearSearch);
+
+function clearSearch(){
+    formSuccess.innerHTML = "";
+}
+
 
 
 

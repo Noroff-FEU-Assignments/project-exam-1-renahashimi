@@ -37,8 +37,7 @@ const welcomeImg = document.querySelector(".welcomeimg");
 const welcomeTxt = document.querySelector(".welcometxt");
   //<img src="/images/Pomegranate.png" alt="Pomegranate">,  <p class="foodbold"><span>food</span> blog</p>
   welcomeImg.innerHTML += `<h1>Welcome</h1>`;
-  welcomeTxt.innerHTML += `<p>to my food blog</p>
-                          <a href="blog.html">All blogs</a>`; 
+  welcomeTxt.innerHTML += `<p>to my food blog</p>`; 
 
 }
 

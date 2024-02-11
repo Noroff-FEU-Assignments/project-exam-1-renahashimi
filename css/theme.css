@@ -25,7 +25,7 @@ header {
     width: 100%;
     max-width: 1000px;
     background-color: var(--beige);
-    box-shadow: 0px 0px 60px black;
+    box-shadow: 0px 2px 20px black;
     margin-top: -40px;
 }
 
@@ -148,7 +148,7 @@ button, .poststitle, .postsimage, .backbutton {
     display: flex;
     width: 100%;
     min-width: 100px; 
-    background-color: var(--white);
+    background-color: var(--beige);
 }
 
 .nav2 {
@@ -194,7 +194,6 @@ button, .poststitle, .postsimage, .backbutton {
     color: var(--black);
     border-radius: 60px;
     box-shadow: 0 1px 15px var(--black);
-
 }
 
 .nav3 {
@@ -243,6 +242,7 @@ button, .poststitle, .postsimage, .backbutton {
 }
 
 
+
 /*FOOTER*/
 
 .connect {
@@ -282,6 +282,10 @@ button, .poststitle, .postsimage, .backbutton {
     margin-left: 12px;
 }
 
+.connect img:hover {
+    scale: 120%;
+}
+
 @media screen and (min-width: 500px){
 
 /*HOME*/
@@ -294,6 +298,21 @@ button, .poststitle, .postsimage, .backbutton {
 }
 
 }
+
+
+
+@media screen and (min-width: 600px){
+
+/* COMBINATIONS */
+
+.carousel, .postbox {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+}
+
+
 
 
 @media screen and (min-width: 768px){
@@ -374,17 +393,14 @@ main, body , header {
 }
 
 .nav2 li {
-    width: 450px;
     max-width: 100%;
-    padding: 5px 0 -5px;
+    margin: 15px auto -10px;
     justify-content: center;
 }
 
 .nav2 a {
     width: 140px;
-    font-size: 1em;
     border: none;
-    padding: 5px 0 -5px;
     text-align: center;
     border: none;
 }
@@ -393,8 +409,10 @@ main, body , header {
     min-width: 100%;
     font-size: 1.1em;
     padding: 2px 0;
-    border: none;
-    border-radius: 10px;
+    border-bottom: 3px solid var(--black);
+    border-radius: 0px;
+    mask-border-width: 50px;
+    color: var(--black);
 }
 
 .nav2 ul {

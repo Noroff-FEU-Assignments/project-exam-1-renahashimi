@@ -33,33 +33,42 @@
     box-shadow: -5px 10px 20px 0 var(--black);
 }
 
-/* .mobimg::before {
+.mobimg::before {
     content: "";
     position: absolute;
     background-color: var(--black);
     inset: 0;
-    transform: skewY(-6deg);
-    height: 16%;
+    height: 20%;
     margin-top: 185px;
     z-index: 1;
     opacity: 0.5;
-} */
-
+}
 
 .quote1 {
     padding-top: 120px;
 }
+.quote1text  {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 300px;
+    margin: auto;
+    padding: 20px 10px;
+}
+
+.quote1txt {
+    display: none;
+}
+
 .quote1 p {
-    display: block;
-    font-family: var(--gluten);
+    font-family: var(--railway);
     font-weight: 900;
     position: relative;
     color: var(--tran);
-    -webkit-text-stroke: 7px var(--white);
-    font-size: 3.5em;
+    -webkit-text-stroke: 2px var(--white);
+    font-size: 2.1em;
     margin: auto;
-    padding: 10px;
     text-align: center;
+    z-index: 3;
 }
 
 .quote1 span {
@@ -87,12 +96,14 @@
     background-position: center;
     background-size: contain;
     -webkit-text-stroke: 1px var(--black);
+    text-shadow: 1px 2px 8px var(--beige) inset;
+    filter: drop-shadow( 10px 7px 3px #a4a4a4 );
 }
 
 .welcometxt p {
     font-size: 1.5em;
     text-align: center;
-    margin: -30px auto 0;
+    margin: -20px auto 0;
     font-family: var(--water);
     letter-spacing: 0.1em;
 }
@@ -103,7 +114,6 @@
     text-align: center;
     color: var(--black);
     background-color: var(--white);
-    cursor: pointer;
     text-transform: uppercase;
     border: 2px solid var(--beige);
     padding: 1px 5px;
@@ -142,7 +152,9 @@
 }
 
 .indexcontact a:hover {
-    background-color: var(--beige);
+    border-radius: 0;
+    border: none;
+    border-bottom: 4px solid var(--beige);
 }
 
 .contact-back {
@@ -213,7 +225,7 @@
 
 .postbox {
     margin: 0 auto;
-    max-width: 420px;
+    max-width: 400px;
 }
 
 .pagename {
@@ -298,12 +310,12 @@
 }
 
 .post-aut-date{
-    font-size: 0.6em;
+    font-size: 0.8em;
     color: var(--black);
 }
 
 .post-aut-date i{
-    margin: 10px 0;
+    margin: 12px 0;
     padding-left: 10px;
 }
 
@@ -325,6 +337,10 @@
     margin: 10px auto;
 }
 
+.posttitle {
+    text-shadow: 1px 5px var(--beige);
+}
+
 .postimages {
     display: block;
     width: 95%;
@@ -343,7 +359,7 @@
 
 .wp-block-quote {
     display: block;
-    font-size: 0.8em;
+    font-size: 1em;
     margin: 15px 10px 10px;
     padding: 1px 4px;
     background-color: var(--beige);
@@ -352,11 +368,16 @@
 }
 
 .wp-block-columns, .wp-block-columns p {
+    font-family: var(--railway);
     word-spacing: 0;
     margin: 2px 10px;
     padding: 2px 0;
-    font-size: 0.88em;
-    line-height: 1.3rem;
+    font-size: 0.9em;
+    line-height: 1.5rem;
+}
+
+.wp-block-columns strong {
+    font-weight: bold;
 }
 
 .wp-block-heading {
@@ -368,7 +389,7 @@
     display: block;
     width: 94%;
     padding: 5px 10px;
-    font-size: 0.6em;
+    font-size: 0.8em;
     border-bottom: 2px solid var(--beige);
 }
 
@@ -588,13 +609,20 @@
     letter-spacing: 0.4em;
     max-width: 200px;
     margin: 30px auto 40px;
-    padding: 0 20px 10px;
+    padding: 0 20px 25px;
     box-shadow: 0 5px 20px var(--black);
 }
 
 .buta h2 {
+    display: block;
     font-size: 3em;
     margin: 50px auto -10px;
+}
+
+.buta h2 img {
+    width: 50px;
+    transform: rotate(-20deg);
+    margin: 10px 0 -20px;
 }
 
 .buta p {
@@ -640,7 +668,7 @@
 
 .contactform {
     display: flex;
-    max-width: 380px;
+    max-width: 400px;
     width: 95%;
     background-color: var(--white);
     border: 2px solid var(--beige);
@@ -710,8 +738,8 @@
     background-color: var(--white);
     margin: 30px auto;
     padding: 10px 0;
-    width: 300px;
-    border: 1px solid var(--beige);
+    max-width: 400px;
+    border: 3px solid var(--beige);
     border-radius: 20px;
 }
 
@@ -719,9 +747,6 @@
     text-align: center;
     font-size: 1.3em;
 }
-
-
-
 
 
 @media screen and (min-width: 500px){
@@ -733,8 +758,8 @@
     background-position: 95%;
 }
 
-.quote1 {
-    font-size: 1.3em;
+.quote1 p {
+    max-width: 500px;
 }
 
 .welcomeimg h1 {
@@ -766,6 +791,24 @@
 
 }
 
+@media screen and (min-width: 600px){
+
+/* COMBINATIONS */
+
+.postbox {
+    max-width: 600px;
+}
+
+.postcontent {
+    height: 430px;
+}
+
+.text-justify {
+    height: 70px;
+}
+
+}
+
 @media screen and (min-width: 768px){
 
 
@@ -776,26 +819,45 @@
     height: 500px;
 }
 
-.quote1 {
+.mobimg::before {
+    display: none;
+}
+
+.quote1  {
     padding: 160px 30px;
+}
+
+.quote1text{
+   display: none;
+}
+
+.quote1txt{
+    display: block;
 }
 
 .quote1 p {
     text-align: left;
-    font-family: var(--della);
-    -webkit-text-stroke: 0px;
-    color: var(--white);
-    font-size: 2.8em;
+    font-family: var(--railway);
     padding: 0;
+    -webkit-text-stroke: 3px var(--white);
+    font-size: 4em;
+    color: var(--tran);
+    max-width: 1000px;
 }
+
+.quote1 span {
+    -webkit-text-stroke: 2px var(--black);
+    color: var(--white);
+}
+
 
 .welcomeimg h1 {
     font-size: 5em;
 }
 
 .welcometxt p {
-    font-size: 2.2em;
-    margin: -60px auto 20px;
+    font-size: 2.4em;
+    margin: -30px auto 20px;
 }
 
 .container-heritage {
@@ -863,7 +925,7 @@
 }
 
 .butaimg {
-    display: none;
+    display: block;
 }
 
 .blogquote {
@@ -942,7 +1004,10 @@
 
 .postquote {
     font-size: 1.3em;
-    
+}
+
+.backbutton {
+    font-size: 1em;
 }
 
 /* CONTACT */
@@ -980,11 +1045,21 @@
 }
 
 .buta {
-    max-width: 240px;
+    max-width: 320px;
+    padding-top: -30px;
+}
+
+.buta h2 {
+    font-size: 4em;
+}
+
+.buta h2 img {
+    width: 80px;
+    margin: 0px 15px -60px;
 }
 
 .buta p, .buta span, .p-span {
-    font-size: 1em;
+    font-size: 1.2em;
     padding: 15px 0;
 }
 
@@ -1019,17 +1094,17 @@
 }
 
 .quote1 {
-    padding: 100px 40px;
+    padding: 200px 40px;
 }
 
 .quote1 p {
-    -webkit-text-stroke: 0.5px var(--black);
-    font-size: 3.5em;
-    color: var(--beige);
+    -webkit-text-stroke: 2px var(--black);
+    font-size: 4.3em;
+    color: var(--tran);
 }
 
 .quote1 span {
-    color: var(--white);
+    color: var(--beige);
 }
 
 .indexcontact {
