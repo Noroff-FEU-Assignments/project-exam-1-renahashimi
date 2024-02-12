@@ -428,13 +428,13 @@
     overflow: scroll;
 }
 
-.likesection h3, .likesection p {
+.likesection h4, .likesection p {
     display: block;
     text-align: center;
     font-size: small;
 }
 
-.likesection h3 {
+.likesection h4 {
     text-transform: uppercase;
     margin-bottom: -15px;
 }
@@ -1135,7 +1135,7 @@
     min-height: 400px;
 }
 
-.likesection h3, .likesection p {
+.likesection h4, .likesection p {
     font-size: medium;
 }
 
