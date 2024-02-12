@@ -107,6 +107,7 @@
     margin: 5px auto;
     text-transform: uppercase;
     color: var(--black);
+    border-radius: 20px;
 }
 
 .filter-btn:hover {
