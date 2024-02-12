@@ -111,8 +111,6 @@ async function setupLikePosts() {
         console.log("Unknown error", error);
     }
 }
-
-
 setupLikePosts();
 
 
