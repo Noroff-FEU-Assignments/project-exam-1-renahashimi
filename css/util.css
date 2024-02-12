@@ -68,7 +68,7 @@
     text-transform: uppercase;
     border: 5px double var(--beige);
     box-shadow: 5px 3px 10px var(--beige);
-
+    color: var(--black);
 }
 
 .loadmorebtn:hover {
@@ -106,6 +106,7 @@
     border: 2px solid var(--beige);
     margin: 5px auto;
     text-transform: uppercase;
+    color: var(--black);
 }
 
 .filter-btn:hover {
