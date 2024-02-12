@@ -32,7 +32,7 @@ async function getSinglePosts() {
         createPosts(posts);
         //setupLikePosts(posts);
     
-        recipeTitle.innerText += `Buta Cuisine - ${posts.title.rendered}`;
+        recipeTitle.innerHTML += `- ${posts.title.rendered}`;
 
         const modalImg = document.querySelector(".postimages");
         modalImg.addEventListener("click", modal);
