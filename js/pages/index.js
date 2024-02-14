@@ -50,27 +50,27 @@ const welcomeTxt = document.querySelector(".welcometxt");
 /* CAROUSEL */
 
 function displayCarousel(posts) {
-  showLoader()
-  hideLoader()
-  posts.forEach((post) => {
-    const indexPost = `<div class="carouselcontent">
-                        <a href="blogpage.html?id=${post.id}" class="caritem">
-                        <img class="carimage" src="${post._embedded["wp:featuredmedia"][0].source_url}" alt="${post.title.rendered}"> 
-                        <div class="caritemblock">
-                          <div class="post-aut-date2">
-                            <i class="fa-solid fa-pen-nib fa-xs" style="color: #000000;"> Rena Hashimi</i> 
-                            <i class="fa-solid fa-calendar-days fa-xs" style="color: #000000;"> ${post.date.slice(0, -9)} </i> 
-                          </div>
-                          <h4 class="cartitle">${post.title.rendered}</h4>
-                          <div class="cartext">${post.excerpt.rendered}</div>
-                          <button class="carlink">The recipe <span class="heart">&#9825;</span></button>
-                        </div> 
-                        </a>
-                      </div>`;
+  setTimeout (function () {
+    posts.forEach((post) => {
+      const indexPost = `<div class="carouselcontent">
+                          <a href="blogpage.html?id=${post.id}" class="caritem">
+                          <img class="carimage" src="${post._embedded["wp:featuredmedia"][0].source_url}" alt="${post.title.rendered}"> 
+                          <div class="caritemblock">
+                            <div class="post-aut-date2">
+                              <i class="fa-solid fa-pen-nib fa-xs" style="color: #000000;"> Rena Hashimi</i> 
+                              <i class="fa-solid fa-calendar-days fa-xs" style="color: #000000;"> ${post.date.slice(0, -9)} </i> 
+                            </div>
+                            <h4 class="cartitle">${post.title.rendered}</h4>
+                            <div class="cartext">${post.excerpt.rendered}</div>
+                            <button class="carlink">The recipe <span class="heart">&#9825;</span></button>
+                          </div> 
+                          </a>
+                        </div>`;
 
 
-carouselContainer.innerHTML += indexPost;
-  }); 
+    carouselContainer.innerHTML += indexPost;
+    }); 
+  }, 2000);
 }
 
 

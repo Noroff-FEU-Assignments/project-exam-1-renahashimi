@@ -5,7 +5,7 @@ export function showLoader() {
     setTimeout(function(){
         loader.style.display = "block";
         loadInd.style.display = "block";
-    }, 3000);
+    }, 2500);
  
 }
 export function hideLoader() {
@@ -15,6 +15,6 @@ export function hideLoader() {
     setTimeout(function(){
         loader.style.display = "none";
         loadInd.style.display = "none";
-    }, 3000);
+    }, 2500);
 }
 

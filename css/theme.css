@@ -273,7 +273,7 @@ button, .poststitle, .postsimage, .backbutton {
 
 .connect p {
     font-family: var(--della);
-    font-size: 0.6em;
+    font-size: 0.7em;
     margin: 60px 10px;
 }
 
@@ -331,7 +331,7 @@ button, .poststitle, .postsimage, .backbutton {
 
 /* FOOTER */
 
-.connect h2 {
+.connect .cwm  {
     font-size: 2.5em;
     padding: 0;
     margin: 10px;
@@ -397,7 +397,7 @@ main, body , header {
 
 .nav2 li {
     max-width: 100%;
-    margin: 15px auto -10px;
+    margin: 12px auto -10px;
     justify-content: center;
 }
 
@@ -411,10 +411,12 @@ main, body , header {
 
 .nav2 a:hover {
     min-width: 100%;
-    padding: 0;
-    border-bottom: 2px solid var(--black);
-    border-radius: 5px;
+    border-radius: 0;
+    margin-top: 9px;
+    box-shadow: none;
     background-color: transparent;
+    border-top: 1px solid var(--black);
+    border-bottom: 4px double var(--white);
 }
 
 .nav2 ul {

@@ -44,8 +44,7 @@ async function getPosts() {
 getPosts();
 
 function createPost(posts) {
-    showLoader(createPost, 3000)
-    hideLoader()
+    setTimeout (function() {
     postContainer.innerHTML = "";
     pageNameBlog.innerHTML = `<h1>Blog Posts</h1>
                             <div class="blogquote"><p>“Where heritage meets the plate.”</p> </div>`;
@@ -66,6 +65,7 @@ function createPost(posts) {
                                             <div><img class="butaimg" src="images/buta.png" alt="Buta-Logo"></div>
                                         </div>`;                                                      
             });
+    }, 2000);
 }
 
 loadMoreBtn.addEventListener("click", function () {
@@ -73,6 +73,8 @@ loadMoreBtn.addEventListener("click", function () {
     getPosts(baseUrl);
     loadMoreBtn.style.display = "none";
 });
+
+
 
 /* FILTER / BUTTON / CATEGORY */
 

@@ -676,8 +676,8 @@
     display: flex;
     max-width: 400px;
     width: 95%;
-    background-color: var(--white);
-    border: 2px solid var(--beige);
+    background: linear-gradient(0.30turn, #BFAFB0 10%, white, transparent, white, #BFAFB0);    
+    border: 4px solid var(--beige);
     border-radius: 20px;
     margin: 15px auto;
 }
@@ -708,6 +708,7 @@
 
 .contactbox label {
     font-family: var(--della);
+    backdrop-filter: blur(100px);
 }
 
 #messageerror {
@@ -1124,7 +1125,10 @@
 }
 
 .quote1 span {
-    color: var(--beige);
+    -webkit-text-stroke: 3px var(--black);
+    background: -webkit-linear-gradient(0.25turn, white 50%, #BFAFB0 50%);    
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .container-heritage {
