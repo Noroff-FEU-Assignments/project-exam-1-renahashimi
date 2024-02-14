@@ -176,7 +176,7 @@
 .searchresult {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
     background-color: var(--beige);
     width: 100%;
 }
@@ -187,7 +187,7 @@
     justify-content: center;
     width: 200px;
     height: 220px;
-
+    margin: 10px auto;
     justify-content: left;
     border: 2px solid var(--black);
 }
@@ -700,7 +700,7 @@
 }
 
 .filter-btn {
-    padding: 15px 0;
+    padding: 10px 0;
 }
 
 

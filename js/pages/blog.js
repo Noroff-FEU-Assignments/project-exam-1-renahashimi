@@ -33,10 +33,10 @@ async function getPosts() {
    
 } catch(error) {
     console.log("Unknown error", error);
-    hideLoader()
+    hideLoader();
    // postBox.innerHTML = errorMessage();
 }finally {
-    hideLoader()
+    hideLoader();
 }
 }
 
@@ -44,6 +44,8 @@ async function getPosts() {
 getPosts();
 
 function createPost(posts) {
+    showLoader(createPost, 3000)
+    hideLoader()
     postContainer.innerHTML = "";
     pageNameBlog.innerHTML = `<h1>Blog Posts</h1>
                             <div class="blogquote"><p>“Where heritage meets the plate.”</p> </div>`;
@@ -91,9 +93,9 @@ filterBtns.forEach(function (filterBtn) {
 
     });
 });
+
 async function handleFilter(selectedCategory) {
     try{
-        showLoader();
         let catUrl = urlLoad + `&categories=${selectedCategory}&_embed`;
         const response = await fetch(catUrl);
         const posts =  await response.json();
@@ -106,11 +108,7 @@ async function handleFilter(selectedCategory) {
         createPost(posts);
 
     }catch(error) {
-        console.log("Unknown error", error);
-        hideLoader();
-    }finally {
-        hideLoader();
+        console.error("Something went wrong", error);
     }
 }
-
 });

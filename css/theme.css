@@ -264,8 +264,9 @@ button, .poststitle, .postsimage, .backbutton {
     border-bottom: 1px solid var(--black);
 }
 
-.connect h2 {
-    font-size: 1.8em;
+.connect .cwm {
+    font-family: var(--water);
+    font-size: 1.6em;
     margin: 20px 10px 0;
     padding: 5px;
 }
@@ -325,6 +326,7 @@ button, .poststitle, .postsimage, .backbutton {
 
 .nav2 a {
     font-size: 1.2em;
+    width: 250px;
 }
 
 /* FOOTER */
@@ -400,7 +402,8 @@ main, body , header {
 }
 
 .nav2 a {
-    width: 140px;
+    max-width: 150px;
+    width: 130%;
     border: none;
     text-align: center;
     border: none;
@@ -408,19 +411,17 @@ main, body , header {
 
 .nav2 a:hover {
     min-width: 100%;
-    font-size: 1.1em;
-    padding: 2px 0;
-    border-bottom: 3px solid var(--black);
-    border-radius: 0px;
-    mask-border-width: 50px;
-    color: var(--black);
+    padding: 0;
+    border-bottom: 2px solid var(--black);
+    border-radius: 5px;
+    background-color: transparent;
 }
 
 .nav2 ul {
     display: flex;
     width: 100%;
     text-align: left;
-    padding: 0;
+    padding: 2px 0;
     box-shadow: none;
     background-color: var(--beige);
 }

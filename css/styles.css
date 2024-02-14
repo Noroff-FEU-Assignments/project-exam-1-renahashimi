@@ -21,17 +21,18 @@
 
 .mobimg {
     display: block; 
-    height: 550px;
+    height: 500px;
     padding: 0;
-    background-image: url(/images/traditional-azerbaijani-sweetness.jpeg);
+    background-image: url(/images/cake-roll.jpeg);
     background-size: cover;
+    background-position:top;
     background-color: var(--white);
     width: 99,5%;
     margin: -30px auto 60px;
     border-bottom: 0.5px solid var(--beige);
     box-shadow: -5px 10px 20px 0 var(--black);
 }
-
+/* 
 .mobimg::before {
     content: "";
     position: absolute;
@@ -41,17 +42,22 @@
     margin-top: 185px;
     z-index: 1;
     opacity: 0.5;
-}
+} */
 
 .quote1 {
-    padding-top: 120px;
+    padding-top: 50px;
 }
+
 .quote1text  {
     display: flex;
-    flex-wrap: wrap;
     max-width: 300px;
-    margin: auto;
-    padding: 20px 10px;
+    margin: 5px 15px;
+    padding: 20px;
+    backdrop-filter: blur(2px);
+}
+
+.quote1text p span {
+    text-transform: lowercase;
 }
 
 .quote1txt {
@@ -59,14 +65,14 @@
 }
 
 .quote1 p {
-    font-family: var(--della);
+    font-family: var(--gluten);
     font-weight: 900;
     position: relative;
     color: var(--tran);
-    -webkit-text-stroke: 2px var(--white);
-    font-size: 2.1em;
+    -webkit-text-stroke: 3px var(--white);
+    font-size: 2em;
     margin: auto;
-    text-align: center;
+    text-align: left;
     z-index: 3;
 }
 
@@ -95,8 +101,8 @@
     background-position: center;
     background-size: contain;
     -webkit-text-stroke: 1px var(--black);
-    text-shadow: 1px 2px 8px var(--beige) inset;
-    filter: drop-shadow( 10px 7px 3px #a4a4a4 );
+    /* text-shadow: 1px 2px 8px var(--beige) inset;
+    filter: drop-shadow( 10px 7px 3px #a4a4a4 ); */
 }
 
 .welcometxt p {
@@ -172,13 +178,14 @@
     display: block;
     text-align: right;
     padding-right: 20px;
-    color: var(--white);
+    color: var(--black);
+    backdrop-filter: blur(4px);
 }
 
 .heritagetext h4 {
     font-family: var(--water);
     font-size: 1.6em;
-    padding: 15px 0;
+    padding: 15px 0 0;
     margin: 10px 0 0;
     letter-spacing: 0.1em;
 }
@@ -186,21 +193,21 @@
 .heritagetext p {
     justify-content: right;
     font-size: 1.1em;
-    padding: 10px 0 0;
+    padding: 5px 0 0;
     margin: 0;
     text-align: right;
 }
 
 .container-heritage {
     display: grid;
-    grid-template-columns: 45% 55%;
-    background-image: url(/images/tasty-kebabs.jpeg);
+    grid-template-columns: 50% 50%;
+    background-image: url(/images/cake-plate-with-macarons.jpeg);
     background-size: cover;
-    background-position: center;
+    background-position: 100% 80%;
     width: 100%;
     background-color: var(--beige);
     height: 250px;
-    margin: 0px auto 30px;
+    margin: 0px auto 50px;
 }
 
 .container-heritage img {
@@ -367,7 +374,7 @@
 }
 
 .wp-block-columns, .wp-block-columns p {
-    font-family: var(--railway);
+    font-family: var(--della);
     word-spacing: 0;
     margin: 2px 10px;
     padding: 2px 0;
@@ -772,6 +779,7 @@
 
 .quote1 p {
     max-width: 500px;
+    font-size: 2.5em;
 }
 
 .welcomeimg h1 {
@@ -784,11 +792,13 @@
 
 .heritagetext h4 {
     font-size: 2.5em;
+    padding-bottom: 20px;
     letter-spacing: 0.2em;
 }
 
 .heritagetext p {
     font-size: 1.3em;
+    padding-left: 30px;
 }
 
 .container-heritage {
@@ -848,17 +858,14 @@
 }
 
 .quote1 p {
-    text-align: left;
     font-family: var(--railway);
-    padding: 0;
-    -webkit-text-stroke: 3px var(--white);
+    -webkit-text-stroke: 4px var(--white);
     font-size: 4em;
-    color: var(--tran);
     max-width: 1000px;
 }
 
 .quote1 span {
-    -webkit-text-stroke: 2px var(--black);
+    -webkit-text-stroke: 3px var(--black);
     color: var(--white);
 }
 
@@ -878,8 +885,11 @@
 
 .container-heritage {
     display: flex;
+    width: 90%;
+    max-width: 700px;
+    height: fit-content;
+    margin: 0 auto 70px; 
     justify-content: center;
-    margin: 10px auto 150px;
     background-image: none;
     background-color: transparent;
 }
@@ -887,29 +897,28 @@
 .container-heritage img {
     display: block;
     visibility: visible;
-    width: 650px;
+    width: 620px;
     height: fit-content;
-    margin-left: 90px;
-    box-shadow: -10px 4px 25px 0px var(--black);
+    box-shadow: -4px 4px 25px 0px var(--beige);
 }
 
 .heritagetext {
-    background-color: var(--beige);
+    background: linear-gradient(0.40turn, transparent, transparent, #BFAFB0);    
     height: fit-content;
-    margin: 40px 90px 0 -250px;
+    min-width: 250px;
     color: var(--black);
-    min-width: 300px;
-    padding: 0 20px 20px;
-    box-shadow: 0px 2px 25px 2px var(--black);
+    margin: 160px -10px 0 -250px;
+    padding: 0 10px 30px 0;
+    box-shadow: 7px -1px 10px var(--beige);
 }
 
 .heritagetext p {
-    font-size: 1.6em;
-
+    font-size: 1.3em;
+    padding: 0;
 }
 
 .heritagetext h4 {
-    font-size: 2.7em;
+    font-size: 2em;
 }
 
 
@@ -1066,8 +1075,8 @@
 }
 
 .buta h2 img {
-    width: 80px;
-    margin: 0px 15px -60px;
+    width: 60px;
+    margin: 0px 20px -50px;
 }
 
 .buta p, .buta span, .p-span {
@@ -1110,9 +1119,8 @@
 }
 
 .quote1 p {
-    -webkit-text-stroke: 2px var(--black);
+    -webkit-text-stroke: 3px var(--black);
     font-size: 4.3em;
-    color: var(--tran);
 }
 
 .quote1 span {
@@ -1122,17 +1130,21 @@
 .container-heritage {
     margin: 0;
     padding: 0;
+    max-width: 800px;
     height: max-content;
     padding-bottom: 90px;
 }
 
 .heritagetext {
-    margin: 60px 90px 0 -250px; 
+    margin: 200px -50px 0 -250px;
+    font-size: larger;
+    min-width: 350px;
 } 
 
 .container-heritage img {
-    min-width: 700px;
-    min-height: 400px;
+    min-width: 800px;
+    max-height: 500px;
+    margin-left: 150px;
 }
 
 .likesection h4, .likesection p {
