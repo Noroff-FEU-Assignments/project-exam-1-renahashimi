@@ -8,6 +8,7 @@
     --kaus: 'Kaushan Script', cursive;
 }
 
+
 /* LOADER FOR PAGE*/
 
 .loadingbox {
@@ -111,7 +112,8 @@
 }
 
 .filter-btn:hover {
-    border-color: var(--black);
+    border: none;
+    box-shadow: 0 6px 20px var(--black);
 }
 
 .searchbox {
@@ -565,6 +567,7 @@
 .utilbox {
     display: grid;
     grid-template-columns: 55% 45%;
+    padding: 0 20px;
 }
 
 .filterbtn {

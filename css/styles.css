@@ -9,13 +9,19 @@
     --white: #fff;
     --black: #000;
     --red: red;
+    --tran: transparent;
     --della:'Della Respira', serif;
     --water:'Water Brush', cursive;
     --kaus: 'Kaushan Script', cursive;
     --gluten: 'Gluten', cursive;
     --railway:'Raleway', sans-serif;
-    --tran: transparent;
+    --georgia: Georgia, 'Times New Roman', Times, serif;
 }
+
+:hover {
+    transition: all 0.6s ease;
+}
+
 
 /*HOME*/
 
@@ -45,19 +51,19 @@
 } */
 
 .quote1 {
-    padding-top: 50px;
+    padding-top: 20px;
 }
 
 .quote1text  {
     display: flex;
     max-width: 300px;
-    margin: 5px 15px;
-    padding: 20px;
+    margin: 5px auto;
     backdrop-filter: blur(2px);
 }
 
 .quote1text p span {
-    text-transform: lowercase;
+    color: var(--white);
+    -webkit-text-stroke: 2px var(--beige);
 }
 
 .quote1txt {
@@ -65,14 +71,15 @@
 }
 
 .quote1 p {
-    font-family: var(--gluten);
+    display: block;
+    width: 100%;
+    font-family: var(--railway);
     font-weight: 900;
     position: relative;
     color: var(--tran);
-    -webkit-text-stroke: 3px var(--white);
+    -webkit-text-stroke: 2px var(--white);
     font-size: 2em;
-    margin: auto;
-    text-align: left;
+    text-align: center;
     z-index: 3;
 }
 
@@ -148,8 +155,7 @@
 }
 
 .indexcontact a {
-    border:  1px dotted var(--black);
-    border-radius: 20px;
+    border-bottom: 4px solid var(--beige);
     font-size: 0.7em;
     color: var(--black);
     text-transform: uppercase;
@@ -157,13 +163,13 @@
 }
 
 .indexcontact a:hover {
-    border-radius: 0;
-    border: none;
-    border-bottom: 4px solid var(--beige);
+    transform: translate(30px);
+    border-top: 4px solid var(--beige);
+    transition: all 0.3s ease;
 }
 
 .contact-back {
-    display: -webkit-flex;
+    display: flex;
     background-image: url(/images/Paisley5.jpeg);
     background-size: 300px;
     height: 200px;
@@ -374,7 +380,7 @@
 }
 
 .wp-block-columns, .wp-block-columns p {
-    font-family: var(--della);
+    font-family: var(--georgia);
     word-spacing: 0;
     margin: 2px 10px;
     padding: 2px 0;
@@ -389,6 +395,11 @@
 .wp-block-heading {
     font-size: 1em;
     margin: 30px 0 5px;
+    padding: 5px 0;
+    text-align: center;
+    text-transform: uppercase;
+    border-top: 2px solid var(--beige);
+    border-bottom: 2px solid var(--beige);
 }
 
 .backbutton {
@@ -438,7 +449,6 @@
 .likesection h4, .likesection p {
     display: block;
     text-align: center;
-    font-size: small;
 }
 
 .likesection h4 {
@@ -449,21 +459,50 @@
 .morepostcontent {
     width: 100%;
     height: 210px;
-    margin: 20px ;
+    margin: 20px;
     border: 2px solid var(--black);
 }
 
 .morepostcontent img {
     border: 2px solid var(--black);
     height: 150px;
-    width: 220px;
+    width: 225px;
+}
+
+.morep p {
+    background-color: rgb(0, 0, 0, 0.7);
+    color:var(--white);    
 }
 
 .morepostcontent h4{
-    font-size: 0.9em;
+    font-size: 0.7em;
     margin: 0;
     color: var(--black);
-    padding: 15px 4px 10px;
+    padding: 18px 4px 10px;
+    text-align: left;
+}
+
+.morecontent {
+    display: block;
+}
+
+.morepostcontent .text-justify {
+    position: relative;    
+    background-color: rgb(0, 0, 0, 0.7);
+    z-index: 2;
+    height: 125px;
+    width: 225px;
+    margin: -153px 0 0 ;
+    color:  var(--white);
+    text-align: center;
+    opacity: 0;
+    padding: 30px 2px 0;
+    overflow-y: hidden;
+    font-size: 1.1em;
+}
+
+.morepostcontent .text-justify:hover {
+    opacity: 1;
 }
 
 .morebtn {
@@ -485,7 +524,7 @@
     border: 2px solid var(--black);
 }
 
-/* COMMENT FORM */
+/* COMMENT FORM
 
 .commentcontainer {
     display: block;
@@ -536,7 +575,7 @@
     font-size: 0.9em;
     color: var(--black);
     text-transform: uppercase;
-}
+} */
 
 
 
@@ -666,6 +705,8 @@
 
 .contact-wrapper h1 {
     background-color: var(--white);
+    border-top: 3px solid var(--beige);
+    border-bottom: 3px solid var(--beige);
 }
 
 .heart {
@@ -718,7 +759,7 @@
 .contactform button {
     display: block;
     margin: 20px auto;
-    width: 40%;
+    width: 60%;
     height: 40px;
     font-size: 1.2em;
     background-color: var(--white);
@@ -727,18 +768,17 @@
 }
 
 .contactform button:hover {
-    background-color: var(--beige);
-    border: 3px solid var(--black);
-    color: var(--black);
+    box-shadow: 0 5px 20px var(--black);
 }
 
 .errorbox {
     display: none;
-    background-color: var(--beige);
-    border: 1px solid var(--red);
+    border: 2px solid var(--red);
     font-size: 0.8em;
-    width: 235px;
+    width: 234px;
     padding: 2px 5px;
+    background: linear-gradient(0.15turn, #BFAFB0, white);    
+
 }
 
 .successmessage {
@@ -778,7 +818,12 @@
     background-position: 95%;
 }
 
+.quote1text {
+    margin: 0 20px;
+}
+
 .quote1 p {
+    text-align: left;
     max-width: 500px;
     font-size: 2.5em;
 }
@@ -838,8 +883,9 @@
 /* HOME */
 
 .mobimg {
-    background-image: url(/images/bbq-grill.jpeg);
-    height: 500px;
+    background-image: url(/images/macarons.jpeg);
+    height: 550px;
+    background-position: center;
 }
 
 .mobimg::before {
@@ -847,27 +893,33 @@
 }
 
 .quote1  {
-    padding: 160px 30px;
+    padding: 0;
 }
 
 .quote1text{
    display: none;
 }
 
-.quote1txt{
+.quote1txt {
     display: block;
+    padding: 200px 40px;
+    margin: 0;
+    line-height: 1em;
 }
 
 .quote1 p {
-    font-family: var(--railway);
-    -webkit-text-stroke: 4px var(--white);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    -webkit-text-stroke: 3px var(--black);
     font-size: 4em;
     max-width: 1000px;
+    letter-spacing: 0.2rem;
 }
 
 .quote1 span {
     -webkit-text-stroke: 3px var(--black);
-    color: var(--white);
+    background: -webkit-linear-gradient(105turn, #BFAFB0 10%, white, #BFAFB0);    
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .welcomeimg h1 {
@@ -1116,19 +1168,7 @@
 }
 
 .quote1 {
-    padding: 200px 40px;
-}
-
-.quote1 p {
-    -webkit-text-stroke: 3px var(--black);
-    font-size: 4.3em;
-}
-
-.quote1 span {
-    -webkit-text-stroke: 3px var(--black);
-    background: -webkit-linear-gradient(0.25turn, white 50%, #BFAFB0 50%);    
-    -webkit-background-clip: text;
-    color: transparent;
+    padding-left: 20px;
 }
 
 .container-heritage {
@@ -1151,11 +1191,18 @@
     margin-left: 150px;
 }
 
-.likesection h4, .likesection p {
-    font-size: medium;
+.morebtn h4 {
+    text-align: left;
+    font-size: 0.9em;
 }
 
+.morepostcontent img {
+    min-width: 275px;
+}
 
+.morepostcontent .text-justify  {
+    width: 275px;
+}
 
 /*BLOG*/
 

@@ -412,11 +412,10 @@ main, body , header {
 .nav2 a:hover {
     min-width: 100%;
     border-radius: 0;
-    margin-top: 9px;
-    box-shadow: none;
-    background-color: transparent;
-    border-top: 1px solid var(--black);
-    border-bottom: 4px double var(--white);
+    margin-top: 7px;
+    border-top: 3px solid var(--beige);
+    border-bottom: 3px solid var(--beige);
+    transition: all 0.4s ease-in-out;
 }
 
 .nav2 ul {
