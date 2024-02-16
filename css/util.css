@@ -6,13 +6,10 @@
     --tran: transparent;
     --della:'Della Respira', serif;
     --water:'Water Brush', cursive;
-    --kaus: 'Kaushan Script', cursive;
-    --gluten: 'Gluten', cursive;
-    --railway:'Raleway', sans-serif;
-    --fredoka: 'Fredoka', sans-serif;
-    --urbanist:  "Urbanist", sans-serif;
+    --raleway:'Raleway', sans-serif;
     --georgia: Georgia, 'Times New Roman', Times, serif;
 }
+
 
 /* LOADER FOR PAGE*/
 
@@ -78,8 +75,10 @@
 }
 
 .loadmorebtn:hover {
-    background-color: var(--beige);
-    color: var(--black);
+    border: 1px solid var(--beige);
+    font-size: 1.3em;
+    padding: 13px 22px;
+    box-shadow: 0 0 30px var(--beige);
 }
 
 .loadbtn {

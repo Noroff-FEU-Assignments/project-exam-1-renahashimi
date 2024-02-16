@@ -6,13 +6,10 @@
     --tran: transparent;
     --della:'Della Respira', serif;
     --water:'Water Brush', cursive;
-    --kaus: 'Kaushan Script', cursive;
-    --gluten: 'Gluten', cursive;
-    --railway:'Raleway', sans-serif;
-    --fredoka: 'Fredoka', sans-serif;
-    --urbanist:  "Urbanist", sans-serif;
+    --raleway:'Raleway', sans-serif;
     --georgia: Georgia, 'Times New Roman', Times, serif;
 }
+
 
 /* HEADER & NAVIGATION & FOOTER */ 
 
@@ -110,9 +107,9 @@ button, .poststitle, .postsimage, .backbutton {
 
 .sitename, .sitename p {
     display: flex;
-    font-size: 1.7em;
+    font-size: 1.8em;
     color: var(--black);
-    margin: 5px;
+    margin: 2px 5px;
     text-align: left;
 }
 
@@ -126,7 +123,7 @@ button, .poststitle, .postsimage, .backbutton {
     font-size: 0.9em;
     font-family: var(--della);
     color: var(--white);
-    margin: -45px 55px;
+    margin: -45px 60px;
 }
 
 .headlogo {
@@ -205,6 +202,17 @@ button, .poststitle, .postsimage, .backbutton {
     box-shadow: 0 1px 15px var(--black);
 }
 
+.nav2 .active  {
+    border-top: 1px solid var(--white);    
+    border-bottom: 1px solid var(--white);    
+    box-shadow: 0 0 20px var(--black);
+}
+
+.activehover {
+    background-color: none;
+    border: none;
+    pointer-events: none;
+}
 
 
 /*FOOTER*/
@@ -384,11 +392,24 @@ main, body , header {
 .nav2 ul {
     display: flex;
     width: 100%;
+    height: 68px;
     text-align: left;
     padding: 2px 0;
     box-shadow: none;
     background-color: var(--beige);
 }
+
+.nav2 .active {
+    border-left: 5px solid var(--white);
+    border-right: 5px solid var(--white);
+    width: fit-content;
+    padding: 4px 15px;
+    margin-top: 6px;
+    box-shadow: 2px 2px 12px var(--black);
+    border-radius: 70% 40px;
+}
+
+
 
 /* BACK TO TOP */
 
