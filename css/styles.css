@@ -507,7 +507,7 @@
     font-size: 1.1em;
 }
 
-.morepostcontent .text-justify:hover {
+.morepostcontent .text-justify:hover, .morepostcontent .text-justify:focus {
     opacity: 1;
 }
 
@@ -521,7 +521,7 @@
 .morebtn p {
     border: 2px solid var(--beige);
     padding: 4px 5px;
-    font-size: 0.9em;
+    font-size: 0.8em;
     border-radius: 20px;
     margin: 5px;
 }
@@ -529,60 +529,6 @@
 .morebtn:hover p {
     border: 2px solid var(--black);
 }
-
-/* COMMENT FORM
-
-.commentcontainer {
-    display: block;
-    margin: 40px auto 0;
-    padding: 20px;
-    background-color: var(--beige);
-    border: 10px double var(--black);
-    border-left: none;
-    border-right: none;
-}
-
-.commentcontainer h3 {
-    text-transform: uppercase;
-    margin-left: 5px;
-}
-
-.commentcontainer span {
-    font-size: 1.1em;
-    color: var(--white);
-}
-
-.commentbox {
-    display: block;
-    padding: 6px;
-}
-
-.commentform input, .commentform textarea {
-    padding: 10px;
-    width: 80%;
-    max-width: 300px;
-    border: 3px solid var(--black);
-    font-family: var(--della);
-    color: black;
-    font-size: 1em;
-}
-
-.commentform textarea {
-    max-width: 500px;
-
-}
-
-.commentcontainer button {
-    font-family: var(--della);
-    background-color: var(--white);
-    border: 3px solid var(--black);
-    padding: 5px 10px;
-    margin: 10px 6px 0;
-    font-size: 0.9em;
-    color: var(--black);
-    text-transform: uppercase;
-} */
-
 
 
 /* ABOUT */
