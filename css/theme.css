@@ -298,6 +298,15 @@ button, .poststitle, .postsimage, .backbutton {
     width: 250px;
 }
 
+
+.navigation1 label {
+    display: flex;
+    margin: 20px;
+    justify-content: right;
+    padding-right: 20px;
+}
+
+
 /* FOOTER */
 
 .connect .cwm  {

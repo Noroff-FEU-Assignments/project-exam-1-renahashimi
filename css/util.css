@@ -198,14 +198,13 @@
 
 .clearbtn {
     opacity: 0;
-    padding: 0 2px;
+    padding: 6px;
+    cursor: pointer;
 }
 
 .searchbox:hover .clearbtn {
     opacity: 1;
 }
-
-
 
 .searchcontent{
     display: block;
@@ -444,6 +443,11 @@
     padding-top: 20px;
     margin: 0 auto 0;
 }
+
+}
+
+
+@media screen and (min-width: 600px){
 
 /* FILTER & SEARCH */
 
