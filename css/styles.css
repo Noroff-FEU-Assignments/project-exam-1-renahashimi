@@ -763,6 +763,7 @@
 .contactform button {
     display: block;
     margin: 20px auto;
+    color: var(--black);
     width: 60%;
     height: 40px;
     font-size: 1.2em;
