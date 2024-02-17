@@ -12,7 +12,8 @@ const modalBox = document.querySelector(".modalbox");
 
 
 const backButton = document.querySelector(".backbutton");
-backButton.innerHTML = "GO BACK TO POSTS";
+backButton.innerHTML = "GO BACK TO PREVIOUS PAGE";
+
 
 const recipeTitle = document.querySelector(".recipetitle")
 
