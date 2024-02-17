@@ -103,8 +103,8 @@
     background-position: center;
     background-size: contain;
     -webkit-text-stroke: 1px var(--black);
-    /* text-shadow: 1px 2px 8px var(--beige) inset;
-    filter: drop-shadow( 10px 7px 3px #a4a4a4 ); */
+    /* text-shadow: 0px 0px 8px var(--beige) inset; */
+    filter: drop-shadow( 0 1px 2px rgb(0, 0, 0));
 }
 
 .welcometxt p {
@@ -138,12 +138,12 @@
 .indexcontact {
     display: block;
     justify-content: center;
-    border: 2px solid var(--black);
-    border-radius: 20px;
+    border: 3px solid var(--beige);
+    border-radius: 20%;
     text-align: center;
-    padding: 5px 10px 25px;
-    max-height: 140px;
-    margin: 20px auto;
+    padding: 0 5px 20px;
+    max-height: 160px;
+    margin: auto;
     background-color: var(--white);
     width: 85%;
     max-width: 450px;
@@ -154,7 +154,8 @@
     font-size: 0.7em;
     color: var(--black);
     text-transform: uppercase;
-    padding: 2px 5px;
+    padding: 2px;
+    margin-bottom: 50px;
 }
 
 .indexcontact a:hover {
@@ -172,7 +173,7 @@
     width: 100%;
     padding: 0 20px;
     margin: 20px auto 60px -20px;
-    border: 3px solid var(--beige);
+    border: 8px double var(--beige);
 }
 
 .heritagetext {
@@ -194,7 +195,7 @@
 
 .heritagetext p {
     font-family: var(--georgia);
-    font-weight: 400;
+    font-weight: 500;
     font-style: italic;
     justify-content: right;
     font-size: 1em;
@@ -931,6 +932,7 @@
 
 .welcomeimg h1 {
     font-size: 5em;
+    filter: drop-shadow( 0 1px 4px rgb(0, 0, 0));
 }
 
 .welcometxt p {

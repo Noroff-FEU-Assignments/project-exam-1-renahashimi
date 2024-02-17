@@ -15,29 +15,28 @@ let currentPosts = 9;
 
 async function getPosts() {
    try {
-    showLoader();
-    const response = await fetch(baseUrl + `?per_page=${currentPosts}&_embed`);
-    const posts = await response.json(); 
+        showLoader();
+        const response = await fetch(baseUrl + `?per_page=${currentPosts}&_embed`);
+        const posts = await response.json(); 
 
-    if (!posts) {
-        console.error("Posts not found");
-        return;
-    }
+        if (!posts) {
+            console.error("Posts not found", errorMessage);
+            return;
+        }
+
+        createPost(posts);
+        postContainer.innerHTML += "";
+        pageNameBlog.innerHTML += "";
+
+        return posts;
     
-    console.log(posts);
-
-    createPost(posts);
-    postContainer.innerHTML += "";
-    pageNameBlog.innerHTML += "";
-    return posts;
-   
-} catch(error) {
-    console.log("Unknown error", error);
-    hideLoader();
-   // postBox.innerHTML = errorMessage();
-}finally {
-    hideLoader();
-}
+    } catch(error) {
+        console.log("Unknown error", error);
+        hideLoader();
+        errorMessage()
+    }finally {
+        hideLoader();
+    }
 }
 
 
@@ -84,11 +83,9 @@ const filterBtns = document.querySelectorAll(".filter-btn");
 
 filterBtns.forEach(function (filterBtn) {
     filterBtn.addEventListener ("click", function (event) {
-
         const selectedCategory = event.target.value;
-        console.log('Selected URL:', selectedCategory);
         handleFilter(selectedCategory);
-
+        
         if (selectedCategory !== "1") {
             loadMoreBtn.style.display = "none";
         }
@@ -101,10 +98,9 @@ async function handleFilter(selectedCategory) {
         let catUrl = urlLoad + `&categories=${selectedCategory}&_embed`;
         const response = await fetch(catUrl);
         const posts =  await response.json();
-        console.log(catUrl);
 
         if (!posts) {
-            console.error("Posts not found");
+            console.error("Posts not found", errorMessage);
             return;
         }
         createPost(posts);

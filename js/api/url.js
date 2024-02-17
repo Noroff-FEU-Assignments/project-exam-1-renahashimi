@@ -1,4 +1,3 @@
-
 const url = "https://butacuisine.renahashimi.no/wp-json/wp/v2/"; 
 const post = "posts";
 const posts  = "posts/";

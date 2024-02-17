@@ -113,6 +113,7 @@
     text-transform: uppercase;
     color: var(--black);
     border-radius: 20px;
+    transition: all 0s ease-in;
 }
 
 .filter-btn:hover {
@@ -121,7 +122,8 @@
 }
 
 .searchbox {
-    display: flex;
+display: flex;
+flex-direction: column;
     height: 20px;
     border-radius: 60px;
     background-color: var(--beige);
@@ -142,17 +144,18 @@
     padding-left: 1px;
     font-size: 1em;
     margin-left: 10px;
+    width: 70%;
 }
 
-.searchbox:hover input  {
-    width: 220px;
+.searchbox:hover input {
+    width: 160px;
     transition: 0.7s;
 }
 
-.searchbox:hover {
+.searchbox:hover, .searchbox:focus {
     transition: 0.1s;
     border: 2px solid var(--beige);
-    width: 280px;
+    width: 250px;
 }
 
 .searchbox input, .searchbox {
@@ -160,7 +163,7 @@
     outline: none;
     width: 0;
     border: none;
-}
+} 
 
 .searchbox button  {
     display: block;
@@ -186,6 +189,17 @@
     background-color: var(--beige);
     width: 100%;
 }
+
+.clearbtn {
+    opacity: 0;
+    padding: 0 2px;
+}
+
+.searchbox:hover .clearbtn {
+    opacity: 1;
+}
+
+
 
 .searchcontent{
     display: block;

@@ -23,7 +23,7 @@ async function getSinglePosts() {
         const posts = await response.json();
         
         showLoader();
-        console.log(posts);
+
         if (!posts) {
             console.error("Posts not found");
             return;
@@ -36,8 +36,6 @@ async function getSinglePosts() {
 
         const modalImg = document.querySelector(".postimages");
         modalImg.addEventListener("click", modal);
-
-        console.log(modalImg);
 
     } catch(error) {
         console.log("Unknown error", error);
@@ -56,8 +54,6 @@ function modal(){
     modalImage.classList.add("open");
     modalImage.addEventListener("click", () => {
         modalImage.classList.remove("open")
-
-        //console.log(modal, modalImage, modalbox);
     });
 }
 
@@ -108,7 +104,7 @@ async function setupLikePosts() {
         });
         
     }catch(error) {
-        console.log("Something went wrong", error);
+        console.error("Something went wrong", error);
     }
 }
 setupLikePosts();

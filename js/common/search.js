@@ -1,5 +1,5 @@
-import { getPosts } from "../api/getPosts.js";
 import { urlLoad, BUTACUISINE_URL_MEDIA } from "../api/url.js";
+
 
 const searchBtn = document.querySelector(".searchbox button")
 const searchResult = document.querySelector(".searchresult")
@@ -16,8 +16,6 @@ async function searchPosts(urlLoad) {
     else {
         searchResult.innerHTML += `<p class="searcherr">No matching recipes found, try again</p>`;
     }
-
-    console.log(posts, searchBtn);
 
     } catch(error) {
         console.log("No recipes found", error);
@@ -39,6 +37,8 @@ function searchResultPost(posts){
 }
 
 searchBtn.onclick = function () {
+    event.preventDefault();
+    document.querySelector(".searchbox").classList.add("active");
     const searchInput = document.getElementById("search").value;
     const newUrl = urlLoad + `&search=${searchInput}`;    
 
@@ -48,11 +48,21 @@ searchBtn.onclick = function () {
     else{
         searchResult.innerHTML = `<p class="searcherr">No matching recipes found, try again</p>`;
     }
-    // console.log(newUrl);
 }
+
 
 window.addEventListener("click", clearSearch);
 
 function clearSearch(){
     searchResult.innerHTML = "";
+}
+
+const cleatBtn = document.querySelector(".clearbtn");
+cleatBtn.addEventListener("click", clearSearchTxt);
+
+function clearSearchTxt() {
+    const searchTxt = document.getElementById("search").value;
+    searchTxt.innerHTML.value = "";
+
+    console.log(searchTxt)
 }
