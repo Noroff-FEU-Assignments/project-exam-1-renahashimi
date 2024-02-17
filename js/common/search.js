@@ -61,8 +61,5 @@ const cleatBtn = document.querySelector(".clearbtn");
 cleatBtn.addEventListener("click", clearSearchTxt);
 
 function clearSearchTxt() {
-    const searchTxt = document.getElementById("search").value;
-    searchTxt.innerHTML.value = "";
-
-    console.log(searchTxt)
+    document.getElementById("search").value = "";
 }
