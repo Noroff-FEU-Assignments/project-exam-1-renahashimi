@@ -70,6 +70,7 @@ function createPost(posts) {
 loadMoreBtn.addEventListener("click", function () {
     currentPosts += 9;
     getPosts(baseUrl);
+    hideLoader()
     loadMoreBtn.style.display = "none";
 });
 

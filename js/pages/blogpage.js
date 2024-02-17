@@ -22,6 +22,8 @@ async function getSinglePosts() {
         const response = await fetch(BUTACUISINE_URL);
         const posts = await response.json();
         
+
+        console.log();
         showLoader();
 
         if (!posts) {
@@ -66,10 +68,10 @@ function createPosts(posts){
     postImage.innerHTML += `<img class="postimages" src="${imgUrl}" alt="${imgAlt}">`;
     modalBox.innerHTML += `<div class="modalimage"><div class="modalcontent"><img src="${imgUrl}" alt="${imgAlt}"></div></div>`;
     postText.innerHTML += `<p>${posts.content.rendered}</p>
-                        <div class="post-aut-date3">
-                            <i class="fa-solid fa-pen-nib fa-xs" style="color: #000000;"> Rena Hashimi</i> 
-                            <i class="fa-solid fa-calendar-days fa-xs" style="color: #000000;"> ${posts.date.slice(0, -9)} </i> 
-                        </div>`;
+                            <div class="post-aut-date3">
+                                <i class="fa-solid fa-pen-nib fa-xs" style="color: #000000;"> Rena Hashimi</i> 
+                                <i class="fa-solid fa-calendar-days fa-xs" style="color: #000000;"> ${posts.date.slice(0, -9)} </i> 
+                            </div>`;
     postQuote.innerHTML += `<h2>Ready, Cook & <span>Bon Appetit</span></h2>`;
 }
 
@@ -96,7 +98,7 @@ async function setupLikePosts() {
                                             </div>
                                             <div class="morebtn">
                                                <h4>${post.title.rendered}</h4>
-                                               <p>the recipe <i class="fa-solid fa-arrow-right fa-sm" style="color: #000000;"></i></p>
+                                               <p>recipe <i class="fa-solid fa-arrow-right fa-sm" style="color: #000000;"></i></p>
                                             </div>   
                                         </a>
                                     </div>`;
