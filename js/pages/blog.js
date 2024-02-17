@@ -85,9 +85,17 @@ filterBtns.forEach(function (filterBtn) {
     filterBtn.addEventListener ("click", function (event) {
         const selectedCategory = event.target.value;
         handleFilter(selectedCategory);
-        
+        filterBtn.classList.add("active");
+
+
         if (selectedCategory !== "1") {
             loadMoreBtn.style.display = "none";
+
+        }
+    
+        else{
+            filterBtn.classList.remove("active");
+
         }
 
     });

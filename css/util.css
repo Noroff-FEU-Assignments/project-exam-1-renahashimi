@@ -121,9 +121,15 @@
     box-shadow: 0 6px 20px var(--black);
 }
 
+.active {
+    background-color: #000;
+    border: 3px solid var(--black);
+    pointer-events: none;
+}
+
 .searchbox {
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
     height: 20px;
     border-radius: 60px;
     background-color: var(--beige);
