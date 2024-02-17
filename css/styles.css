@@ -762,6 +762,7 @@
 
 .contactform button {
     display: block;
+    font-family: var(--della);
     margin: 20px auto;
     color: var(--black);
     width: 80%;
