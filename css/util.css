@@ -230,6 +230,7 @@
 .searchcontent h3 {
     text-transform: uppercase;
     padding: 10px;
+    font-size: 1em;
     color: var(--black);
 }
 
