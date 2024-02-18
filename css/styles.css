@@ -669,7 +669,7 @@
     display: flex;
     max-width: 400px;
     width: 95%;
-    background: linear-gradient(0.27turn, #BFAFB0 10%, white, transparent, white, #BFAFB0);    
+    background: linear-gradient(0.30turn, #BFAFB0 10%, white, transparent, white, #BFAFB0);    
     border: 4px solid var(--beige);
     border-radius: 20px;
     margin: 15px auto;
