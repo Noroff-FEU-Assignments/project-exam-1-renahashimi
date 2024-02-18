@@ -294,7 +294,7 @@ button, .poststitle, .postsimage, .backbutton {
 
 
 .navigation1 label {
-    display: flex;
+    display: inline-flex;
     margin: 20px 20px 0 0;
     justify-content: right;
 }
