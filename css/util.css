@@ -518,7 +518,6 @@
     top: 45%;
     width: 60px;
     height: 60px; 
-    color: var(--black);
 }
 
 .carbtnpre {
@@ -533,7 +532,8 @@
 
 .carbtnnext span, .carbtnpre span  {
     display: block;
-    scale: 2.2;
+    scale: 2.5;
+    color: var(--black);
 }
 
 .cartitle {
