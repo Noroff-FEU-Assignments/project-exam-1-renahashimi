@@ -189,9 +189,9 @@
 
 .heritagetext h4 {
     font-family: var(--water);
-    font-size: 1.7em;
-    padding: 15px 0 0;
-    margin: 20px 0 0;
+    font-size: 1.6em;
+    padding: 10px 0 0;
+    margin: 15px 0 0;
     letter-spacing: 0.1em;
 }
 
@@ -202,13 +202,13 @@
     font-size: 1em;
     text-align: right;
     padding: 0;
-    margin: 20px 0 0;
+    margin: 10px 0 0;
     bottom: 0;
 }
 
 .container-heritage {
     display: grid;
-    grid-template-columns: 45% 55%;
+    grid-template-columns: 55% 45%;
     background-image: url(/images/cake-plate-with-macarons.jpeg);
     background-size: cover;
     background-position: 100% 80%;
@@ -937,7 +937,7 @@
     height: fit-content;
     min-width: 250px;
     color: var(--black);
-    margin: 110px -10px 0 -250px;
+    margin: 130px -10px 0 -250px;
     padding: 20px 10px;
     box-shadow: 10px 10px 15px var(--beige);
     backdrop-filter: blur(3px);
@@ -1168,7 +1168,7 @@
 }
 
 .heritagetext {
-    margin: 150px -50px 0 -300px;
+    margin: 160px -50px 0 -300px;
     font-size: larger;
     min-width: 370px;
 } 
