@@ -118,7 +118,7 @@ button, .poststitle, .postsimage, .backbutton {
 }
 
 .rh-name {
-    font-size: 0.9em;
+    font-size: 1em;
     font-family: var(--della);
     color: var(--white);
     margin: -45px 60px;
@@ -300,9 +300,6 @@ button, .poststitle, .postsimage, .backbutton {
     justify-content: right;
 }
 
-.rh-name  {
-    font-size: 1em;
-}
 
 
 /* FOOTER */

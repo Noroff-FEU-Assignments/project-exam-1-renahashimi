@@ -54,7 +54,7 @@ function displayCarousel(posts) {
                               <i class="fa-solid fa-pen-nib fa-xs" style="color: #000000;"> Rena Hashimi</i> 
                               <i class="fa-solid fa-calendar-days fa-xs" style="color: #000000;"> ${post.date.slice(0, -9)} </i> 
                             </div>
-                            <h4 class="cartitle">${post.title.rendered}</h4>
+                            <h3 class="cartitle">${post.title.rendered}</h3>
                             <div class="cartext">${post.excerpt.rendered}</div>
                             <button class="carlink">The recipe <span class="heart">&#9829;</span></button>
                           </div> 
