@@ -74,7 +74,7 @@ button, .poststitle, .postsimage, .backbutton {
     border-radius: 50%;
     border: 2px solid var(--black);
     right: 20px;
-    bottom: 40px;
+    bottom: 45px;
     position: fixed;
     z-index: 3;
 }
@@ -86,6 +86,9 @@ button, .poststitle, .postsimage, .backbutton {
 
 .back-to-top p {
     position: fixed;
+    background-color: var(--beige);
+    border: 0.5px solid var(--black);
+    padding: 0 1px;
     z-index: 3;
     right: 17px;
     bottom: 15px;
