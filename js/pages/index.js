@@ -56,7 +56,7 @@ function displayCarousel(posts) {
                             </div>
                             <h4 class="cartitle">${post.title.rendered}</h4>
                             <div class="cartext">${post.excerpt.rendered}</div>
-                            <button class="carlink">The recipe <span class="heart">&#9825;</span></button>
+                            <button class="carlink">The recipe <span class="heart">&#9829;</span></button>
                           </div> 
                           </a>
                         </div>`;

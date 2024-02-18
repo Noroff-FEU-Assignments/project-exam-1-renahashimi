@@ -337,9 +337,9 @@
     transform: rotate(-25deg);
 }
 
-.r-m-btn.heart {
+/* .r-m-btn.heart {
     font-size: 1.5em;
-}
+} */
 
 
 /*BLOGPAGE*/
@@ -663,7 +663,7 @@
 }
 
 .heart {
-    font-size: medium;
+    font-size: small;
 }
 
 .contactform {
