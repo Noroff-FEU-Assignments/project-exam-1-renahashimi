@@ -198,6 +198,9 @@
     justify-content: center;
     background-color: var(--beige);
     width: 100%;
+    padding: 15px 0;
+    border-top: 3px groove var(--black);
+    border-bottom: 3px ridge var(--black);
 }
 
 .clearbtn {
@@ -218,11 +221,11 @@
     height: 210px;
     margin: 10px auto;
     justify-content: left;
-    border: 2px solid var(--black);
+    border: 3px solid var(--black);
 }
 
 .searchcontent:hover {
-    border: 2px solid var(--white);
+    border: 3px solid var(--white);
 }
 
 .searchcontent img {
