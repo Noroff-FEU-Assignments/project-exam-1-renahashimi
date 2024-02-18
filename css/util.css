@@ -161,8 +161,8 @@
     transition: 0.7s;
 }
 
-.searchbox:hover, .searchbox:focus {
-    transition: 0.1s;
+.searchbox:hover {
+    transition: 0.3s;
     border: 2px solid var(--beige);
     width: 250px;
 }
@@ -180,7 +180,7 @@
     justify-content: center;
     padding: 13px 15px;
     border-radius: 50%;
-    margin-top: -30px;
+    margin-top: -20px;
     border: 1px solid var(--black);
 }
 
@@ -601,7 +601,8 @@
 .utilbox {
     display: grid;
     grid-template-columns: 55% 45%;
-    padding: 0 20px;
+    padding: 5px 20px;
+    margin: 20px auto;
 }
 
 .filterbtn {
@@ -629,11 +630,11 @@
 }
 
 .searchbox button {
-    margin-top: -30px;
+    margin-top: -50px;
 }
 
 .searchbox:hover {
-    margin: 35px auto 40px;
+    margin: 23px auto;
 }
 
 .searchcontent{
