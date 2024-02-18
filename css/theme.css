@@ -132,7 +132,7 @@ button, .poststitle, .postsimage, .backbutton {
 
 .navigation1 {
     display: grid;
-    grid-template-columns: 90% 10%;
+    grid-template-columns: 80% 20%;
     height: 70px;
     box-shadow: inset 0 1px 8px var(--black);
     border-bottom: 3px solid var(--white);
@@ -292,6 +292,9 @@ button, .poststitle, .postsimage, .backbutton {
     width: 250px;
 }
 
+.navigation1 {
+    grid-template-columns: 90% 10%;
+}
 
 .navigation1 label {
     display: flex;
