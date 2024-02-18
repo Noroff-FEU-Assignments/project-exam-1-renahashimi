@@ -198,9 +198,7 @@
     justify-content: center;
     background-color: var(--beige);
     width: 100%;
-    padding: 15px 0;
-    border-top: 3px groove var(--black);
-    border-bottom: 3px ridge var(--black);
+
 }
 
 .clearbtn {
