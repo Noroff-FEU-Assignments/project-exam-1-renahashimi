@@ -249,6 +249,8 @@
 /* CAROUSEL */
 
  .carousel {
+    display: flex;
+    overflow: scroll;
     width: 95%;
     position: relative;
     margin: 30px auto;
@@ -298,9 +300,8 @@
 .carouselcontent{
     display: block;
     background-color: var(--white);
-    max-width: 370px;
-    width: 85%;
-    margin: 30px auto;
+    width: 100%;
+    margin: 10px 30px;
     border: 5px solid var(--beige);
     padding: 0 0 20px;
     box-shadow: 0px 0px 25px var(--black);
@@ -312,7 +313,7 @@
 }
 
 .carimage {
-    width: 100%;
+    width: 240px;
     height: 200px;
     object-fit: cover;
 }
