@@ -290,6 +290,7 @@
     display: block;
     color: var(--black);
     font-family: var(--della);
+    font-size: 0.8em;
     text-transform: uppercase;
     background-color: var(--white);
     border: 3px solid var(--beige);
@@ -976,6 +977,10 @@
     height: fit-content
 }
 
+.postcontent button {
+    font-size: 0.9em;
+}
+
 .text-justify {
     height: 65px;
 }
@@ -1198,6 +1203,10 @@
 
 .postcontent {
     height: max-content;
+}
+
+.postcontent button {
+    font-size: 1em;
 }
 
 .butaimg {
