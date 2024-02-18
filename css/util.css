@@ -551,14 +551,14 @@
  
 .cartext p {
     font-size: 1.1em;
-    height: 120px;
+    height: 110px;
 }
 
 .carlink {
     display: block;
     font-family: var(--della);
     margin: auto;
-    padding: 2px 0;
+    padding: 5px 0;
     color:  var(--black);
     text-align: center;
     text-transform: uppercase;
