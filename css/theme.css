@@ -73,7 +73,7 @@ button, .poststitle, .postsimage, .backbutton {
     padding: 10px;
     border-radius: 50%;
     border: 2px solid var(--black);
-    right: 20px;
+    right: 22px;
     bottom: 45px;
     position: fixed;
     z-index: 3;
@@ -85,7 +85,7 @@ button, .poststitle, .postsimage, .backbutton {
     border: 1px solid var(--black);
     padding: 0 2px;
     z-index: 3;
-    right: 17px;
+    right: 18px;
     bottom: 15px;
     font-size: 0.7em;
 }
