@@ -79,16 +79,11 @@ button, .poststitle, .postsimage, .backbutton {
     z-index: 3;
 }
 
-.btt:hover{
-    background-color: var(--white);
-    border: 2px solid var(--beige);
-}
-
 .back-to-top p {
     position: fixed;
     background-color: var(--beige);
-    border: 0.5px solid var(--black);
-    padding: 0 1px;
+    border: 1px solid var(--black);
+    padding: 0 2px;
     z-index: 3;
     right: 17px;
     bottom: 15px;
