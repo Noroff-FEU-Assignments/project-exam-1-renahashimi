@@ -333,6 +333,7 @@
     display: block;
     font-family: var(--della);
     margin: auto;
+    font-size: 0.8em;
     padding: 2px 0;
     color:  var(--black);
     text-align: center;
@@ -557,6 +558,7 @@
 .carlink {
     display: block;
     font-family: var(--della);
+    font-size: 0.9em;
     margin: auto;
     padding: 3px 0 5px;
     color:  var(--black);
@@ -725,6 +727,7 @@
 .carlink {
     margin: 20px auto 0;
     width: 60%;
+    font-size: 1em;
 }
 
 
