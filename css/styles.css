@@ -99,12 +99,8 @@
     text-transform: uppercase;
     font-family: var(--raleway);
     font-weight: 900;
-    height: 100%;
-    width: 100%;
-    letter-spacing: 0.1em;
-    background-image: url(/images/colorful-collage.avif);
+    background-image: url(/images/colorful-collage.jpg);
     -webkit-background-clip: text;
-
     -webkit-text-fill-color: transparent;
     background-position: center;
     background-size: contain;
