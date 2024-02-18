@@ -1173,6 +1173,10 @@
     min-width: 370px;
 } 
 
+.heritagetext p {
+    padding-left: 0;
+}
+
 .container-heritage img {
     min-width: 800px;
     max-height: 500px;
