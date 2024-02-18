@@ -117,7 +117,7 @@
 
 .filter-btn:hover {
     border: none;
-    box-shadow: 0 6px 20px var(--black);
+    box-shadow: 0 6px 20px var(--beige);
 }
 
 .filter-btn.active {
@@ -618,7 +618,7 @@
 }
 
 .filter-btn:hover {
-    border-color: var(--black);
+    border-color: var(--beige);
 }
 
 .searchbox {
