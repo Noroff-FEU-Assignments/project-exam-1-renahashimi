@@ -92,7 +92,7 @@
     display: block;
     border-top: 2px solid var(--beige);
     border-bottom: 2px solid var(--beige);
-    padding: 10px 0;
+    padding: 10px 0 30px;
 }
 
 .filterbtn {
