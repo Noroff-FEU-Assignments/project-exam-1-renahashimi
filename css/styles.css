@@ -927,7 +927,6 @@
     display: block;
     visibility: visible;
     width: 620px;
-    height: fit-content;
     box-shadow: -4px 4px 25px 0px var(--beige);
 }
 
