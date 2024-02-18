@@ -1129,6 +1129,10 @@
 .aboutpage p, .myquote {
     font-size: 1.2em;
 }
+.myquote .heart {
+    font-size: 1em;
+}
+
 
 .aboutpage2 p {
     font-size: 1.2em;
@@ -1276,10 +1280,6 @@
 
 .myquote {
     font-size: 1.4em;
-}
-
-.myquote .heart {
-    font-size: 1em;
 }
 
 .aboutme img {
