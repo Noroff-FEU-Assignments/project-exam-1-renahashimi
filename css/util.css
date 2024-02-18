@@ -90,6 +90,9 @@
 
 .utilbox {
     display: block;
+    border-top: 2px solid var(--beige);
+    border-bottom: 2px solid var(--beige);
+    padding: 10px 0;
 }
 
 .filterbtn {
@@ -137,7 +140,7 @@
     padding: 10px 0;
     justify-content: center;
     align-items: center;
-    margin: 30px auto 50px;
+    margin: 30px auto 10px;
 }
 
 .searchbox label {
@@ -626,7 +629,7 @@
 }
 
 .searchbox button {
-    margin-top: -25px;
+    margin-top: -30px;
 }
 
 .searchbox:hover {
