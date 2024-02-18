@@ -93,6 +93,7 @@
 
 .welcomeimg h1 {
     font-size: 2.8em;
+    position: relative;
     text-align: center;
     text-transform: uppercase;
     font-family: var(--raleway);
@@ -101,9 +102,11 @@
     letter-spacing: 0.1em;
     background-image: url(/images/colorful-collage.avif);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     background-position: center;
     background-size: contain;
+    text-fill-color: var(--tran);
     -webkit-text-stroke: 1px var(--black);
     /* text-shadow: 0px 0px 8px var(--beige) inset; */
     filter: drop-shadow( 0 1px 2px rgb(0, 0, 0));
