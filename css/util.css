@@ -620,10 +620,6 @@
     border-color: var(--black);
 }
 
-.searchbox {
-    margin-top: 30px;
-}
-
 .searchbox:hover {
     margin: 35px auto 40px;
 }
