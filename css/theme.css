@@ -302,6 +302,10 @@ button, .poststitle, .postsimage, .backbutton {
     justify-content: right;
 }
 
+.rh-name  {
+    font-size: 1em;
+}
+
 
 /* FOOTER */
 
@@ -349,10 +353,6 @@ main, body , header {
     width: 100%;
     box-shadow: none;
     background-color: var(--beige);
-}
-
-.rh-name  {
-    color: var(--white);
 }
 
 .hideX, .navigation1 label{
