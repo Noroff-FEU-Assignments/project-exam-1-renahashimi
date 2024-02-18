@@ -1174,7 +1174,8 @@
 } 
 
 .heritagetext p {
-    padding: 0;
+    padding-left: 0;
+    font-weight: 500;
 }
 
 .container-heritage img {
