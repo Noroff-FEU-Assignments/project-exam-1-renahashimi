@@ -307,10 +307,6 @@
     font-size: 0.9em;
 }
 
-.r-m-btn span {
-    font-size: 1em;
-}
-
 .postsimage {
     display: block;
     width: 100%;
@@ -664,7 +660,7 @@
 }
 
 .heart {
-    font-size:small;
+    font-size: small;
 }
 
 .contactform {
