@@ -938,7 +938,7 @@
     height: fit-content;
     min-width: 250px;
     color: var(--black);
-    margin: 130px -10px 0 -250px;
+    margin: 110px -10px 0 -250px;
     padding: 20px 10px;
     box-shadow: 8px 8px 10px var(--beige);
     backdrop-filter: blur(3px);
@@ -1161,7 +1161,7 @@
 }
 
 .heritagetext {
-    margin: 170px -50px 0 -300px;
+    margin: 150px -50px 0 -300px;
     font-size: larger;
     min-width: 370px;
 } 
