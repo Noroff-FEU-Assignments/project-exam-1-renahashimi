@@ -1278,6 +1278,10 @@
     font-size: 1.4em;
 }
 
+.myquote .heart {
+    font-size: 1em;
+}
+
 .aboutme img {
     margin: 10px auto -10px;
 }
@@ -1294,10 +1298,6 @@
 
 .imgbaku {
     width: 80%;
-}
-
-.heart {
-    font-size: 1em;
 }
 
 
