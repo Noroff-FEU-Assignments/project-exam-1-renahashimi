@@ -34,7 +34,7 @@ async function fecthIndexData() {
 function setupWelcomeSection(){
 const welcomeImg = document.querySelector(".welcomeimg");
 const welcomeTxt = document.querySelector(".welcometxt");
-  welcomeImg.innerHTML += `<h1>Welcome</h1>`;
+  welcomeImg.innerHTML += `<h1 class="welcome">Welcome</h1>`;
   welcomeTxt.innerHTML += `<p>to my food blog</p>`; 
 
 }
