@@ -631,6 +631,7 @@
 
 .searchbox button {
     margin-top: -60px;
+    padding: 16px 18px;
 }
 
 .searchbox:hover {
